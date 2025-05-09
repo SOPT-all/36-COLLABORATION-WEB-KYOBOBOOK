@@ -23,10 +23,14 @@ export default tseslint.config(
       import: eslintPluginImport,
     },
     rules: {
-      'no-console': 'warn', // 콘솔 사용 경고
-      'no-unused-vars': 'off', // 변수는 선언했지만 사용하지 않았을 때 경고
-      '@typescript-eslint/no-unused-vars': 'warn', // TS 전용으로만 사용
-      curly: 'error', // if/for 등에 항상 중괄호 사용
+      // 콘솔 사용 경고
+      'no-console': 'warn',
+      // 변수는 선언했지만 사용하지 않았을 때 경고
+      'no-unused-vars': 'off',
+      // TS 전용으로만 사용
+      '@typescript-eslint/no-unused-vars': 'warn',
+      // if/for 등에 항상 중괄호 사용
+      curly: 'error',
       // import 정렬
       'import/order': [
         'warn',
@@ -35,8 +39,10 @@ export default tseslint.config(
           'newlines-between': 'always',
         },
       ],
-      'react/self-closing-comp': 'warn', // JSX 안에 content가 없을 경우 self-closing 강제
-      '@typescript-eslint/no-explicit-any': 'warn', // TS: any 사용 금지
+      // JSX 안에 content가 없을 경우 self-closing 강제
+      'react/self-closing-comp': 'warn',
+      // TS: any 사용 금지
+      '@typescript-eslint/no-explicit-any': 'warn',
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
