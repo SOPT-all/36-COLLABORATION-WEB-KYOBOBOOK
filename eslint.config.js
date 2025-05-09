@@ -21,6 +21,7 @@ export default tseslint.config({
     import: eslintPluginImport,
   },
   rules: {
+    'react/react-in-jsx-scope': 'off',
     // 콘솔 사용 경고
     'no-console': 'warn',
     // 변수는 선언했지만 사용하지 않았을 때 경고
