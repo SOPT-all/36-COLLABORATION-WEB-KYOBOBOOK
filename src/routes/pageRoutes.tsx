@@ -1,8 +1,8 @@
 import routePath from '@/routes/routePath';
 import Home from '@/pages/Home/Home';
 import HomeBest from '@/pages/HomeBest/HomeBest';
-import HomeBestDetail from '@/pages/HomeBest/HomeBestDetail';
-import HomeBestDetailCart from '@/pages/HomeBest/HomeBestDetailCart';
+import HomeBestDetail from '@/pages/HomeBestDetail/HomeBestDetail';
+import HomeBestDetailCart from '@/pages/HomeBestDetailCart/HomeBestDetailCart';
 
 const pageRoutes = [
   { path: routePath.HOME, element: <Home />, },

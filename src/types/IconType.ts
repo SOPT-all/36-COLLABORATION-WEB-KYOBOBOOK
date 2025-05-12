@@ -1,4 +1,4 @@
-import type { IconName } from '../assets/icons/index';
+import type { IconName } from '@/assets/icons/index';
 
 export interface IconType {
   name: IconName;

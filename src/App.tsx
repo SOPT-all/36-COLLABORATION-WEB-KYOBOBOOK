@@ -2,7 +2,7 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import { queryClient } from './utils/query-client';
+import { queryClient } from '@/utils/query-client';
 import pageRoutes from '@/routes/pageRoutes';
 
 const router = createBrowserRouter(pageRoutes);
