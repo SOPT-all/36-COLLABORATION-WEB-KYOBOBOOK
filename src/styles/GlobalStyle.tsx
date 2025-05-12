@@ -10,10 +10,40 @@ const GlobalStyle = (theme: ReturnType<typeof useTheme>) => css`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* 폰트: Pretendard Regular, Medium, SemiBold, Bold */
   @font-face {
-    font-family: 'Pretendard';
-    src: url('/assets/fonts/Pretendard-Medium.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'Pretendard-Bold';
+    src:
+      url('https://cdn.banggooso.com/sr/assets/fonts/Pretendard-Bold.otf') format('opentype'),
+      url('https://cdn.banggooso.com/sr/assets/fonts/Pretendard-Bold.woff2') format('woff2'),
+      url('https://cdn.banggooso.com/sr/assets/fonts/Pretendard-Bold.woff') format('woff');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Pretendard-Medium';
+    src:
+      url('https://cdn.banggooso.com/sr/assets/fonts/Pretendard-Medium.otf') format('opentype'),
+      url('https://cdn.banggooso.com/sr/assets/fonts/Pretendard-Medium.woff2') format('woff2'),
+      url('https://cdn.banggooso.com/sr/assets/fonts/Pretendard-Medium.woff') format('woff');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src:
+      url('https://cdn.banggooso.com/sr/assets/fonts/Pretendard-Regular.otf') format('opentype'),
+      url('https://cdn.banggooso.com/sr/assets/fonts/Pretendard-Regular.woff2') format('woff2'),
+      url('https://cdn.banggooso.com/sr/assets/fonts/Pretendard-Regular.woff') format('woff');
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Pretendard-SemiBold';
+    src:
+      url('https://cdn.banggooso.com/sr/assets/fonts/Pretendard-SemiBold.otf') format('opentype'),
+      url('https://cdn.banggooso.com/sr/assets/fonts/Pretendard-SemiBold.woff2') format('woff2'),
+      url('https://cdn.banggooso.com/sr/assets/fonts/Pretendard-SemiBold.woff') format('woff');
     font-style: normal;
   }
 
