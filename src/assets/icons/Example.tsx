@@ -1,6 +1,6 @@
 // svgr 사용 예시
 
-import Icon from '../../../components/Icon';
+import Icon from '../../components/Icon';
 
 export default function Example() {
   return (
