@@ -1,6 +1,9 @@
+import type { IconName } from '../assets/icons/index';
+
 export interface IconType {
-  width: number;
-  height: number;
+  name: IconName;
+  width?: number;
+  height?: number;
   fill?: string;
   stroke?: string;
   className?: string;
