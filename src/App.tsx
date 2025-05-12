@@ -1,5 +1,8 @@
 import { QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { ThemeProvider } from '@emotion/react';
+import { theme } from './styles/theme';
+import GlobalStyles from './styles/GlobalStyle';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import { queryClient } from './utils/query-client';
@@ -10,8 +13,11 @@ const router = createBrowserRouter(pageRoutes);
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-      {import.meta.env.DEV && <ReactQueryDevtools initialIsOpen={false} />}
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <RouterProvider router={router} />
+        {import.meta.env.DEV && <ReactQueryDevtools initialIsOpen={false} />}
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }
