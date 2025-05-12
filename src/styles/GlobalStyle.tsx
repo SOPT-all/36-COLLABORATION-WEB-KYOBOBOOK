@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { Global, css, useTheme } from '@emotion/react';
 
 const GlobalStyle = (theme: ReturnType<typeof useTheme>) => css`
