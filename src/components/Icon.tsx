@@ -1,7 +1,7 @@
 import { iconMap } from '../assets/icons/index';
 import type { IconType } from '../types/IconType';
 
-export default function Icon({ name, width = 24, height = 24, fill, stroke, className }: IconType) {
+export default function Icon({ name, width = 24, height = 24, fill }: IconType) {
   const SvgIcon = iconMap[name];
 
   if (!SvgIcon) {
@@ -9,7 +9,5 @@ export default function Icon({ name, width = 24, height = 24, fill, stroke, clas
     return null;
   }
 
-  return (
-    <SvgIcon width={width} height={height} fill={fill} stroke={stroke} className={className} />
-  );
+  return <SvgIcon width={width} height={height} fill={fill} />;
 }
