@@ -55,5 +55,5 @@ jobs:
               issue_number: prNumber,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `빌드에 성공했습니다 🎉`
+              body: `📖 빌드에 성공했습니다`
             });
