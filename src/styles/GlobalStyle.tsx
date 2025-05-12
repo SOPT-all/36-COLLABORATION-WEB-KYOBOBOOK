@@ -52,10 +52,13 @@ const GlobalStyle = (theme: ReturnType<typeof useTheme>) => css`
     padding: 0;
   }
 
-  html,
+  html {
+    font-size: 62.5%;
+  }
+
   body {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     font-family: 'Pretendard', sans-serif;
     background-color: ${theme.colors.gray1};
     display: flex;
@@ -63,14 +66,22 @@ const GlobalStyle = (theme: ReturnType<typeof useTheme>) => css`
   }
 
   #root {
-    width: 23.4375rem; /* 375px */
-    min-height: 42.3125rem; /* 677px */
-    padding: 0 1.5rem; /* 24px */
+    width: 100%;
+    max-width: 73rem;
+    min-width: 37.5rem;
+    min-height: 100vh;
     background-color: ${theme.colors.white};
+  }
+
+  @media (max-width: 375px) {
+    html {
+      font-size: 56.25%;
+    }
   }
 `;
 
+// 현재 적용된 테마 가져오기
 export default function GlobalStyles() {
-  const theme = useTheme(); // 현재 적용된 테마 가져오기
+  const theme = useTheme();
   return <Global styles={GlobalStyle(theme)} />;
 }
