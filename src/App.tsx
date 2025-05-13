@@ -10,7 +10,7 @@ import pageRoutes from '@/routes/pageRoutes';
 
 const router = createBrowserRouter(pageRoutes);
 
-function App() {
+const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
@@ -20,6 +20,6 @@ function App() {
       </ThemeProvider>
     </QueryClientProvider>
   );
-}
+};
 
 export default App;

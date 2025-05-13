@@ -38,15 +38,14 @@ jobs:
 
       - name: Build the project
         id: build
-        run: pnpm build
-        continue-on-error: true
+        run: pnpm build 
 
       - name: Lint the project
         id: lint
         run: pnpm lint
 
       - name: Add comment to PR if build succeeds
-        if: github.event_name == 'pull_request'
+        if: success() && github.event_name == 'pull_request'
         uses: actions/github-script@v6
         with:
           script: |
@@ -56,4 +55,17 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: `📖 빌드에 성공했습니다`
+            });
+
+      - name: Add failure comment to PR if build fails
+        if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            await github.rest.issues.createComment({
+              issue_number: prNumber,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `❌ 빌드에 실패했습니다` 
             });

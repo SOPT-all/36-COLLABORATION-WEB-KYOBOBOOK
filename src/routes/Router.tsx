@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import pageRoutes from '@/routes/pageRoutes';
 
-export default function Router() {
+const Router = () => {
   return (
     <Routes>
       {pageRoutes.map(({ path, element }) => (
@@ -10,4 +10,5 @@ export default function Router() {
       ))}
     </Routes>
   );
-}
+};
+export default Router;
