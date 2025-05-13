@@ -1,5 +1,6 @@
 import type { Theme } from '@emotion/react';
-import { fonts } from './fonts';
+
+import { fonts } from '@/styles/fonts';
 
 import '@emotion/react';
 

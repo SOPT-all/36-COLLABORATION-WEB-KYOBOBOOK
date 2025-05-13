@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import pageRoutes from './pageRoutes';
+
+import pageRoutes from '@/routes/pageRoutes';
 
 export default function Router() {
   return (
