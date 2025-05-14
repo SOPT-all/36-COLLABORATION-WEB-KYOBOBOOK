@@ -104,3 +104,5 @@ export const theme: Theme = {
     blur1: 'blur(40px)',
   },
 };
+
+export type ThemeType = typeof theme;

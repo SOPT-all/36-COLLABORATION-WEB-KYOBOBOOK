@@ -1,6 +1,7 @@
 import { css, useTheme } from '@emotion/react';
 
 import type { CardType } from '@/types/CardType';
+import type { ThemeType } from '@/styles/theme';
 
 export default function Card({ imgUrl, title, type = 'rectangular' }: CardType) {
   const theme = useTheme();
@@ -27,6 +28,6 @@ const imgStyle = (imgHeight: string) => css`
   object-fit: cover;
 `;
 
-const titleStyle = (theme: any) => css`
+const titleStyle = (theme: ThemeType) => css`
   ${theme.fonts.body1}
 `;
