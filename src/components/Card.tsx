@@ -1,7 +1,7 @@
 import { css, useTheme } from '@emotion/react';
+import type { Theme } from '@emotion/react';
 
 import type { CardType } from '@/types/CardType';
-import type { ThemeType } from '@/styles/theme';
 import { multilineEllipsis } from '@/styles/textStyles';
 
 export default function Card({ imgUrl, title, type = 'rectangular' }: CardType) {
@@ -29,7 +29,7 @@ const imgStyle = (imgHeight: string) => css`
   object-fit: cover;
 `;
 
-const titleStyle = (theme: ThemeType) => css`
+const titleStyle = (theme: Theme) => css`
   ${theme.fonts.body1}
   width: 100%;
   height: 4rem;
