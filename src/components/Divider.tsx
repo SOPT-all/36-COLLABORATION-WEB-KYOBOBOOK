@@ -7,8 +7,8 @@ export default function Divider() {
 }
 
 const dividerStyle = (theme: Theme) => css`
-  border: none;
   width: 100%;
   height: 1rem;
+  border: none;
   background-color: ${theme.colors.gray1};
 `;
