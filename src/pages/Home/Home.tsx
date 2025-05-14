@@ -1,5 +1,13 @@
+import Card from '@/components/Card';
+import sampleImage from '@/assets/img/sample.png';
+
 const Home = () => {
-  return <div>홈페이지입니다</div>;
+  return (
+    <div>
+      <Card imgUrl={sampleImage} title="첫 여름, 완주" type="short" />
+      <Card imgUrl={sampleImage} title="첫 여름, 완주" type="long" />
+    </div>
+  );
 };
 
 export default Home;
