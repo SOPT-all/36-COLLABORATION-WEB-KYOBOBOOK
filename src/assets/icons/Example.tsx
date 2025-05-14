@@ -10,9 +10,9 @@
 // -----------------------------------------------------
 // 🔍 사용 가능한 name 값은 src/assets/icons/index.ts의 iconMap에서 확인 가능
 
-import Icon from '../../components/Icon';
+import Icon from '@/components/Icon';
 
-export default function Example() {
+const Example = () => {
   return (
     <>
       {/* 기본 아이콘 */}
@@ -23,4 +23,6 @@ export default function Example() {
       <Icon name="add" width={40} height={40} />
     </>
   );
-}
+};
+
+export default Example;
