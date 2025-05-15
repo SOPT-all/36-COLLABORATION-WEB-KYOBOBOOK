@@ -53,8 +53,12 @@ import YoutubeIcon from '../icons/svg/ic_youtube.svg?react';
 import kyoboLogo from '../icons/svg/ic_kyobo_logo.svg?react';
 import Down from '../icons/svg/ic_down.svg?react';
 import CircleDown from '../icons/svg/ic_circle_down.svg?react';
-import HeaderNavBar from '../icons/svg/ic_header_relative_nav.svg?react';
 import Dot from '../icons/svg/ic_dot.svg?react';
+import NavHottracks from '../icons/svg/ic_nav_hottracks.svg?react';
+import NavSam from '../icons/svg/ic_nav_sam.svg?react';
+import NavEbook from '../icons/svg/ic_nav_ebook.svg?react';
+import NavLogoBackground from '../icons/svg/ic_nav_logo_background.svg?react';
+import IcHeaderLogo from '../icons/svg/ic_header_logo.svg?react';
 
 export const iconMap = {
   account: AccountIcon,
@@ -112,8 +116,12 @@ export const iconMap = {
   kyoboLogo: kyoboLogo,
   down: Down,
   circleDown: CircleDown,
-  headerNavBar: HeaderNavBar,
   dot: Dot,
+  navHottracks: NavHottracks,
+  navSam: NavSam,
+  navEbook: NavEbook,
+  navLogoBackground: NavLogoBackground,
+  icHeaderLogo: IcHeaderLogo,
 };
 
 export type IconName = keyof typeof iconMap;

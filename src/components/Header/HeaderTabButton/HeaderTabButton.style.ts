@@ -6,7 +6,7 @@ export const tabButtonStyle = ({ active, isStatic }: { active: boolean; isStatic
   display: flex;
   align-items: center;
   gap: 0.2rem;
-  
+
   border: none;
   ${isStatic ? theme.fonts.subtitle1 : active ? theme.fonts.subtitle1 : theme.fonts.subtitle2};
   font-weight: ${isStatic ? 600 : active ? 700 : 600};

@@ -50,3 +50,28 @@ export const headerTabWrapper = css`
   gap: 1.6rem;
   background-color: ${theme.colors.white};
 `;
+
+export const layeredWrapper = css`
+  position: relative;
+  height: 4.5rem;
+  background-color: ${theme.colors.white};
+`;
+
+export const layeredIconWrapper = (index: number) => {
+  const styles = [
+    { zIndex: 1, left: '0', bottom: '0.1rem' },
+    { zIndex: 2, left: '0', bottom: '0.1rem' },
+    { zIndex: 3, left: '0', bottom: '0.1rem' },
+    { zIndex: 4, left: '0', bottom: '0' },
+    { zIndex: 5, left: '2.4rem', bottom: '0.1rem' },
+  ];
+
+  const { zIndex, left, bottom } = styles[index] ?? styles[0];
+
+  return css`
+    position: absolute;
+    left: ${left};
+    bottom: ${bottom};
+    z-index: ${zIndex};
+  `;
+};

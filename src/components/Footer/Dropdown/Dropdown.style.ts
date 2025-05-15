@@ -30,16 +30,16 @@ export const dropdownMenu = css`
   bottom: 100%;
   left: 0;
   margin-bottom: 0.8rem;
+  padding: 0.4rem 0;
   width: 100%;
 
+  border: 1px solid ${theme.colors.gray3};
+  border-radius: 20px;
   overflow: hidden;
   ${theme.fonts.caption3};
   background: ${theme.colors.white};
-  border: 1px solid ${theme.colors.gray3};
-  border-radius: 20px;
-  padding: 0.4rem 0;
+
   li {
     padding: 1.2rem 2rem;
-    ${theme.fonts.caption2};
   }
 `;
