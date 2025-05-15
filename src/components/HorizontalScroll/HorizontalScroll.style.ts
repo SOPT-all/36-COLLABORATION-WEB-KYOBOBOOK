@@ -12,10 +12,10 @@ export const classItemStyle = css`
   flex-shrink: 0;
 `;
 
-export const firstClassItemStyle = (sideMargin: string) => css`
-  padding-left: ${sideMargin};
+export const firstClassItemStyle = (sidePadding: string) => css`
+  padding-left: ${sidePadding};
 `;
 
-export const lastClassItemStyle = (sideMargin: string) => css`
-  padding-right: ${sideMargin};
+export const lastClassItemStyle = (sidePadding: string) => css`
+  padding-right: ${sidePadding};
 `;
