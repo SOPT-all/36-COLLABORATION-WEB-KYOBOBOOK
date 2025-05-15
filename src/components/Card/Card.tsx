@@ -1,9 +1,9 @@
 import { useTheme } from '@emotion/react';
 
-import type { CardType } from '@/types/CardType';
+import type { CardTypes } from '@/types/cardTypes';
 import { cardStyle, imgStyle, titleStyle } from '@/components/Card/Card.styles';
 
-export default function Card({ imgUrl, title, type = 'rectangular' }: CardType) {
+export default function Card({ imgUrl, title, type = 'rectangular' }: CardTypes) {
   const theme = useTheme();
   const imgHeight = type === 'rectangular' ? '18.8rem' : '12.8rem';
 

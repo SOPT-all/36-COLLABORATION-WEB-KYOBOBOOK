@@ -1,7 +1,7 @@
 import { iconMap } from '@/assets/icons/index';
-import type { IconType } from '@/types/IconType';
+import type { IconTypes } from '@/types/iconTypes';
 
-const Icon = ({ name, width = 24, height = 24, fill }: IconType) => {
+const Icon = ({ name, width = 24, height = 24, fill }: IconTypes) => {
   const SvgIcon = iconMap[name];
 
   if (!SvgIcon) {
