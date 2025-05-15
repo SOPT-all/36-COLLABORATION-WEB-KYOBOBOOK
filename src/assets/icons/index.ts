@@ -50,6 +50,9 @@ import WishIcon from '../icons/svg/ic_wish.svg?react';
 import WriteIcon from '../icons/svg/ic_write.svg?react';
 import YoutubeCircleIcon from '../icons/svg/ic_youtube_circle.svg?react';
 import YoutubeIcon from '../icons/svg/ic_youtube.svg?react';
+import kyoboLogo from '../icons/svg/ic_kyobo_logo.svg?react';
+import Down from '../icons/svg/ic_down.svg?react';
+import CircleDown from '../icons/svg/ic_circle_down.svg?react';
 
 export const iconMap = {
   account: AccountIcon,
@@ -104,6 +107,9 @@ export const iconMap = {
   write: WriteIcon,
   youtubeCircle: YoutubeCircleIcon,
   youtube: YoutubeIcon,
+  kyoboLogo: kyoboLogo,
+  down: Down,
+  circleDown: CircleDown,
 };
 
 export type IconName = keyof typeof iconMap;
