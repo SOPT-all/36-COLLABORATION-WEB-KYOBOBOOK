@@ -28,7 +28,7 @@ const Footer = () => {
       </div>
 
       <div css={logoContainer}>
-        <Icon name="kyoboLogo" width={115} />
+        <Icon name="kyoboLogo" width={116} height={33} />
         <div css={businessInfoContainer}>
           <span>사업자정보</span>
           <Icon name="circleDown" width={20} height={20} fill={theme.colors.white} />

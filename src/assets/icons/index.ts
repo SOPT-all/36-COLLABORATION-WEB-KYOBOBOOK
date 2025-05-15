@@ -53,6 +53,8 @@ import YoutubeIcon from '../icons/svg/ic_youtube.svg?react';
 import kyoboLogo from '../icons/svg/ic_kyobo_logo.svg?react';
 import Down from '../icons/svg/ic_down.svg?react';
 import CircleDown from '../icons/svg/ic_circle_down.svg?react';
+import HeaderNavBar from '../icons/svg/ic_header_relative_nav.svg?react';
+import Dot from '../icons/svg/ic_dot.svg?react';
 
 export const iconMap = {
   account: AccountIcon,
@@ -110,6 +112,8 @@ export const iconMap = {
   kyoboLogo: kyoboLogo,
   down: Down,
   circleDown: CircleDown,
+  headerNavBar: HeaderNavBar,
+  dot: Dot,
 };
 
 export type IconName = keyof typeof iconMap;
