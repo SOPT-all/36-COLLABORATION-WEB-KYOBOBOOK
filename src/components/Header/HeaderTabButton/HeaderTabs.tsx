@@ -7,7 +7,7 @@ interface HeaderTabItemTypes {
   route?: string;
 }
 
-export const headerTabs: HeaderTabItemTypes[] = [
+export const HeaderTabs: HeaderTabItemTypes[] = [
   {
     label: '한강 신작',
     icon: <Icon name="dot" width={4} height={4} />,

@@ -1,4 +1,7 @@
-import { iconStyle, tabButtonStyle } from './HeaderTabButton.style';
+import {
+  iconStyle,
+  tabButtonStyle,
+} from '@/components/Header/HeaderTabButton/HeaderTabButton.style';
 
 interface TabButtonPropTypes {
   label: string;

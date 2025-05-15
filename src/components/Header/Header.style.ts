@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 
 import { theme } from '@/styles/theme';
+
 export const headerContainer = css`
   display: flex;
   flex-direction: column;

@@ -13,7 +13,7 @@ import {
   layeredWrapper,
   layeredIconWrapper,
 } from '@/components/Header/Header.style';
-import { headerTabs } from '@/components/Header/HeaderTabButton/headerTabs';
+import { HeaderTabs } from '@/components/Header/HeaderTabButton/HeaderTabs';
 import TabButton from '@/components/Header/HeaderTabButton/HeaderTabButton';
 
 const Header = () => {
@@ -56,8 +56,9 @@ const Header = () => {
           <Icon name="cart" width={24} height={24} />
         </div>
       </div>
+
       <div css={headerTabWrapper}>
-        {headerTabs.map(({ label, icon, route }) => (
+        {HeaderTabs.map(({ label, icon, route }) => (
           <TabButton
             key={label}
             label={label}
