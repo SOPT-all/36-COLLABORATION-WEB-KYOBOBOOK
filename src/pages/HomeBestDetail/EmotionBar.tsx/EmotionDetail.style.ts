@@ -13,7 +13,11 @@ export const barBackground = (theme: Theme) => css`
 `;
 
 export const barFill = (percent: number, theme: Theme) => css`
-  background-color: ${theme.colors.purple4};
+  background-color: ${percent >= 70
+    ? theme.colors.purple4
+    : percent >= 40
+      ? theme.colors.purple3
+      : theme.colors.purple1};
   width: ${percent}%;
   height: 100%;
   border-radius: 0.4rem 0 0 0.4rem;
