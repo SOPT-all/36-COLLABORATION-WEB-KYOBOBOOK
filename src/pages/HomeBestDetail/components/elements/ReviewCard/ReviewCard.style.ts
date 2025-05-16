@@ -1,6 +1,8 @@
 import { css } from '@emotion/react';
 import type { Theme } from '@emotion/react';
 
+import { multilineEllipsis } from '@/styles/textStyles';
+
 export const reviewCardStyle = {
   cardContainer: (theme: Theme) => css`
     display: flex;
@@ -50,11 +52,15 @@ export const reviewCardStyle = {
     color: ${theme.colors.gray4}
   `,
 
-  descriptionSection: (theme: Theme) => css`
+  descriptionSection: css`
+    height: 4rem;
+  `,
+
+  descriptionText: (theme: Theme) => css`
+    ${multilineEllipsis(2)};
     ${theme.fonts.body2}
     color: ${theme.colors.gray5}
   `,
-
   emotionTagSection: css`
     display: flex;
     gap: 0.4rem;
