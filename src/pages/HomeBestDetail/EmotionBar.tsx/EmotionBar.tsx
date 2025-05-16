@@ -7,7 +7,7 @@ import {
   barContent,
   emotionText,
   percentText,
-} from '@/pages/HomeBestDetail/EmotionBar.tsx/EmotionDetail.style';
+} from '@/pages/HomeBestDetail/EmotionBar.tsx/EmotionBar.style';
 
 type EmotionTypes = {
   emotion: string;

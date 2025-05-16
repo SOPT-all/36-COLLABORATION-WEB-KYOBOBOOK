@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 
-import EmotionBar from '@/pages/HomeBestDetail/EmotionBar.tsx/EmotionDetail';
+import EmotionBar from '@/pages/HomeBestDetail/EmotionBar.tsx/EmotionBar';
 import { data } from '@/pages/HomeBestDetail/EmotionBar.tsx/ReviewData';
 
 const HomeBestDetail = () => {
