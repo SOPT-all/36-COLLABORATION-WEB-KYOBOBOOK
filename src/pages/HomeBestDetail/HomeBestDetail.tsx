@@ -1,6 +1,6 @@
 import AuthInfo from '@/pages/HomeBestDetail/components/sections/AuthorInfo';
 import BookDescription from '@/pages/HomeBestDetail/components/sections/BookDescription';
-import BookReview from '@/pages/HomeBestDetail/components/sections/BookReview';
+import BookReview from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview';
 import BookSummary from '@/pages/HomeBestDetail/components/sections/BookSummary';
 
 const HomeBestDetail = () => {
