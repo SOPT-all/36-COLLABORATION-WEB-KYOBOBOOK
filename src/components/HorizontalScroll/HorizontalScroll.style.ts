@@ -5,7 +5,11 @@ export const rowScrollStyle = (gap: string) => css`
   flex-direction: row;
   gap: ${gap};
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const classItemStyle = css`

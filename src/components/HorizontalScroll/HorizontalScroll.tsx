@@ -1,11 +1,6 @@
 import type { ReactNode } from 'react';
 
-import {
-  rowScrollStyle,
-  classItemStyle,
-  firstClassItemStyle,
-  lastClassItemStyle,
-} from '@/components/HorizontalScroll/HorizontalScroll.style';
+import * as s from '@/components/HorizontalScroll/HorizontalScroll.style';
 
 interface HorizontalScrollPropTypes {
   children: ReactNode[];
@@ -19,7 +14,7 @@ const HorizontalScrollList = ({
   sidePadding = '2.4rem',
 }: HorizontalScrollPropTypes) => {
   return (
-    <div css={rowScrollStyle(gap)}>
+    <div css={s.rowScrollStyle(gap)}>
       {children.map((child, index) => {
         const isFirst = index === 0;
         const isLast = index === children.length - 1;
@@ -28,9 +23,9 @@ const HorizontalScrollList = ({
           <div
             key={index}
             css={[
-              classItemStyle,
-              isFirst && firstClassItemStyle(sidePadding),
-              isLast && lastClassItemStyle(sidePadding),
+              s.classItemStyle,
+              isFirst && s.firstClassItemStyle(sidePadding),
+              isLast && s.lastClassItemStyle(sidePadding),
             ]}
           >
             {child}
