@@ -1,6 +1,6 @@
 // 버튼, 칩 테스트
-import  { Button }  from '@/components/buttons/Button';
-import  Chip  from '@/components/chips/Chip';
+import  { Button }  from '@/components/Button/Button';
+import  Chip  from '@/components/Chip/Chip';
 import Icon from '@/components/Icon';
 
 const ButtonChipTestPage = () => {
