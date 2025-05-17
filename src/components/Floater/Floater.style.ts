@@ -8,7 +8,7 @@ const wrapper = css`
   gap: 0.8rem;
   position: fixed;
   right: 50%;
-  bottom: 10rem;
+  bottom: 12rem;
   transform: translateX(30rem);
   z-index: 100;
 `;
