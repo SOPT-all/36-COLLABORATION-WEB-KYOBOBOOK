@@ -1,7 +1,10 @@
 import { useState } from 'react';
 
-import { dropdownWrapper, triggerButton, dropdownMenu } from './Dropdown.style';
-
+import {
+  dropdownWrapper,
+  triggerButton,
+  dropdownMenu,
+} from '@/components/Footer/Dropdown/Dropdown.style';
 import { FAMILY_SITE_OPTIONS } from '@/components/Footer/Footer.constants';
 import Icon from '@/components/Icon';
 

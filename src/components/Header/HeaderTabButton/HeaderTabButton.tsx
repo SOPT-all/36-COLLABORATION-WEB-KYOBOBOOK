@@ -10,7 +10,7 @@ interface TabButtonPropTypes {
   onClick?: () => void;
 }
 
-const TabButton = ({ label, icon, active = false, onClick }: TabButtonPropTypes) => {
+const HeaderTabButton = ({ label, icon, active = false, onClick }: TabButtonPropTypes) => {
   const isStatic = Boolean(icon);
   return (
     <button css={tabButtonStyle({ active, isStatic })} onClick={onClick}>
@@ -20,4 +20,4 @@ const TabButton = ({ label, icon, active = false, onClick }: TabButtonPropTypes)
   );
 };
 
-export default TabButton;
+export default HeaderTabButton;

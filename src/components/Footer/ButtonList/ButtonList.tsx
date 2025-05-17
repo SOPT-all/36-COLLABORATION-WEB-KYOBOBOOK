@@ -13,7 +13,7 @@ const ButtonList = ({
 }) => (
   <>
     {items.map((text, i) => (
-      <button key={text} css={[style, withBorder && i !== 0 && legalButtonBorder]}>
+      <button key={`${text}-${i}`} css={[style, withBorder && i !== 0 && legalButtonBorder]}>
         {text}
       </button>
     ))}
