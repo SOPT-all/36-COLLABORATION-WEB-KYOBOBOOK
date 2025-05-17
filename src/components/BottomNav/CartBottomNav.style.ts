@@ -4,8 +4,8 @@ import type { Theme } from '@emotion/react';
 const wrapper = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
-  padding: 1.75rem;
+  gap: 1.25rem;
+  padding: 1.25rem 1.75rem;
   background-color: ${theme.colors.white};
   border-top: 1px solid ${theme.colors.gray3};
   position: fixed;
@@ -35,7 +35,7 @@ const amount = (theme: Theme) => css`
 const purchaseButton = (theme: Theme) => css`
   width: 100%;
   text-align: center;
-  height: 6rem;
+  height: 4.8rem;
   background-color: ${theme.colors.purple6};
   color: ${theme.colors.white};
   font: ${theme.fonts.body1};
