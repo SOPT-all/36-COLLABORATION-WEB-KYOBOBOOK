@@ -14,8 +14,11 @@ export const bookReviewStyles = {
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    ${theme.fonts.title1};
     margin-bottom: 0.6rem;
+  `,
+
+  titleText: (theme: Theme) => css`
+    ${theme.fonts.title1};
   `,
 
   description: (theme: Theme) => css`

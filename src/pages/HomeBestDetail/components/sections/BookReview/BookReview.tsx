@@ -24,7 +24,7 @@ export default function BookReview() {
       <div css={s.wrapper}>
         <div>
           <div css={s.title(theme)}>
-            <h3>리뷰 ({reviewData.reviewCounts})</h3>
+            <h3 css={s.titleText(theme)}>리뷰 ({reviewData.reviewCounts})</h3>
             <Icon name="info" />
           </div>
           <p css={s.description(theme)}>* 구매 후 리뷰 작성 시, e교환권 200원 적립</p>
