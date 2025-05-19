@@ -1,8 +1,14 @@
-import { css } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
-import { theme } from '@/styles/theme';
-
-const tabButtonStyle = ({ active, isStatic }: { active: boolean; isStatic: boolean }) => css`
+const tabButtonStyle = ({
+  active,
+  isStatic,
+  theme,
+}: {
+  active: boolean;
+  isStatic: boolean;
+  theme: Theme;
+}) => css`
   display: flex;
   align-items: center;
   gap: 0.2rem;
