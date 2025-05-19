@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { useTheme } from '@emotion/react';
 
-import TabButton from '@/pages/HomeBestDetail/TabMenu/TabButton';
-import { sortButton, tabMenuContainer } from '@/pages/HomeBestDetail/TabMenu/TabMenu.style';
+import TabButton from '@/pages/HomeBestDetail/components/elements/TabMenu/TabButton';
+import {
+  sortButton,
+  tabMenuContainer,
+} from '@/pages/HomeBestDetail/components/elements/TabMenu/TabMenu.style';
 import Icon from '@/components/Icon';
 
 const tabs = ['상품정보', '리뷰 (118)', '이벤트', '교환/반품/품절'];

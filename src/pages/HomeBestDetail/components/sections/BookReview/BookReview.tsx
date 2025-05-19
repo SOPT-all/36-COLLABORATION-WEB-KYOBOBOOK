@@ -5,7 +5,7 @@ import ReviewCard from '@/pages/HomeBestDetail/components/elements/ReviewCard/Re
 import RatingBar from '@/pages/HomeBestDetail/components/elements/RatingBar/RatingBar';
 import BookMeta from '@/pages/HomeBestDetail/components/elements/BookMeta/BookMeta';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
-import TabMenu from '@/pages/HomeBestDetail/TabMenu/TabMenu';
+import TabMenu from '@/pages/HomeBestDetail/components/elements/TabMenu/TabMenu';
 
 export default function BookReview() {
   const bookMeta = {

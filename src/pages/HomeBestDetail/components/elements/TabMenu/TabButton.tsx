@@ -1,6 +1,10 @@
 import { useTheme } from '@emotion/react';
 
-import { tabButton, tabCount, tabText } from '@/pages/HomeBestDetail/TabMenu/TabButton.style';
+import {
+  tabButton,
+  tabCount,
+  tabText,
+} from '@/pages/HomeBestDetail/components/elements/TabMenu/TabButton.style';
 
 type TabTypes = {
   tab: string;
@@ -13,7 +17,9 @@ export default function TabButton({ tab, isActive, onClick }: TabTypes) {
 
   const reviewText = (tab: string) => {
     const match = tab.match(/^(.*?)(\s*\(\d+\))$/);
-    if (!match) {return [tab, ''];}
+    if (!match) {
+      return [tab, ''];
+    }
     return [match[1], match[2]];
   };
 
