@@ -15,7 +15,7 @@ export const tabText = (theme: Theme, isActive: boolean) => css`
   gap: 0.4rem;
   height: 100%;
   padding: 1rem 0;
-  border-bottom: ${isActive ? `3px solid ${theme.colors.black1}` : 'none'};
+  border-bottom: ${isActive ? `3px solid ${theme.colors.black1}` : '3px solid transparent'};
   ${isActive ? `${theme.fonts.subtitle2}` : `${theme.fonts.subtitle3}`}
   color:${isActive ? `${theme.colors.black1}` : `${theme.colors.gray4}`}
 `;
