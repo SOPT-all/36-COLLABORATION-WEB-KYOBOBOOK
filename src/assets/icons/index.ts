@@ -10,6 +10,7 @@ import ChangeIcon from '../icons/svg/ic_change.svg?react';
 import CheckIcon from '../icons/svg/ic_check.svg?react';
 import CloseIcon from '../icons/svg/ic_close.svg?react';
 import DeliveryIcon from '../icons/svg/ic_delivery.svg?react';
+import DownIcon from '../icons/svg/ic_down.svg?react';
 import DownloadIcon from '../icons/svg/ic_download.svg?react';
 import FacebookCircleIcon from '../icons/svg/ic_facebook_circle.svg?react';
 import FacebookIcon from '../icons/svg/ic_facebook.svg?react';
@@ -64,6 +65,7 @@ export const iconMap = {
   check: CheckIcon,
   close: CloseIcon,
   delivery: DeliveryIcon,
+  down: DownIcon,
   download: DownloadIcon,
   facebookCircle: FacebookCircleIcon,
   facebook: FacebookIcon,

@@ -7,7 +7,7 @@ import Icon from '@/components/Icon';
 // import FirstCartView from './components/FirstCartView';
 // import SecondCartView from './components/SecondCartView';
 // import ThirdCartView from './components/ThirdCartView';
-// import FourthCartView from './components/FourthCartView';
+import FourthCartView from '@/pages/HomeBestDetailCart/FourthCartView/ForthCartView';
 
 import routePath from '@/routes/routePath';
 const HomeBestDetailCart = () => {
@@ -63,6 +63,7 @@ const HomeBestDetailCart = () => {
       </div>
 
       <main css={s.Body}></main>
+      <FourthCartView />
     </div>
   );
 };
