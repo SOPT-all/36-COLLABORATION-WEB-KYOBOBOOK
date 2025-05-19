@@ -1,4 +1,3 @@
-import { useTheme } from '@emotion/react';
 import type { ReactNode } from 'react';
 
 import { buttonVariantStyles } from './Button.styles';
@@ -10,8 +9,6 @@ type ButtonProps = {
 };
 
 export default function Button({ variant, icon, children }: ButtonProps) {
-  const theme = useTheme();
-
   return (
     <button css={buttonVariantStyles[variant]}>
       {icon && (

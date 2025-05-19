@@ -1,5 +1,3 @@
-// Chip.tsx
-import { useTheme } from '@emotion/react';
 import type { ReactNode } from 'react';
 
 import { chipVariantStyles } from './Chip.styles';
@@ -11,7 +9,6 @@ export type ChipProps = {
 };
 
 export default function Chip({ variant, icon, children }: ChipProps) {
-  const theme = useTheme();
 
   return (
     <span css={chipVariantStyles[variant]}>
