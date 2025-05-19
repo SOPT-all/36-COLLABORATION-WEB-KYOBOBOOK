@@ -2,13 +2,13 @@ import { type CategoryButtonTypes } from '@/pages/HomeBest/HomeBest.constants';
 import * as s from '@/pages/HomeBest/components/CategoryButton/CategoryButton.style';
 import Icon from '@/components/Icon';
 
-interface TopButtonProps extends Omit<CategoryButtonTypes, 'label'> {
+interface CategoryListTypes extends Omit<CategoryButtonTypes, 'label'> {
   active: boolean;
   text: string;
   onClick?: () => void;
 }
 
-const CategoryButton = ({ active, text, onClick, iconName = 'star' }: TopButtonProps) => {
+const CategoryButton = ({ active, text, onClick, iconName = 'star' }: CategoryListTypes) => {
   return (
     <button css={s.buttonStyle(active)} onClick={onClick} type="button">
       <span css={s.iconStyle(active)}>

@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { useTheme } from '@emotion/react';
 
-import MenuButton from './components/MenuButton/MenuButton';
-
+import MenuButton from '@/pages/HomeBest/components/MenuButton/MenuButton';
 import { CategoryButtonList, MENU_BUTTON_LIST } from '@/pages/HomeBest/HomeBest.constants';
 import CategoryButton from '@/pages/HomeBest/components/CategoryButton/CategoryButton';
 import MainHeader from '@/components/MainHeader/MainHeader';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 import * as s from '@/pages/HomeBest/HomeBest.style';
 import Icon from '@/components/Icon';
+
 const HomeBest = () => {
   const theme = useTheme();
   const [activeCategory, setActiveCategory] = useState('종합'); // 기본값 '종합'
