@@ -2,56 +2,56 @@ import { css } from '@emotion/react';
 
 import { theme } from '@/styles/theme';
 
-export const container = css`
+const container = css`
   display: flex;
   border-bottom: 1px solid ${theme.colors.gray2};
   padding: 2.4rem 0;
   gap: 1.4rem;
 `;
 
-export const imageWrapper = css`
+const imageWrapper = css`
   flex-shrink: 0;
   width: 10rem;
   height: 14.4rem;
 `;
 
-export const bookImage = css`
+const bookImage = css`
   width: 100%;
   height: 100%;
   object-fit: cover;
 `;
 
-export const content = css`
+const content = css`
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 `;
 
-export const topRow = css`
+const topRow = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
-export const rankBadgeBase = css`
+const rankBadgeBase = css`
   padding: 0.2rem 0.6rem;
   height: 2.1rem;
   border-radius: 4px;
   ${theme.fonts.caption2};
 `;
 
-export const rankBadgeTop3 = css`
+const rankBadgeTop3 = css`
   background-color: ${theme.colors.green1};
   color: ${theme.colors.white};
 `;
 
-export const rankBadgeOther = css`
+const rankBadgeOther = css`
   background-color: ${theme.colors.gray2};
   color: ${theme.colors.gray6};
 `;
 
-export const likeButton = css`
+const likeButton = css`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,54 +61,54 @@ export const likeButton = css`
   background: none;
 `;
 
-export const titleContainer = css`
+const titleContainer = css`
   display: flex;
   flex-direction: column;
-  gap: 0.2px;
+  gap: 0.2rem;
   margin-bottom: 0.4rem;
 `;
 
-export const title = css`
+const title = css`
   ${theme.fonts.subtitle4};
 `;
 
-export const subtitle = css`
+const subtitle = css`
   color: ${theme.colors.gray4};
   ${theme.fonts.caption3};
 `;
 
-export const priceRow = css`
+const priceRow = css`
   display: flex;
   gap: 0.6rem;
   margin-bottom: 0.6rem;
 `;
 
-export const discount = css`
+const discount = css`
   color: ${theme.colors.green1};
   ${theme.fonts.caption1};
 `;
 
-export const price = css`
+const price = css`
   ${theme.fonts.caption1};
 `;
 
-export const won = css`
+const won = css`
   ${theme.fonts.caption3};
 `;
 
-export const point = css`
+const point = css`
   color: ${theme.colors.gray4};
   ${theme.fonts.caption4};
 `;
 
-export const reviewRow = css`
+const reviewRow = css`
   display: flex;
   align-items: center;
   gap: 0.2rem;
   margin-bottom: 0.4rem;
 `;
 
-export const rating = css`
+const rating = css`
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -120,12 +120,12 @@ export const rating = css`
   }
 `;
 
-export const separator = css`
+const separator = css`
   color: ${theme.colors.gray3};
   ${theme.fonts.caption4};
 `;
 
-export const review = css`
+const review = css`
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -138,13 +138,13 @@ export const review = css`
   }
 `;
 
-export const deliveryRow = css`
+const deliveryRow = css`
   display: flex;
   gap: 0.2rem;
   align-items: center;
 `;
 
-export const deliveryBadge = css`
+const deliveryBadge = css`
   display: flex;
   align-items: center;
   height: 2rem;
@@ -157,10 +157,38 @@ export const deliveryBadge = css`
   ${theme.fonts.caption3};
 `;
 
-export const deliveryDate = css`
+const deliveryDate = css`
   ${theme.fonts.caption1};
 `;
 
-export const deliveryText = css`
+const deliveryText = css`
   ${theme.fonts.caption3};
 `;
+
+export {
+  container,
+  imageWrapper,
+  bookImage,
+  content,
+  topRow,
+  rankBadgeBase,
+  rankBadgeTop3,
+  rankBadgeOther,
+  likeButton,
+  titleContainer,
+  title,
+  subtitle,
+  priceRow,
+  discount,
+  price,
+  won,
+  point,
+  reviewRow,
+  rating,
+  separator,
+  review,
+  deliveryRow,
+  deliveryBadge,
+  deliveryDate,
+  deliveryText,
+};

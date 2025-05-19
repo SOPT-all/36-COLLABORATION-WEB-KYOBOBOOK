@@ -1,5 +1,4 @@
-import BookItem from './components/BookItem/BookItem';
-
+import BookItem from '@/pages/HomeBest/components/BookItem/BookItem';
 import sample from '@/assets/img/sample.png';
 const HomeBest = () => {
   return (
