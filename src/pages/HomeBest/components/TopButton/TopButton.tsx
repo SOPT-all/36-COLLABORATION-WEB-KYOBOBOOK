@@ -12,8 +12,10 @@ interface TopButtonProps extends Omit<TopButtonItemTypes, 'label'> {
 const TopButton = ({ active, text, onClick, iconName = 'star' }: TopButtonProps) => {
   return (
     <button css={s.buttonStyle(active)} onClick={onClick} type="button">
-      <Icon name={iconName} width={24} height={24} fill="currentColor" />
-      {text}
+      <span css={s.iconStyle(active)}>
+        <Icon name={iconName} width={24} height={24} fill="currentColor" />
+      </span>
+      <span css={s.labelStyle(active)}>{text}</span>
     </button>
   );
 };
