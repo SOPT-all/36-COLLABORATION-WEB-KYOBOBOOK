@@ -1,3 +1,5 @@
+import { useTheme } from '@emotion/react';
+
 import {
   iconStyle,
   tabButtonStyle,
@@ -11,9 +13,11 @@ interface MainHeaderTabTypes {
 }
 
 const MainHeaderTab = ({ label, icon, active = false, onClick }: MainHeaderTabTypes) => {
+  const theme = useTheme();
+
   const isStatic = Boolean(icon);
   return (
-    <button css={tabButtonStyle({ active, isStatic })} onClick={onClick}>
+    <button css={tabButtonStyle({ active, isStatic, theme })} onClick={onClick}>
       {label}
       {icon && <span css={iconStyle}>{icon}</span>}
     </button>
