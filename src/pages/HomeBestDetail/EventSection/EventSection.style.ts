@@ -11,4 +11,5 @@ const titleSection = (theme: Theme) => css`
   padding: 0 2.4rem;
   ${theme.fonts.title1};
 `;
+
 export { eventSection, titleSection };

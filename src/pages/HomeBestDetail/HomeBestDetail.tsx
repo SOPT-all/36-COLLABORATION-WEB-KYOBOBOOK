@@ -1,4 +1,5 @@
 import KeywordSection from './KeywordSection/KeywordSection';
+import NoticeSection from './NoticeSection/NoticeSection';
 
 import RatingBar from '@/pages/HomeBestDetail/RatingBar/RatingBar';
 import { data } from '@/pages/HomeBestDetail/EmotionBar/ReviewData';
@@ -35,6 +36,7 @@ const HomeBestDetail = () => {
 
       <KeywordSection />
       <EventSection />
+      <NoticeSection />
     </>
   );
 };
