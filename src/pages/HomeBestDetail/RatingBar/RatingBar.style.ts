@@ -11,7 +11,7 @@ export const percentBar = (theme: Theme) => css`
   width: 20.4rem;
   height: 0.4rem;
   background-color: ${theme.colors.gray2};
-  border-radius: 1rem;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
 `;
