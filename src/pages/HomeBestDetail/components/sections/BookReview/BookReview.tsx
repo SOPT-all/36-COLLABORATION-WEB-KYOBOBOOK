@@ -10,7 +10,7 @@ import TabMenu from '@/pages/HomeBestDetail/components/elements/TabMenu/TabMenu'
 import Icon from '@/components/Icon';
 import EmotionBar from '@/pages/HomeBestDetail/components/elements/EmotionBar/EmotionBar';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
-import { bookReviewStyles as s } from '@/pages/HomeBestDetail/components/sections/BookReview/BookReivew.style'; // 👈 스타일 객체 import
+import { bookReviewStyles as s } from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview.style';
 
 export default function BookReview() {
   const theme = useTheme();
