@@ -2,8 +2,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 
-import Button from '@/components/Button/Button';
-import Chip from '@/components/Chip/Chip';
+import { Button } from '@/components/Button/Button';
+import { Chip } from '@/components/Chip/Chip';
 import { iconMap } from '@/assets/icons';
 import { theme } from '@/styles/theme';
 
@@ -43,16 +43,16 @@ const ButtonChipTestPage = () => {
         <Button variant="mainOutlined">button</Button>
 
         {/* 2. 아이콘 + 텍스트 버튼 4종 */}
-        <Button variant="iconOutlinedPurple" icon={<iconMap.write stroke="currentcolor" />}>button</Button>
-        <Button variant="iconFilledPurple" icon={<iconMap.write fill="currentcolor" />}>button</Button>
-        <Button variant="iconFilledLightPurple" icon={<iconMap.write  />}>button</Button>
+        <Button variant="iconOutlinedPurple" icon={<iconMap.write fill="currentColor" />}>button</Button>
+        <Button variant="iconFilledPurple" icon={<iconMap.write fill="currentColor" />}>button</Button>
+        <Button variant="iconFilledLightPurple" icon={<iconMap.write />}>button</Button>
         <Button variant="iconOutlinedGray" icon={<iconMap.write />}>button</Button>
 
         {/* 3. 찜 버튼 */}
-        <Button variant="iconOnlyHeart" icon={<iconMap.wish width="2.4rem" height="2.4rem" fill="current" />} />
+        <Button variant="iconOnlyHeart" icon={<iconMap.wish width="2.4rem" height="2.4rem" />} />
 
         {/* 4. 다운로드 버튼 */}
-        <Button variant="iconOnlyExcel" icon={<iconMap.download width="1.6rem" height="1.6rem" fill="current" />} />
+        <Button variant="iconOnlyExcel" icon={<iconMap.download width="1.6rem" height="1.6rem"  />} />
       </div>
 
       <h2 css={sectionTitleStyle}>공통 칩 테스트</h2>

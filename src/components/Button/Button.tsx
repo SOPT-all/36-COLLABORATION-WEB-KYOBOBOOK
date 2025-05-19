@@ -1,14 +1,7 @@
-import type { ReactNode } from 'react';
-
 import { buttonVariantStyles } from './Button.styles';
+import type { ButtonTypes } from './buttonTypes';
 
-type ButtonProps = {
-  variant: keyof typeof buttonVariantStyles;
-  icon?: ReactNode;
-  children?: ReactNode;
-};
-
-export default function Button({ variant, icon, children }: ButtonProps) {
+export const Button = ({ variant, icon, children }: ButtonTypes) => {
   return (
     <button css={buttonVariantStyles[variant]}>
       {icon && (
@@ -28,4 +21,4 @@ export default function Button({ variant, icon, children }: ButtonProps) {
       {children}
     </button>
   );
-}
+};

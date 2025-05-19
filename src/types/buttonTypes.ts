@@ -1,8 +1,10 @@
+import type { ReactNode } from 'react';
+
 import { buttonVariantStyles } from '@/components/Button/Button.styles';
 
 export type ButtonVariant = keyof typeof buttonVariantStyles;
 
-export type ButtonProps = {
+export type ButtonTypes = {
   variant: ButtonVariant;
   icon?: React.ReactNode;
   children?: React.ReactNode;

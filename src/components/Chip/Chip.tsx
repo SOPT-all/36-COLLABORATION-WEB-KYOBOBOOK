@@ -1,15 +1,7 @@
-import type { ReactNode } from 'react';
-
 import { chipVariantStyles } from './Chip.styles';
+import type { ChipTypes } from './chipTypes';
 
-export type ChipProps = {
-  variant: keyof typeof chipVariantStyles;
-  icon?: ReactNode;
-  children?: ReactNode;
-};
-
-export default function Chip({ variant, icon, children }: ChipProps) {
-
+export const Chip = ({ variant, icon, children }: ChipTypes) => {
   return (
     <span css={chipVariantStyles[variant]}>
       {icon && (
@@ -28,4 +20,5 @@ export default function Chip({ variant, icon, children }: ChipProps) {
       {children}
     </span>
   );
-}
+};
+

@@ -1,9 +1,11 @@
+import type { ReactNode } from 'react';
+
 import { chipVariantStyles } from '@/components/Chip/Chip.styles';
 
 export type ChipVariant = keyof typeof chipVariantStyles;
 
-export type ChipProps = {
+export type ChipTypes = {
   variant: ChipVariant;
-  icon?: any;
-  children?: any;
+  icon?: ReactNode;
+  children?: ReactNode;
 };

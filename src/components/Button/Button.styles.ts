@@ -10,7 +10,7 @@ export const buttonVariantStyles = {
     color: ${theme.colors.white};
     ${theme.fonts.body1};
     border: none;
-    border-radius: 0.6rem;
+    border-radius: 6px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +23,7 @@ export const buttonVariantStyles = {
     color: ${theme.colors.purple6};
     ${theme.fonts.body1};
     border: 1px solid ${theme.colors.purple7};
-    border-radius: 0.6rem;
+    border-radius: 6px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +36,7 @@ export const buttonVariantStyles = {
     color: ${theme.colors.purple7};
     ${theme.fonts.body1};
     border: 1px solid ${theme.colors.purple7};
-    border-radius: 0.6rem;
+    border-radius: 6px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +49,7 @@ export const buttonVariantStyles = {
     color: ${theme.colors.white};
     ${theme.fonts.body1};
     border: none;
-    border-radius: 0.6rem;
+    border-radius: 6px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +62,7 @@ export const buttonVariantStyles = {
     color: ${theme.colors.black1};
     ${theme.fonts.body1};
     border: none;
-    border-radius: 0.6rem;
+    border-radius: 6px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -75,7 +75,7 @@ export const buttonVariantStyles = {
     color: ${theme.colors.black1};
     ${theme.fonts.body1};
     border: 1px solid ${theme.colors.gray3};
-    border-radius: 0.6rem;
+    border-radius: 6px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -86,7 +86,7 @@ export const buttonVariantStyles = {
     height: 4.8rem;
     background-color: ${theme.colors.white};
     border: 1px solid ${theme.colors.gray3};
-    border-radius: 0.6rem;
+    border-radius: 6px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -96,7 +96,7 @@ export const buttonVariantStyles = {
     height: 2.8rem;
     background-color: ${theme.colors.white};
     border: 1px solid ${theme.colors.gray3};
-    border-radius: 0.4rem;
+    border-radius: 4px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
