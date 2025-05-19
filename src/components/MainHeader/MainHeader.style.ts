@@ -5,7 +5,6 @@ import { theme } from '@/styles/theme';
 const headerContainer = css`
   display: flex;
   flex-direction: column;
-  background-color: ${theme.colors.gray1};
 `;
 
 const searchContainer = css`
@@ -54,17 +53,20 @@ const headerTabWrapper = css`
 
 const layeredWrapper = css`
   position: relative;
-  height: 4.5rem;
-  background-color: ${theme.colors.white};
+  height: 4.4rem;
+  background-color: ${theme.colors.gray1};
+  svg {
+    display: block;
+  }
 `;
 
 const layeredIconWrapper = (index: number) => {
   const styles = [
-    { zIndex: 1, left: '0', bottom: '0.1rem' },
-    { zIndex: 2, left: '0', bottom: '0.1rem' },
-    { zIndex: 3, left: '0', bottom: '0.1rem' },
+    { zIndex: 1, left: '0', bottom: '0' },
+    { zIndex: 2, left: '0', bottom: '0' },
+    { zIndex: 3, left: '0', bottom: '0' },
     { zIndex: 4, left: '0', bottom: '0' },
-    { zIndex: 5, left: '2.4rem', bottom: '0.1rem' },
+    { zIndex: 5, left: '2.4rem', bottom: '0' },
   ];
 
   const { zIndex, left, bottom } = styles[index] ?? styles[0];
