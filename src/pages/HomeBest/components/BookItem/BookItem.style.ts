@@ -23,7 +23,7 @@ const content = css`
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 0.2rem;
 `;
 
 const topRow = css`
@@ -63,8 +63,7 @@ const titleContainer = css`
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  margin-top: 0.1rem;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.6rem;
 `;
 
 const title = (theme: Theme) => css`
@@ -79,7 +78,7 @@ const subtitle = (theme: Theme) => css`
 const priceRow = css`
   display: flex;
   gap: 0.6rem;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.8rem;
 `;
 
 const discount = (theme: Theme) => css`
@@ -104,7 +103,7 @@ const reviewRow = css`
   display: flex;
   align-items: center;
   gap: 0.2rem;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.6rem;
 `;
 
 const rating = (theme: Theme) => css`

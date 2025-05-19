@@ -2,6 +2,7 @@ import BookItem from '@/pages/HomeBest/components/BookItem/BookItem';
 import sample from '@/assets/img/sample.png';
 import Footer from '@/components/Footer/Footer';
 import MainHeader from '@/components/MainHeader/MainHeader';
+
 const HomeBest = () => {
   return (
     <>
