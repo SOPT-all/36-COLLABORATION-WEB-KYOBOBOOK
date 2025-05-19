@@ -4,7 +4,6 @@ import { useTheme } from '@emotion/react';
 import * as s from '@/pages/HomeBest/components/BookItem/BookItem.style';
 import { getRankBadgeInfo } from '@/pages/HomeBest/utils/getRankBadgeStyle';
 import Icon from '@/components/Icon';
-import { theme } from '@/styles/theme';
 
 interface BookItemPropTypes {
   rank: number;
