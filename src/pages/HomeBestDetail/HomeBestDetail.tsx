@@ -1,3 +1,5 @@
+import KeywordSection from "./KeywordSection/KeywordSection";
+
 import RatingBar from '@/pages/HomeBestDetail/RatingBar/RatingBar';
 import { data } from '@/pages/HomeBestDetail/EmotionBar/ReviewData';
 import BookMeta from '@/pages/HomeBestDetail/BookMeta/BookMeta';
@@ -29,6 +31,8 @@ const HomeBestDetail = () => {
           return <RatingBar key={rating} rating={rating} percent={percent} />;
         })}
       </div>
+
+      <KeywordSection />
     </>
   );
 };
