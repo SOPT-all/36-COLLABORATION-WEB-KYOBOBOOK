@@ -1,16 +1,16 @@
 import {
   iconStyle,
   tabButtonStyle,
-} from '@/components/Header/HeaderTabButton/HeaderTabButton.style';
+} from '@/components/MainHeader/MainHeaderTab/MainHeaderTab.style';
 
-interface TabButtonPropTypes {
+interface MainHeaderTabTypes {
   label: string;
   icon?: React.ReactNode;
   active?: boolean;
   onClick?: () => void;
 }
 
-const HeaderTabButton = ({ label, icon, active = false, onClick }: TabButtonPropTypes) => {
+const MainHeaderTab = ({ label, icon, active = false, onClick }: MainHeaderTabTypes) => {
   const isStatic = Boolean(icon);
   return (
     <button css={tabButtonStyle({ active, isStatic })} onClick={onClick}>
@@ -20,4 +20,4 @@ const HeaderTabButton = ({ label, icon, active = false, onClick }: TabButtonProp
   );
 };
 
-export default HeaderTabButton;
+export default MainHeaderTab;

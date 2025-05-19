@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { theme } from '@/styles/theme';
 
-export const tabButtonStyle = ({ active, isStatic }: { active: boolean; isStatic: boolean }) => css`
+const tabButtonStyle = ({ active, isStatic }: { active: boolean; isStatic: boolean }) => css`
   display: flex;
   align-items: center;
   gap: 0.2rem;
@@ -14,8 +14,10 @@ export const tabButtonStyle = ({ active, isStatic }: { active: boolean; isStatic
   white-space: nowrap;
 `;
 
-export const iconStyle = css`
+const iconStyle = css`
   display: flex;
   align-items: center;
   padding-bottom: 1.2rem;
 `;
+
+export { tabButtonStyle, iconStyle };

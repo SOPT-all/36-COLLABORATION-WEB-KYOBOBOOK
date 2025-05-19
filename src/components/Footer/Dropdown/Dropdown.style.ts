@@ -2,13 +2,13 @@ import { css } from '@emotion/react';
 
 import { theme } from '@/styles/theme';
 
-export const dropdownWrapper = css`
+const dropdownWrapper = css`
   display: inline-block;
   position: relative;
   width: 100%;
 `;
 
-export const triggerButton = css`
+const triggerButton = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,7 +25,7 @@ export const triggerButton = css`
   color: ${theme.colors.black1};
 `;
 
-export const dropdownMenu = css`
+const dropdownMenu = css`
   position: absolute;
   bottom: 100%;
   left: 0;
@@ -43,3 +43,5 @@ export const dropdownMenu = css`
     padding: 1.2rem 2rem;
   }
 `;
+
+export { dropdownWrapper, triggerButton, dropdownMenu };

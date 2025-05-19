@@ -3,11 +3,11 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import routePath from '@/routes/routePath';
 import Icon from '@/components/Icon';
 import { theme } from '@/styles/theme';
-import * as s from '@/components/Header/Header.style';
-import { HeaderTabs } from '@/components/Header/HeaderTabButton/HeaderTabs';
-import TabButton from '@/components/Header/HeaderTabButton/HeaderTabButton';
+import * as s from '@/components/MainHeader/MainHeader.style';
+import { MainHeaderTab } from '@/components/MainHeader/MainHeaderTab.constants';
+import TabButton from '@/components/MainHeader/MainHeaderTab/MainHeaderTab';
 
-const Header = () => {
+const MainHeader = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -49,7 +49,7 @@ const Header = () => {
       </div>
 
       <div css={s.headerTabWrapper}>
-        {HeaderTabs.map(({ label, icon, route }) => (
+        {MainHeaderTab.map(({ label, icon, route }) => (
           <TabButton
             key={label}
             label={label}
@@ -63,4 +63,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MainHeader;

@@ -2,13 +2,13 @@ import { css } from '@emotion/react';
 
 import { theme } from '@/styles/theme';
 
-export const headerContainer = css`
+const headerContainer = css`
   display: flex;
   flex-direction: column;
   background-color: ${theme.colors.gray1};
 `;
 
-export const searchContainer = css`
+const searchContainer = css`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@ export const searchContainer = css`
   background-color: ${theme.colors.white};
 `;
 
-export const searchInputWrapper = css`
+const searchInputWrapper = css`
   display: flex;
   align-items: center;
   flex: 1 0 0;
@@ -30,7 +30,7 @@ export const searchInputWrapper = css`
   background-color: ${theme.colors.gray1};
 `;
 
-export const searchInput = css`
+const searchInput = css`
   flex: 1;
   border: none;
   outline: none;
@@ -40,11 +40,11 @@ export const searchInput = css`
   color: ${theme.colors.gray4};
 `;
 
-export const cartIconWrapper = css`
+const cartIconWrapper = css`
   padding: 0.8rem 0.4rem;
 `;
 
-export const headerTabWrapper = css`
+const headerTabWrapper = css`
   display: flex;
   padding: 0.8rem 2.4rem;
   height: 5rem;
@@ -52,13 +52,13 @@ export const headerTabWrapper = css`
   background-color: ${theme.colors.white};
 `;
 
-export const layeredWrapper = css`
+const layeredWrapper = css`
   position: relative;
   height: 4.5rem;
   background-color: ${theme.colors.white};
 `;
 
-export const layeredIconWrapper = (index: number) => {
+const layeredIconWrapper = (index: number) => {
   const styles = [
     { zIndex: 1, left: '0', bottom: '0.1rem' },
     { zIndex: 2, left: '0', bottom: '0.1rem' },
@@ -75,4 +75,15 @@ export const layeredIconWrapper = (index: number) => {
     bottom: ${bottom};
     z-index: ${zIndex};
   `;
+};
+
+export {
+  headerContainer,
+  searchContainer,
+  searchInputWrapper,
+  searchInput,
+  cartIconWrapper,
+  headerTabWrapper,
+  layeredWrapper,
+  layeredIconWrapper,
 };

@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { theme } from '@/styles/theme';
 
-export const legalButtonBorder = css`
+const legalButtonBorder = css`
   position: relative;
   padding: 1rem 0.6rem 1rem 0.5rem;
 
@@ -16,3 +16,5 @@ export const legalButtonBorder = css`
     border-left: 1px solid ${theme.colors.gray3};
   }
 `;
+
+export { legalButtonBorder };

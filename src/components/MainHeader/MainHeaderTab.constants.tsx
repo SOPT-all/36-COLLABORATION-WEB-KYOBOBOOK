@@ -1,13 +1,13 @@
 import Icon from '@/components/Icon';
 import routePath from '@/routes/routePath';
 
-interface HeaderTabItemTypes {
+interface MainHeaderTabItemTypes {
   label: string;
   icon?: React.ReactNode;
   route?: string;
 }
 
-export const HeaderTabs: HeaderTabItemTypes[] = [
+export const MainHeaderTab: MainHeaderTabItemTypes[] = [
   {
     label: '한강 신작',
     icon: <Icon name="dot" width={4} height={4} />,

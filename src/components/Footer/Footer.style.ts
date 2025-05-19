@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { theme } from '@/styles/theme';
 
-export const noticeContainer = css`
+const noticeContainer = css`
   display: flex;
   align-items: center;
   gap: 1.7rem;
@@ -13,24 +13,24 @@ export const noticeContainer = css`
   background: ${theme.colors.gray1};
 `;
 
-export const noticeStyle = css`
+const noticeStyle = css`
   ${theme.fonts.subtitle4};
 `;
 
-export const linkStyle = css`
+const linkStyle = css`
   ${theme.fonts.body3};
   text-decoration: underline;
   text-decoration-skip-ink: none;
   text-underline-position: from-font;
 `;
 
-export const logoContainer = css`
+const logoContainer = css`
   display: flex;
   padding: 2.8rem 2.4rem 2rem;
   justify-content: space-between;
 `;
 
-export const businessInfoContainer = css`
+const businessInfoContainer = css`
   display: flex;
   padding: 0.2rem 0 0;
   gap: 0.2rem;
@@ -39,49 +39,65 @@ export const businessInfoContainer = css`
   color: ${theme.colors.gray4};
 `;
 
-export const authButtonsContainer = css`
+const authButtonsContainer = css`
   display: flex;
   padding-left: 1.4rem;
   ${theme.fonts.body1};
 `;
 
-export const authButton = css`
+const authButton = css`
   all: unset;
   padding: 1rem;
 `;
 
-export const legalButtonsContainer = css`
+const legalButtonsContainer = css`
   all: unset;
   padding: 0 0 0 1.8rem;
   ${theme.fonts.caption3};
   color: ${theme.colors.gray5};
 `;
 
-export const legalButton = css`
+const legalButton = css`
   all: unset;
   padding: 1rem 0.6rem;
 `;
 
-export const dropdwonContainer = css`
+const dropdwonContainer = css`
   padding: 2rem 2.4rem 0 2.4rem;
   width: 100%;
 `;
 
-export const snsButtonContainer = css`
+const snsButtonContainer = css`
   display: flex;
   justify-content: space-between;
   padding: 1.2rem 2.4rem;
 `;
 
-export const snsButtonWrapper = css`
+const snsButtonWrapper = css`
   display: flex;
   gap: 0.8rem;
 `;
 
-export const designSystemWrapper = css`
+const designSystemWrapper = css`
   display: flex;
   gap: 0.4rem;
   align-items: center;
   ${theme.fonts.caption3}
   color: ${theme.colors.gray4};
 `;
+
+export {
+  noticeContainer,
+  noticeStyle,
+  linkStyle,
+  logoContainer,
+  businessInfoContainer,
+  authButtonsContainer,
+  authButton,
+  legalButtonsContainer,
+  legalButton,
+  dropdwonContainer,
+  snsButtonContainer,
+  snsButtonWrapper,
+  designSystemWrapper,
+};
