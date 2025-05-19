@@ -1,7 +1,6 @@
 import RatingBar from '@/pages/HomeBestDetail/RatingBar/RatingBar';
 import { data } from '@/pages/HomeBestDetail/EmotionBar/ReviewData';
 import BookMeta from '@/pages/HomeBestDetail/BookMeta/BookMeta';
-import { metaWrapper } from '@/pages/HomeBestDetail/HomeBestDetail.Style';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 
 const HomeBestDetail = () => {
