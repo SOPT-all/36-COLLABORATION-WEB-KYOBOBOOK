@@ -1,7 +1,6 @@
 import { useTheme } from '@emotion/react';
 
-import { reviewCardStyle as s } from './ReviewCard.style';
-
+import { reviewCardStyle as s } from '@/pages/HomeBestDetail/components/elements/ReviewCard/ReviewCard.style';
 import Icon from '@/components/Icon';
 import type { ReviewTypes } from '@/types/reviewTypes';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
