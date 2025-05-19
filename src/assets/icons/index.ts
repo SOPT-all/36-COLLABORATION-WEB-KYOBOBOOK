@@ -6,9 +6,11 @@ import BellIcon from '../icons/svg/ic_bell.svg?react';
 import BestIcon from '../icons/svg/ic_best.svg?react';
 import CaptionIcon from '../icons/svg/ic_caption.svg?react';
 import CartIcon from '../icons/svg/ic_cart.svg?react';
+import CartBookIcon from '../icons/svg/ic_cart_book.svg?react';
 import ChangeIcon from '../icons/svg/ic_change.svg?react';
 import CheckIcon from '../icons/svg/ic_check.svg?react';
 import CloseIcon from '../icons/svg/ic_close.svg?react';
+import DeliveryBarIcon from '../icons/svg/ic_delivery_bar.svg?react';
 import DeliveryIcon from '../icons/svg/ic_delivery.svg?react';
 import DownIcon from '../icons/svg/ic_down.svg?react';
 import DownloadIcon from '../icons/svg/ic_download.svg?react';
@@ -61,9 +63,11 @@ export const iconMap = {
   best: BestIcon,
   caption: CaptionIcon,
   cart: CartIcon,
+  cartBook: CartBookIcon,
   change: ChangeIcon,
   check: CheckIcon,
   close: CloseIcon,
+  deliveryBar: DeliveryBarIcon,
   delivery: DeliveryIcon,
   down: DownIcon,
   download: DownloadIcon,

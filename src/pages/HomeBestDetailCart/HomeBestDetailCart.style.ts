@@ -102,12 +102,12 @@ const kyoboChip = (theme: Theme) => css`
 const placeButton = (theme: Theme) => css`
   display: flex;
   align-items: center;
-  padding: 0.4rem 0.75rem;
   font: ${theme.fonts.caption3};
   color: ${theme.colors.black1};
   background-color: ${theme.colors.white};
   border: 1px solid ${theme.colors.gray3};
   border-radius: 0.3rem;
+  padding: 0.4rem 0.75rem;
   cursor: pointer;
 `;
 
@@ -115,7 +115,7 @@ const Body = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  padding: 0.75rem;
+  padding: 1.2rem 0rem;
   background-color: ${theme.colors.gray1};
 `;
 

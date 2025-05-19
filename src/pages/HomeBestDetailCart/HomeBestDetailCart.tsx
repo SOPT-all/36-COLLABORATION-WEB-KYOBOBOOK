@@ -4,12 +4,13 @@ import { HomeBestDetailCartStyle as s } from '@/pages/HomeBestDetailCart/HomeBes
 import Icon from '@/components/Icon';
 // import Chip from '@/components/Chip/Chip';
 
-// import FirstCartView from './components/FirstCartView';
+import FirstCartView from '@/pages/HomeBestDetailCart/FirstCartView/FirstCartView';
 // import SecondCartView from './components/SecondCartView';
 // import ThirdCartView from './components/ThirdCartView';
 import FourthCartView from '@/pages/HomeBestDetailCart/FourthCartView/ForthCartView';
 
 import routePath from '@/routes/routePath';
+
 const HomeBestDetailCart = () => {
   const navigate = useNavigate();
 
@@ -62,8 +63,10 @@ const HomeBestDetailCart = () => {
         <button css={s.kyoboChip}>교보문고</button>
       </div>
 
-      <main css={s.Body}></main>
-      <FourthCartView />
+      <main css={s.Body}>
+        <FirstCartView />
+        <FourthCartView />
+      </main>
     </div>
   );
 };
