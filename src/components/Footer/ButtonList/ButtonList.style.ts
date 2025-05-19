@@ -1,8 +1,7 @@
-import { css } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
-import { theme } from '@/styles/theme';
 
-const legalButtonBorder = css`
+const legalButtonBorder = (theme: Theme) => css`
   position: relative;
   padding: 1rem 0.6rem 1rem 0.5rem;
 

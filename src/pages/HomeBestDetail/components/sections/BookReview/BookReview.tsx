@@ -1,10 +1,11 @@
-import ReviewCard from '@/pages/HomeBestDetail/components/elements/ReviewCard/ReviewCard';
+import type { ReviewTypes } from '@/types/reviewTypes';
 import { reviewData } from '@/sampleData/reviewData';
-import RatingBar from '@/pages/HomeBestDetail/components/elements/RatingBar/RatingBar';
 import { ratingData } from '@/sampleData/ratingData';
+import ReviewCard from '@/pages/HomeBestDetail/components/elements/ReviewCard/ReviewCard';
+import RatingBar from '@/pages/HomeBestDetail/components/elements/RatingBar/RatingBar';
 import BookMeta from '@/pages/HomeBestDetail/components/elements/BookMeta/BookMeta';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
-import type { ReviewTypes } from '@/types/reviewTypes';
+import TabMenu from '@/pages/HomeBestDetail/TabMenu/TabMenu';
 
 export default function BookReview() {
   const bookMeta = {
@@ -21,11 +22,15 @@ export default function BookReview() {
 
   return (
     <>
+      <div>
+        <TabMenu type="default" />
+      </div>
       <HorizontalScrollList gap="0" sidePadding="0">
         {Object.entries(bookMeta).map(([title, content], index) => {
           return <BookMeta key={title} title={title} content={content} index={index} />;
         })}
       </HorizontalScrollList>
+
       <div>
         {sortedStar.map(([key, percent]) => {
           const rating = Number(key);

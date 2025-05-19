@@ -1,13 +1,15 @@
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useTheme } from '@emotion/react';
 
 import routePath from '@/routes/routePath';
 import Icon from '@/components/Icon';
-import { theme } from '@/styles/theme';
 import * as s from '@/components/MainHeader/MainHeader.style';
 import { MainHeaderTab } from '@/components/MainHeader/MainHeaderTab.constants';
 import TabButton from '@/components/MainHeader/MainHeaderTab/MainHeaderTab';
 
 const MainHeader = () => {
+  const theme = useTheme();
+
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -15,8 +17,8 @@ const MainHeader = () => {
     navigate(routePath.HOME);
   };
   return (
-    <div css={s.headerContainer}>
-      <div css={s.layeredWrapper}>
+    <div css={s.headerContainer(theme)}>
+      <div css={s.layeredWrapper(theme)}>
         <div css={s.layeredIconWrapper(0)}>
           <Icon name="navHottracks" width={375} height={30} />
         </div>
@@ -34,11 +36,11 @@ const MainHeader = () => {
         </div>
       </div>
 
-      <div css={s.searchContainer}>
-        <div css={s.searchInputWrapper}>
+      <div css={s.searchContainer(theme)}>
+        <div css={s.searchInputWrapper(theme)}>
           <Icon name="search" width={24} height={24} fill={`${theme.colors.gray5}`} />
           <input
-            css={s.searchInput}
+            css={s.searchInput(theme)}
             type="text"
             placeholder="SBS 그알 화제의 법의학자 유성호, 신작"
           />
@@ -48,7 +50,7 @@ const MainHeader = () => {
         </div>
       </div>
 
-      <div css={s.headerTabWrapper}>
+      <div css={s.headerTabWrapper(theme)}>
         {MainHeaderTab.map(({ label, icon, route }) => (
           <TabButton
             key={label}

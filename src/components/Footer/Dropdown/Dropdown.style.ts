@@ -1,6 +1,4 @@
-import { css } from '@emotion/react';
-
-import { theme } from '@/styles/theme';
+import { css, type Theme } from '@emotion/react';
 
 const dropdownWrapper = css`
   display: inline-block;
@@ -8,7 +6,7 @@ const dropdownWrapper = css`
   width: 100%;
 `;
 
-const triggerButton = css`
+const triggerButton = (theme: Theme) => css`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,7 +23,7 @@ const triggerButton = css`
   color: ${theme.colors.black1};
 `;
 
-const dropdownMenu = css`
+const dropdownMenu = (theme: Theme) => css`
   position: absolute;
   bottom: 100%;
   left: 0;
