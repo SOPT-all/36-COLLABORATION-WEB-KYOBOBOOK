@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTheme } from '@emotion/react';
 
 import * as s from '@/pages/HomeBest/components/BookItem/BookItem.style';
 import { getRankBadgeInfo } from '@/pages/HomeBest/utils/getRankBadgeStyle';
@@ -34,6 +35,8 @@ const BookItem = ({
   isLiked: defaultLiked,
   imageUrl,
 }: BookItemPropTypes) => {
+  const theme = useTheme();
+
   const { text, isTop3 } = getRankBadgeInfo(rank);
   const [isLiked, setIsLiked] = useState(defaultLiked);
 
@@ -42,14 +45,21 @@ const BookItem = ({
   };
 
   return (
-    <div css={s.container}>
+    <div css={s.container(theme)}>
       <div css={s.imageWrapper}>
         <img src={imageUrl} alt={title} css={s.bookImage} />
       </div>
 
       <div css={s.content}>
         <div css={s.topRow}>
-          <span css={[s.rankBadgeBase, isTop3 ? s.rankBadgeTop3 : s.rankBadgeOther]}>{text}</span>
+          <span
+            css={[
+              s.rankBadgeBase(theme),
+              isTop3 ? s.rankBadgeTop3(theme) : s.rankBadgeOther(theme),
+            ]}
+          >
+            {text}
+          </span>
           <button css={s.likeButton} onClick={toggleLike}>
             <Icon
               name={isLiked ? 'wishFill' : 'wish'}
@@ -60,36 +70,36 @@ const BookItem = ({
           </button>
         </div>
         <div css={s.titleContainer}>
-          <h3 css={s.title}>{title}</h3>
-          <div css={s.subtitle}>
+          <h3 css={s.title(theme)}>{title}</h3>
+          <div css={s.subtitle(theme)}>
             {author} · {publisher}
           </div>
         </div>
 
         <div css={s.priceRow}>
-          <span css={s.discount}>{discountRate}%</span>
+          <span css={s.discount(theme)}>{discountRate}%</span>
           <div>
-            <span css={s.price}>{price.toLocaleString()}</span>
-            <span css={s.won}>원</span>
+            <span css={s.price(theme)}>{price.toLocaleString()}</span>
+            <span css={s.won(theme)}>원</span>
           </div>
-          <span css={s.point}>({point}P)</span>
+          <span css={s.point(theme)}>({point}P)</span>
         </div>
 
         <div css={s.reviewRow}>
-          <span css={s.rating}>
+          <span css={s.rating(theme)}>
             <Icon name="star" width={14} height={14} /> {rating}
           </span>
-          <span css={s.separator}>/</span>
-          <span css={s.review}>
+          <span css={s.separator(theme)}>/</span>
+          <span css={s.review(theme)}>
             <Icon name="quote" width={14} height={14} />
             {review}
           </span>
         </div>
 
         <div css={s.deliveryRow}>
-          <span css={s.deliveryBadge}>당일배송</span>
-          <span css={s.deliveryDate}>{deliveryDate}</span>
-          <span css={s.deliveryText}>도착</span>
+          <span css={s.deliveryBadge(theme)}>당일배송</span>
+          <span css={s.deliveryDate(theme)}>{deliveryDate}</span>
+          <span css={s.deliveryText(theme)}>도착</span>
         </div>
       </div>
     </div>

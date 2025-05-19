@@ -1,8 +1,6 @@
-import { css } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
-import { theme } from '@/styles/theme';
-
-const container = css`
+const container = (theme: Theme) => css`
   display: flex;
   border-bottom: 1px solid ${theme.colors.gray2};
   padding: 2.4rem 0;
@@ -25,7 +23,7 @@ const content = css`
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.1rem;
 `;
 
 const topRow = css`
@@ -34,19 +32,19 @@ const topRow = css`
   align-items: center;
 `;
 
-const rankBadgeBase = css`
+const rankBadgeBase = (theme: Theme) => css`
   padding: 0.2rem 0.6rem;
   height: 2.1rem;
   border-radius: 4px;
   ${theme.fonts.caption2};
 `;
 
-const rankBadgeTop3 = css`
+const rankBadgeTop3 = (theme: Theme) => css`
   background-color: ${theme.colors.green1};
   color: ${theme.colors.white};
 `;
 
-const rankBadgeOther = css`
+const rankBadgeOther = (theme: Theme) => css`
   background-color: ${theme.colors.gray2};
   color: ${theme.colors.gray6};
 `;
@@ -65,14 +63,15 @@ const titleContainer = css`
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  margin-bottom: 0.4rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.7rem;
 `;
 
-const title = css`
+const title = (theme: Theme) => css`
   ${theme.fonts.subtitle4};
 `;
 
-const subtitle = css`
+const subtitle = (theme: Theme) => css`
   color: ${theme.colors.gray4};
   ${theme.fonts.caption3};
 `;
@@ -80,23 +79,23 @@ const subtitle = css`
 const priceRow = css`
   display: flex;
   gap: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.9rem;
 `;
 
-const discount = css`
+const discount = (theme: Theme) => css`
   color: ${theme.colors.green1};
   ${theme.fonts.caption1};
 `;
 
-const price = css`
+const price = (theme: Theme) => css`
   ${theme.fonts.caption1};
 `;
 
-const won = css`
+const won = (theme: Theme) => css`
   ${theme.fonts.caption3};
 `;
 
-const point = css`
+const point = (theme: Theme) => css`
   color: ${theme.colors.gray4};
   ${theme.fonts.caption4};
 `;
@@ -105,10 +104,10 @@ const reviewRow = css`
   display: flex;
   align-items: center;
   gap: 0.2rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.7rem;
 `;
 
-const rating = css`
+const rating = (theme: Theme) => css`
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -120,12 +119,12 @@ const rating = css`
   }
 `;
 
-const separator = css`
+const separator = (theme: Theme) => css`
   color: ${theme.colors.gray3};
   ${theme.fonts.caption4};
 `;
 
-const review = css`
+const review = (theme: Theme) => css`
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -144,7 +143,7 @@ const deliveryRow = css`
   align-items: center;
 `;
 
-const deliveryBadge = css`
+const deliveryBadge = (theme: Theme) => css`
   display: flex;
   align-items: center;
   height: 2rem;
@@ -157,11 +156,11 @@ const deliveryBadge = css`
   ${theme.fonts.caption3};
 `;
 
-const deliveryDate = css`
+const deliveryDate = (theme: Theme) => css`
   ${theme.fonts.caption1};
 `;
 
-const deliveryText = css`
+const deliveryText = (theme: Theme) => css`
   ${theme.fonts.caption3};
 `;
 

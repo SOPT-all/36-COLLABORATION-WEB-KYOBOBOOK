@@ -1,5 +1,6 @@
 import BookItem from '@/pages/HomeBest/components/BookItem/BookItem';
 import sample from '@/assets/img/sample.png';
+import Footer from "@/components/Footer/Footer";
 const HomeBest = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const HomeBest = () => {
         isLiked={false}
         imageUrl={sample}
       />
+      <Footer />
     </>
   );
 };
