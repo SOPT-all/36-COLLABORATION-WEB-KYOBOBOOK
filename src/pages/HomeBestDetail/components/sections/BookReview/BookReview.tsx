@@ -32,7 +32,7 @@ export default function BookReview() {
           return <RatingBar key={rating} rating={rating} percent={percent} />;
         })}
       </div>
-      <HorizontalScrollList gap="1rem" sidePadding="0">
+      <HorizontalScrollList gap="1rem" sidePadding="0" effect={true}>
         {reviewData.reviewList.map((review: ReviewTypes) => (
           <ReviewCard key={review.id} reviewData={review} />
         ))}

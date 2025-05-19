@@ -8,7 +8,6 @@ export const reviewCardStyle = {
     display: flex;
     flex-direction: column;
     width: 26.4rem;
-    height: 39.3rem;
     border: 1px solid ${theme.colors.gray1};
     border-radius: 1rem;
     overflow: hidden;
