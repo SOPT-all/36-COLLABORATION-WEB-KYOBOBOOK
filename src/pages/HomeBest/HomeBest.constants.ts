@@ -1,7 +1,7 @@
 import type { iconMap } from '@/assets/icons';
 
 export interface CategoryButtonTypes {
-  label: string;
+  label: '종합' | '온라인' | '실시간' | '매장별' | '인물';
   iconName: keyof typeof iconMap;
 }
 

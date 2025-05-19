@@ -2,7 +2,11 @@ import { useState } from 'react';
 import { useTheme } from '@emotion/react';
 
 import MenuButton from '@/pages/HomeBest/components/MenuButton/MenuButton';
-import { CategoryButtonList, MENU_BUTTON_LIST } from '@/pages/HomeBest/HomeBest.constants';
+import {
+  CategoryButtonList,
+  MENU_BUTTON_LIST,
+  type CategoryButtonTypes,
+} from '@/pages/HomeBest/HomeBest.constants';
 import CategoryButton from '@/pages/HomeBest/components/CategoryButton/CategoryButton';
 import MainHeader from '@/components/MainHeader/MainHeader';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
@@ -11,7 +15,7 @@ import Icon from '@/components/Icon';
 
 const HomeBest = () => {
   const theme = useTheme();
-  const [activeCategory, setActiveCategory] = useState('종합');
+  const [activeCategory, setActiveCategory] = useState<CategoryButtonTypes['label']>('종합');
   const [activeMenu, setActiveMenu] = useState(0);
   const today = new Date();
   const formattedDate = `${today.getFullYear()}.${String(today.getMonth() + 1).padStart(2, '0')}.${String(today.getDate()).padStart(2, '0')}`;
