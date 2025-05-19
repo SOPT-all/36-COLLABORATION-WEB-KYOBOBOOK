@@ -1,15 +1,14 @@
-import * as s from './TopButton.style';
-import type { TopButtonItemTypes } from './TopButton.constants';
-
+import { type CategoryButtonTypes } from '@/pages/HomeBest/HomeBest.constants';
+import * as s from '@/pages/HomeBest/components/CategoryButton/CategoryButton.style';
 import Icon from '@/components/Icon';
 
-interface TopButtonProps extends Omit<TopButtonItemTypes, 'label'> {
+interface TopButtonProps extends Omit<CategoryButtonTypes, 'label'> {
   active: boolean;
   text: string;
   onClick?: () => void;
 }
 
-const TopButton = ({ active, text, onClick, iconName = 'star' }: TopButtonProps) => {
+const CategoryButton = ({ active, text, onClick, iconName = 'star' }: TopButtonProps) => {
   return (
     <button css={s.buttonStyle(active)} onClick={onClick} type="button">
       <span css={s.iconStyle(active)}>
@@ -20,4 +19,4 @@ const TopButton = ({ active, text, onClick, iconName = 'star' }: TopButtonProps)
   );
 };
 
-export default TopButton;
+export default CategoryButton;

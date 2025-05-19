@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { theme } from '@/styles/theme';
 
-export const buttonStyle = (active: boolean) => css`
+const buttonStyle = (active: boolean) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,14 +15,16 @@ export const buttonStyle = (active: boolean) => css`
   background-color: ${active ? theme.colors.green1 : theme.colors.white};
 `;
 
-export const iconStyle = (active: boolean) => css`
+const iconStyle = (active: boolean) => css`
   display: flex;
   margin-top: 0.333rem;
   color: ${active ? theme.colors.white : theme.colors.gray4};
 `;
 
-export const labelStyle = (active: boolean) => css`
+const labelStyle = (active: boolean) => css`
   color: ${active ? theme.colors.white : theme.colors.gray6};
 
   ${theme.fonts.caption3};
 `;
+
+export { buttonStyle, iconStyle, labelStyle };
