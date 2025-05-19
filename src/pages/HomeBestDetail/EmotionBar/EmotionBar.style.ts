@@ -8,7 +8,7 @@ export const barWrapper = css`
 
 export const barBackground = (theme: Theme) => css`
   background-color: ${theme.colors.gray1};
-  border-radius: 0.4rem;
+  border-radius: 4px;
   width: 100%;
 `;
 
@@ -20,7 +20,7 @@ export const barFill = (percent: number, theme: Theme) => css`
       : theme.colors.purple1};
   width: ${percent}%;
   height: 100%;
-  border-radius: 0.4rem 0 0 0.4rem;
+  border-radius: 4px 0 0 0.4px;
   position: absolute;
   top: 0;
   left: 0;
