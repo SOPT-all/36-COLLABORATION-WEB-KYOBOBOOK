@@ -1,12 +1,17 @@
-import { buttonVariantStyles } from './buttonStyle';
+import { useTheme } from '@emotion/react';
+import type { ReactNode } from 'react';
+
+import { buttonVariantStyles } from './Button.styles';
 
 type ButtonProps = {
   variant: keyof typeof buttonVariantStyles;
-  icon?: React.ReactNode;
-  children?: React.ReactNode;
+  icon?: ReactNode;
+  children?: ReactNode;
 };
 
-export const Button = ({ variant, icon, children }: ButtonProps) => {
+export default function Button({ variant, icon, children }: ButtonProps) {
+  const theme = useTheme();
+
   return (
     <button css={buttonVariantStyles[variant]}>
       {icon && (
@@ -14,9 +19,9 @@ export const Button = ({ variant, icon, children }: ButtonProps) => {
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            marginRight: children ? '0.125rem' : 0, // 아이콘-only일 때는 마진 제거
+            marginRight: children ? '0.125rem' : 0,
             verticalAlign: 'middle',
-            lineHeight: 0, 
+            lineHeight: 0,
             color: 'currentColor',
           }}
         >
@@ -26,6 +31,4 @@ export const Button = ({ variant, icon, children }: ButtonProps) => {
       {children}
     </button>
   );
-};
-
-
+}

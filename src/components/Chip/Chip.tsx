@@ -1,12 +1,34 @@
-import { chipVariantStyles } from './chipStyle';
+// Chip.tsx
+import { useTheme } from '@emotion/react';
+import type { ReactNode } from 'react';
+
+import { chipVariantStyles } from './Chip.styles';
 
 export type ChipProps = {
   variant: keyof typeof chipVariantStyles;
-  children: React.ReactNode;
+  icon?: ReactNode;
+  children?: ReactNode;
 };
 
-const Chip = ({ variant, children }: ChipProps) => {
-  return <span css={chipVariantStyles[variant]}>{children}</span>;
-};
+export default function Chip({ variant, icon, children }: ChipProps) {
+  const theme = useTheme();
 
-export default Chip;
+  return (
+    <span css={chipVariantStyles[variant]}>
+      {icon && (
+        <span
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            marginRight: children ? '0.4rem' : 0,
+            lineHeight: 0,
+            color: 'currentColor',
+          }}
+        >
+          {icon}
+        </span>
+      )}
+      {children}
+    </span>
+  );
+}

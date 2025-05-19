@@ -10,7 +10,7 @@ const pageRoutes = [
   { path: routePath.HOME_BEST, element: <HomeBest /> },
   { path: routePath.HOME_BEST_DETAIL, element: <HomeBestDetail /> },
   { path: routePath.HOME_BEST_DETAIL_CART, element: <HomeBestDetailCart /> },
-  { path: '/button-chip-test', element: <ButtonChipTestPage /> },
+  { path: routePath.TEST_BUTTON_CHIP, element: <ButtonChipTestPage /> }
 ];
 
 export default pageRoutes;
