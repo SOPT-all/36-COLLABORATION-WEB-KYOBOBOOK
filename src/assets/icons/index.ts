@@ -10,7 +10,6 @@ import CartBookIcon from '../icons/svg/ic_cart_book.svg?react';
 import ChangeIcon from '../icons/svg/ic_change.svg?react';
 import CheckIcon from '../icons/svg/ic_check.svg?react';
 import CloseIcon from '../icons/svg/ic_close.svg?react';
-import DeliveryBarIcon from '../icons/svg/ic_delivery_bar.svg?react';
 import DeliveryIcon from '../icons/svg/ic_delivery.svg?react';
 import DownIcon from '../icons/svg/ic_down.svg?react';
 import DownloadIcon from '../icons/svg/ic_download.svg?react';
@@ -67,7 +66,6 @@ export const iconMap = {
   change: ChangeIcon,
   check: CheckIcon,
   close: CloseIcon,
-  deliveryBar: DeliveryBarIcon,
   delivery: DeliveryIcon,
   down: DownIcon,
   download: DownloadIcon,
