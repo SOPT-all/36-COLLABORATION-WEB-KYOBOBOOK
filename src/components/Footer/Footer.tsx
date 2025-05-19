@@ -1,6 +1,6 @@
 import Dropdown from '@/components/Footer/Dropdown/Dropdown';
 import * as s from '@/components/Footer/Footer.style';
-import { authButtonLabels, legalButtonLabels } from '@/components/Footer/Footer.constants';
+import { AUTH_BUTTON_LABELS, LEGAL_BUTTON_LABELS } from '@/components/Footer/Footer.constants';
 import Icon from '@/components/Icon';
 import ButtonList from '@/components/Footer/ButtonList/ButtonList';
 import { theme } from '@/styles/theme';
@@ -22,11 +22,11 @@ const Footer = () => {
       </div>
 
       <div css={s.authButtonsContainer}>
-        <ButtonList items={authButtonLabels} style={s.authButton} />
+        <ButtonList items={AUTH_BUTTON_LABELS} style={s.authButton} />
       </div>
 
       <div css={s.legalButtonsContainer}>
-        <ButtonList items={legalButtonLabels} style={s.legalButton} withBorder />
+        <ButtonList items={LEGAL_BUTTON_LABELS} style={s.legalButton} withBorder />
       </div>
 
       <div css={s.dropdwonContainer}>
