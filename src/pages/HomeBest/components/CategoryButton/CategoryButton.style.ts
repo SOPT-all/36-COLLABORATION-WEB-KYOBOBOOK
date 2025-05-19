@@ -1,8 +1,6 @@
-import { css } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
-import { theme } from '@/styles/theme';
-
-const buttonStyle = (active: boolean) => css`
+const buttonStyle = (active: boolean, theme: Theme) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,13 +13,13 @@ const buttonStyle = (active: boolean) => css`
   background-color: ${active ? theme.colors.green1 : theme.colors.white};
 `;
 
-const iconStyle = (active: boolean) => css`
+const iconStyle = (active: boolean, theme: Theme) => css`
   display: flex;
   margin-top: 0.333rem;
   color: ${active ? theme.colors.white : theme.colors.gray4};
 `;
 
-const labelStyle = (active: boolean) => css`
+const labelStyle = (active: boolean, theme: Theme) => css`
   color: ${active ? theme.colors.white : theme.colors.gray6};
 
   ${theme.fonts.caption3};

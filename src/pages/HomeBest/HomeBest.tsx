@@ -11,7 +11,7 @@ import Icon from '@/components/Icon';
 
 const HomeBest = () => {
   const theme = useTheme();
-  const [activeCategory, setActiveCategory] = useState('종합'); // 기본값 '종합'
+  const [activeCategory, setActiveCategory] = useState('종합');
   const [activeMenu, setActiveMenu] = useState(0);
   const today = new Date();
   const formattedDate = `${today.getFullYear()}.${String(today.getMonth() + 1).padStart(2, '0')}.${String(today.getDate()).padStart(2, '0')}`;
@@ -22,7 +22,7 @@ const HomeBest = () => {
       <HorizontalScrollList gap="0.8rem">
         {CategoryButtonList.map(({ label, iconName }) => (
           <CategoryButton
-            key={label}
+            key={`${label}-${iconName}`}
             text={label}
             iconName={iconName}
             active={activeCategory === label}
@@ -35,7 +35,7 @@ const HomeBest = () => {
       <HorizontalScrollList gap="0.6rem">
         {MENU_BUTTON_LIST.map((label, idx) => (
           <MenuButton
-            key={label}
+            key={`${label}-${idx}`}
             label={label}
             active={activeMenu === idx}
             onClick={() => setActiveMenu(idx)}
@@ -43,7 +43,7 @@ const HomeBest = () => {
         ))}
       </HorizontalScrollList>
 
-      <div css={s.wrapper}>
+      <div css={s.wrapper(theme)}>
         <div css={s.leftGroup}>
           <span css={s.date(theme)}>{formattedDate}</span>
           <Icon name="info" width={16} height={16} />
@@ -54,10 +54,10 @@ const HomeBest = () => {
             <span>일간</span>
             <Icon name="circleDown" width={20} height={20} fill={theme.colors.white} />
           </span>
-          <button css={s.iconButton}>
+          <button css={s.iconButton(theme)}>
             <Icon name="view" width={16} height={16} />
           </button>
-          <button css={s.iconButton}>
+          <button css={s.iconButton(theme)}>
             <Icon name="download" width={16} height={16} />
           </button>
         </div>

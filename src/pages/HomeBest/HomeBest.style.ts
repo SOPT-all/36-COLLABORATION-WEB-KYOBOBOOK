@@ -1,13 +1,11 @@
 import { css, type Theme } from '@emotion/react';
 
-import { theme } from '@/styles/theme';
-
 const titleStyle = (theme: Theme) => css`
   padding: 2.4rem 0 0.8rem 2.4rem;
   ${theme.fonts.title3};
 `;
 
-const wrapper = css`
+const wrapper = (theme: Theme) => css`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,7 +40,7 @@ const label = (theme: Theme) => css`
   ${theme.fonts.body3};
 `;
 
-const iconButton = css`
+const iconButton = (theme: Theme) => css`
   display: flex;
   align-items: center;
   justify-content: center;
