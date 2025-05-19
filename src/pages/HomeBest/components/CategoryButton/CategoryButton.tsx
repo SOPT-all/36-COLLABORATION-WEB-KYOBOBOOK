@@ -8,7 +8,7 @@ interface CategoryListTypes extends Omit<CategoryButtonTypes, 'label'> {
   onClick?: () => void;
 }
 
-const CategoryButton = ({ active, text, onClick, iconName = 'star' }: CategoryListTypes) => {
+const CategoryButton = ({ active, text, onClick, iconName }: CategoryListTypes) => {
   return (
     <button css={s.buttonStyle(active)} onClick={onClick} type="button">
       <span css={s.iconStyle(active)}>
