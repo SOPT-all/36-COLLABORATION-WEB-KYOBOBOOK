@@ -4,7 +4,7 @@ import {
   titleText,
   contentText,
   metaContainer,
-} from '@/pages/HomeBestDetail/BookMeta/BookMeta.style';
+} from '@/pages/HomeBestDetail/components/elements/BookMeta/BookMeta.style';
 
 type BookMetaTypes = {
   title: string;

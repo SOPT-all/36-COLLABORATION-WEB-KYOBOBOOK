@@ -3,12 +3,15 @@ import type { Theme } from '@emotion/react';
 
 export const ratingContainer = css`
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 1.2rem;
+
+  width: 100%;
 `;
 
 export const percentBar = (theme: Theme) => css`
-  width: 20.4rem;
+  flex-grow: 1;
   height: 0.4rem;
   background-color: ${theme.colors.gray2};
   border-radius: 10px;
