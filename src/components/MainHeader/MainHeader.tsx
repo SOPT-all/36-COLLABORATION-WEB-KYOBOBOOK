@@ -17,7 +17,7 @@ const MainHeader = () => {
     navigate(routePath.HOME);
   };
   return (
-    <div css={s.headerContainer(theme)}>
+    <div css={s.headerContainer}>
       <div css={s.layeredWrapper(theme)}>
         <div css={s.layeredIconWrapper(0)}>
           <Icon name="navHottracks" width={375} height={30} />

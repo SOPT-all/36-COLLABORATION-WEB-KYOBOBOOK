@@ -1,9 +1,8 @@
 import { css, type Theme } from '@emotion/react';
 
-const headerContainer = (theme: Theme) => css`
+const headerContainer = css`
   display: flex;
   flex-direction: column;
-  background-color: ${theme.colors.gray1};
 `;
 
 const searchContainer = (theme: Theme) => css`
@@ -45,24 +44,27 @@ const cartIconWrapper = css`
 const headerTabWrapper = (theme: Theme) => css`
   display: flex;
   padding: 0.8rem 2.4rem;
-  height: 5rem;
+  height: 6.6rem;
   gap: 1.6rem;
   background-color: ${theme.colors.white};
 `;
 
 const layeredWrapper = (theme: Theme) => css`
   position: relative;
-  height: 4.5rem;
-  background-color: ${theme.colors.white};
+  height: 4.4rem;
+  background-color: ${theme.colors.gray1};
+  svg {
+    display: block;
+  }
 `;
 
 const layeredIconWrapper = (index: number) => {
   const styles = [
-    { zIndex: 1, left: '0', bottom: '0.1rem' },
-    { zIndex: 2, left: '0', bottom: '0.1rem' },
-    { zIndex: 3, left: '0', bottom: '0.1rem' },
+    { zIndex: 1, left: '0', bottom: '0' },
+    { zIndex: 2, left: '0', bottom: '0' },
+    { zIndex: 3, left: '0', bottom: '0' },
     { zIndex: 4, left: '0', bottom: '0' },
-    { zIndex: 5, left: '2.4rem', bottom: '0.1rem' },
+    { zIndex: 5, left: '2.4rem', bottom: '0' },
   ];
 
   const { zIndex, left, bottom } = styles[index] ?? styles[0];
