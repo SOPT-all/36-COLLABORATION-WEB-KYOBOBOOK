@@ -1,12 +1,11 @@
-import KeywordSection from './KeywordSection/KeywordSection';
-import NoticeSection from './NoticeSection/NoticeSection';
-
 import RatingBar from '@/pages/HomeBestDetail/RatingBar/RatingBar';
 import { data } from '@/pages/HomeBestDetail/EmotionBar/ReviewData';
 import BookMeta from '@/pages/HomeBestDetail/BookMeta/BookMeta';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 import TabMenu from '@/pages/HomeBestDetail/TabMenu/TabMenu';
 import EventSection from '@/pages/HomeBestDetail/EventSection/EventSection';
+import KeywordSection from '@/pages/HomeBestDetail/KeywordSection/KeywordSection';
+import NoticeSection from '@/pages/HomeBestDetail//NoticeSection/NoticeSection';
 
 const HomeBestDetail = () => {
   const bookMeta = {

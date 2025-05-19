@@ -12,6 +12,35 @@ const titleSection = (theme: Theme) => css`
   ${theme.fonts.title1};
 `;
 
+const buttonStyle = (theme: Theme) => css`
+  display: flex;
+  gap: 0.5rem;
+  height: 4rem;
+  ${theme.fonts.subtitle4};
+`;
+
+const sharedButtonStyle = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  border-radius: 6px;
+`;
+
+const leftButtonStyle = (theme: Theme) => css`
+  ${sharedButtonStyle};
+  border: 1px solid ${theme.colors.gray3};
+  background-color: ${theme.colors.white};
+  color: ${theme.colors.black1};
+`;
+
+const rightButtonStyle = (theme: Theme) => css`
+  ${sharedButtonStyle};
+  border: 1px solid ${theme.colors.purple6};
+  background-color: ${theme.colors.purple6};
+  color: ${theme.colors.white};
+`;
+
 const divider = (theme: Theme) => css`
   display: flex;
   width: 100%;
@@ -43,6 +72,9 @@ const numbebrStyle = css`
 export {
   noticeSection,
   titleSection,
+  buttonStyle,
+  leftButtonStyle,
+  rightButtonStyle,
   divider,
   textSection,
   subTitleSection,

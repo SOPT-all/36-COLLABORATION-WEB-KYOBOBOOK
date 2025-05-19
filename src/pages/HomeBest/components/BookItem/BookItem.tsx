@@ -18,6 +18,7 @@ interface BookItemPropTypes {
   deliveryDate: string;
   isLiked: boolean;
   imageUrl: string;
+  onClick?: () => void;
 }
 
 const BookItem = ({
@@ -33,6 +34,7 @@ const BookItem = ({
   deliveryDate,
   isLiked: defaultLiked,
   imageUrl,
+  onClick,
 }: BookItemPropTypes) => {
   const theme = useTheme();
 
@@ -44,7 +46,7 @@ const BookItem = ({
   };
 
   return (
-    <div css={s.container(theme)}>
+    <div css={s.container(theme)} onClick={onClick}>
       <div css={s.imageWrapper}>
         <img src={imageUrl} alt={title} css={s.bookImage} />
       </div>

@@ -7,9 +7,9 @@ const NoticeSection = () => {
   return (
     <div css={s.noticeSection}>
       <h2 css={s.titleSection(theme)}>교환/반품/품절 안내</h2>
-      <section>
-        <button>반품/교환 신청</button>
-        <button>1:1 문의</button>
+      <section css={s.buttonStyle}>
+        <button css={s.leftButtonStyle(theme)}>반품/교환 신청</button>
+        <button css={s.rightButtonStyle(theme)}>1:1 문의</button>
       </section>
       <div css={s.divider(theme)} />
       <section css={s.textSection}>
