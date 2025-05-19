@@ -1,6 +1,6 @@
 import { css, type Theme } from '@emotion/react';
 
-const headerContainer = (theme: Theme) => css`
+const headerContainer = css`
   display: flex;
   flex-direction: column;
 `;
