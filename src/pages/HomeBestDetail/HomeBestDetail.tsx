@@ -2,6 +2,7 @@ import RatingBar from '@/pages/HomeBestDetail/RatingBar/RatingBar';
 import { data } from '@/pages/HomeBestDetail/EmotionBar/ReviewData';
 import BookMeta from '@/pages/HomeBestDetail/BookMeta/BookMeta';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
+import TabMenu from '@/pages/HomeBestDetail/TabMenu/TabMenu';
 
 const HomeBestDetail = () => {
   const bookMeta = {
@@ -18,6 +19,9 @@ const HomeBestDetail = () => {
 
   return (
     <>
+      <div>
+        <TabMenu type="default" />
+      </div>
       <HorizontalScrollList gap="0" sidePadding="0">
         {Object.entries(bookMeta).map(([title, content], index) => {
           return <BookMeta key={title} title={title} content={content} index={index} />;
