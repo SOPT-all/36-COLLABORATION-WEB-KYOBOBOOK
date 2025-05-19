@@ -23,7 +23,7 @@ export default function BookReview() {
     <>
       <div css={s.wrapper}>
         <div>
-          <div css={s.title(theme)}>
+          <div css={s.title}>
             <h3 css={s.titleText(theme)}>리뷰 ({reviewData.reviewCounts})</h3>
             <Icon name="info" />
           </div>

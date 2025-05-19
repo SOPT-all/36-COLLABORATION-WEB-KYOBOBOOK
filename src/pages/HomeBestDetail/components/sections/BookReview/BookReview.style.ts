@@ -10,7 +10,7 @@ export const bookReviewStyles = {
     margin-bottom: 4.4rem;
   `,
 
-  title: (theme: Theme) => css`
+  title: css`
     display: flex;
     align-items: center;
     gap: 0.4rem;
