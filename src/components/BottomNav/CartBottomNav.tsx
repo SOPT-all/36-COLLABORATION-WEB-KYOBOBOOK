@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react';
 import { CartBottomNavStyle as s } from '@/components/BottomNav/CartBottomNav.style';
 
-export default function CartBottomNav() {
+const CartBottomNav = () => {
   const theme = useTheme();
   const Price = 15120;
 
@@ -14,4 +14,6 @@ export default function CartBottomNav() {
       <button css={s.purchaseButton(theme)}>구매하기</button>
     </div>
   );
-}
+};
+
+export default CartBottomNav;

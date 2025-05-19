@@ -6,7 +6,7 @@ import { DetailBottomNavStyle as s } from '@/components/BottomNav/DetailBottomNa
 import Icon from '@/components/Icon';
 import routePath from '@/routes/routePath';
 
-export default function DetailBottomNav() {
+const DetailBottomNav = () => {
   const theme = useTheme();
   const navigate = useNavigate();
   const [liked, setLiked] = useState(false);
@@ -32,4 +32,6 @@ export default function DetailBottomNav() {
       </button>
     </nav>
   );
-}
+};
+
+export default DetailBottomNav;

@@ -13,7 +13,7 @@ const navItems: { label: string; icon: IconName }[] = [
   { label: '마이', icon: 'account' },
 ];
 
-export default function HomeBottomNav() {
+const HomeBottomNav = () => {
   const theme = useTheme();
 
   return (
@@ -29,4 +29,6 @@ export default function HomeBottomNav() {
       })}
     </nav>
   );
-}
+};
+
+export default HomeBottomNav;
