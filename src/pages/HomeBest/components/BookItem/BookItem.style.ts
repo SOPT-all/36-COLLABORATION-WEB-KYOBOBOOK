@@ -95,6 +95,8 @@ const won = (theme: Theme) => css`
 `;
 
 const point = (theme: Theme) => css`
+  display: flex;
+  align-items: center;
   color: ${theme.colors.gray4};
   ${theme.fonts.caption4};
 `;
