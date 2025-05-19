@@ -47,7 +47,7 @@ const cartIconWrapper = css`
 const headerTabWrapper = css`
   display: flex;
   padding: 0.8rem 2.4rem;
-  height: 5rem;
+  height: 6.6rem;
   gap: 1.6rem;
   background-color: ${theme.colors.white};
 `;
