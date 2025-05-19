@@ -52,4 +52,10 @@ const iconButton = (theme: Theme) => css`
   border-radius: 4px;
 `;
 
-export { titleStyle, wrapper, leftGroup, date, rightGroup, label, iconButton };
+const bookListWrapper = css`
+  display: flex;
+  flex-direction: column;
+  padding: 0 2.4rem 2rem 2.4rem;
+`;
+
+export { titleStyle, wrapper, leftGroup, date, rightGroup, label, iconButton, bookListWrapper };

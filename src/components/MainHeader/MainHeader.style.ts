@@ -1,13 +1,11 @@
-import { css } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
-import { theme } from '@/styles/theme';
-
-const headerContainer = css`
+const headerContainer = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
 `;
 
-const searchContainer = css`
+const searchContainer = (theme: Theme) => css`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +15,7 @@ const searchContainer = css`
   background-color: ${theme.colors.white};
 `;
 
-const searchInputWrapper = css`
+const searchInputWrapper = (theme: Theme) => css`
   display: flex;
   align-items: center;
   flex: 1 0 0;
@@ -29,7 +27,7 @@ const searchInputWrapper = css`
   background-color: ${theme.colors.gray1};
 `;
 
-const searchInput = css`
+const searchInput = (theme: Theme) => css`
   flex: 1;
   border: none;
   outline: none;
@@ -43,7 +41,7 @@ const cartIconWrapper = css`
   padding: 0.8rem 0.4rem;
 `;
 
-const headerTabWrapper = css`
+const headerTabWrapper = (theme: Theme) => css`
   display: flex;
   padding: 0.8rem 2.4rem;
   height: 6.6rem;
@@ -51,7 +49,7 @@ const headerTabWrapper = css`
   background-color: ${theme.colors.white};
 `;
 
-const layeredWrapper = css`
+const layeredWrapper = (theme: Theme) => css`
   position: relative;
   height: 4.4rem;
   background-color: ${theme.colors.gray1};

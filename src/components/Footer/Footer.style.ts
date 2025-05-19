@@ -1,8 +1,6 @@
-import { css } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
-import { theme } from '@/styles/theme';
-
-const noticeContainer = css`
+const noticeContainer = (theme: Theme) => css`
   display: flex;
   align-items: center;
   gap: 1.7rem;
@@ -13,11 +11,11 @@ const noticeContainer = css`
   background: ${theme.colors.gray1};
 `;
 
-const noticeStyle = css`
+const noticeStyle = (theme: Theme) => css`
   ${theme.fonts.subtitle4};
 `;
 
-const linkStyle = css`
+const linkStyle = (theme: Theme) => css`
   ${theme.fonts.body3};
   text-decoration: underline;
   text-decoration-skip-ink: none;
@@ -30,7 +28,7 @@ const logoContainer = css`
   justify-content: space-between;
 `;
 
-const businessInfoContainer = css`
+const businessInfoContainer = (theme: Theme) => css`
   display: flex;
   padding: 0.2rem 0 0;
   gap: 0.2rem;
@@ -39,7 +37,7 @@ const businessInfoContainer = css`
   color: ${theme.colors.gray4};
 `;
 
-const authButtonsContainer = css`
+const authButtonsContainer = (theme: Theme) => css`
   display: flex;
   padding-left: 1.4rem;
   ${theme.fonts.body1};
@@ -50,7 +48,7 @@ const authButton = css`
   padding: 1rem;
 `;
 
-const legalButtonsContainer = css`
+const legalButtonsContainer = (theme: Theme) => css`
   all: unset;
   padding: 0 0 0 1.8rem;
   ${theme.fonts.caption3};
@@ -78,7 +76,7 @@ const snsButtonWrapper = css`
   gap: 0.8rem;
 `;
 
-const designSystemWrapper = css`
+const designSystemWrapper = (theme: Theme) => css`
   display: flex;
   gap: 0.4rem;
   align-items: center;

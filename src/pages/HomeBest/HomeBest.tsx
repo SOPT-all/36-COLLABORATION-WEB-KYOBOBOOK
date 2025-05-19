@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useTheme } from '@emotion/react';
 
+import { mockBooks } from './mockBooks';
+
 import MenuButton from '@/pages/HomeBest/components/MenuButton/MenuButton';
 import {
   CategoryButtonList,
@@ -12,6 +14,9 @@ import MainHeader from '@/components/MainHeader/MainHeader';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 import * as s from '@/pages/HomeBest/HomeBest.style';
 import Icon from '@/components/Icon';
+import BookItem from '@/pages/HomeBest/components/BookItem/BookItem';
+import sample from '@/assets/img/sample.png';
+import Footer from '@/components/Footer/Footer';
 
 const HomeBest = () => {
   const theme = useTheme();
@@ -66,6 +71,14 @@ const HomeBest = () => {
           </button>
         </div>
       </div>
+
+      <div css={s.bookListWrapper}>
+        {mockBooks.map((book) => (
+          <BookItem key={book.rank} {...book} />
+        ))}
+      </div>
+
+      <Footer />
     </>
   );
 };
