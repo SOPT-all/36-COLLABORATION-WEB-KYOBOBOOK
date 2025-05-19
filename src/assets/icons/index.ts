@@ -46,7 +46,7 @@ import TotalIcon from '../icons/svg/ic_total.svg?react';
 import TrashIcon from '../icons/svg/ic_trash.svg?react';
 import UpIcon from '../icons/svg/ic_up.svg?react';
 import ViewDetailIcon from '../icons/svg/ic_view_detail.svg?react';
-import View from '../icons/svg/ic_view.svg?react';
+import ViewIcon from '../icons/svg/ic_view.svg?react';
 import WishFillIcon from '../icons/svg/ic_wish_fill.svg?react';
 import WishIcon from '../icons/svg/ic_wish.svg?react';
 import WriteIcon from '../icons/svg/ic_write.svg?react';
@@ -102,7 +102,7 @@ export const iconMap = {
   trash: TrashIcon,
   up: UpIcon,
   viewDetail: ViewDetailIcon,
-  view: View,
+  view: ViewIcon,
   wishFill: WishFillIcon,
   wish: WishIcon,
   write: WriteIcon,
