@@ -1,5 +1,12 @@
+import MainHeader from '@/components/MainHeader/MainHeader';
+
 const Home = () => {
-  return <>홈페이지 화면</>;
+  return (
+    <>
+      <MainHeader />
+      <div>홈페이지입니다.</div>
+    </>
+  );
 };
 
 export default Home;
