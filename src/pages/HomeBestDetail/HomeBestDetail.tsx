@@ -1,16 +1,34 @@
-import AuthInfo from '@/pages/HomeBestDetail/components/sections/AuthorInfo';
-import BookDescription from '@/pages/HomeBestDetail/components/sections/BookDescription';
-import BookReview from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview';
-import BookSummary from '@/pages/HomeBestDetail/components/sections/BookSummary';
+import RatingBar from '@/pages/HomeBestDetail/RatingBar/RatingBar';
+import { data } from '@/sampleData/ratingData';
+import BookMeta from '@/pages/HomeBestDetail/BookMeta/BookMeta';
+import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 
 const HomeBestDetail = () => {
+  const bookMeta = {
+    카테고리: '한국에세이',
+    출간일: '2025.04.06',
+    쪽수: '200P',
+    크기: '9791191114768',
+    ISBN: '137 * 196 * 22      mm / 397 g',
+  };
+
+  const sortedStar = Object.entries(data.starDistribution).sort(
+    ([a], [b]) => Number(b) - Number(a),
+  );
+
   return (
     <>
-      <p>홈 베스트 상세 페이지입니다</p>
-      <BookSummary />
-      <BookDescription />
-      <AuthInfo />
-      <BookReview />
+      <HorizontalScrollList gap="0" sidePadding="0">
+        {Object.entries(bookMeta).map(([title, content], index) => {
+          return <BookMeta key={title} title={title} content={content} index={index} />;
+        })}
+      </HorizontalScrollList>
+      <div>
+        {sortedStar.map(([key, percent]) => {
+          const rating = Number(key);
+          return <RatingBar key={rating} rating={rating} percent={percent} />;
+        })}
+      </div>
     </>
   );
 };
