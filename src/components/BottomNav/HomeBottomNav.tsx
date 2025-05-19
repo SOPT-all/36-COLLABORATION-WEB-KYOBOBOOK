@@ -1,10 +1,7 @@
-import { useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
 import { useTheme } from '@emotion/react';
 import { HomeBottomNavStyle as s } from '@/components/BottomNav/HomeBottomNav.style';
 
 import Icon from '@/components/Icon';
-import routePath from '@/routes/routePath';
 
 import type { IconName } from '@/assets/icons';
 
@@ -18,14 +15,6 @@ const navItems: { label: string; icon: IconName }[] = [
 
 export default function HomeBottomNav() {
   const theme = useTheme();
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.pathname !== routePath.HOME) {
-      navigate(routePath.HOME, { replace: true });
-    }
-  }, [location.pathname, navigate]);
 
   return (
     <nav css={s.wrapper(theme)}>
