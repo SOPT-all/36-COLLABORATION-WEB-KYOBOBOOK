@@ -2,7 +2,6 @@ import { useTheme } from '@emotion/react';
 
 import { reviewCardStyle as s } from './ReviewCard.style';
 
-import sampleImage from '@/assets/img/sample.png';
 import Icon from '@/components/Icon';
 import type { ReviewTypes } from '@/types/reviewTypes';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
@@ -11,7 +10,9 @@ export default function ReviewCard({ reviewData }: { reviewData: ReviewTypes }) 
   const theme = useTheme();
 
   const blindName = (name: string) => {
-    if (name.length <= 2) {return name;}
+    if (name.length <= 2) {
+      return name;
+    }
     return name.slice(0, 2) + '*'.repeat(name.length - 2);
   };
 
