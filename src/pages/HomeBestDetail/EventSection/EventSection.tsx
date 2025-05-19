@@ -1,8 +1,7 @@
 import { useTheme } from '@emotion/react';
 
-import EventCard from './EventCard/EventCard';
-import { EVENT_CARD_LIST } from './EventSection.constants';
-
+import { EVENT_CARD_LIST } from '@/pages/HomeBestDetail/EventSection/EventSection.constants';
+import EventCard from '@/pages/HomeBestDetail/EventSection/EventCard/EventCard';
 import * as s from '@/pages/HomeBestDetail/EventSection/EventSection.style';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 const EventSection = () => {

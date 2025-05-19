@@ -13,4 +13,5 @@ const EVENT_CARD_LIST = [
     date: '2025/04/23 ~ 2025/06/30',
   },
 ];
+
 export { EVENT_CARD_LIST };
