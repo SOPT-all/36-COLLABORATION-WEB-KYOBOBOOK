@@ -1,5 +1,7 @@
 import { useState } from 'react';
+
 import { FirstCartViewStyle as s } from './FirstCartView.style';
+
 import Icon from '@/components/Icon';
 // import Chip from '@/components/Chip/Chip';
 
@@ -10,11 +12,15 @@ const FirstCartView = () => {
   const point = 840;
 
   const handleDecrease = () => {
-    if (count > 1) setCount(count - 1);
+    if (count > 1) {
+      setCount(count - 1);
+    }
   };
 
   const handleIncrease = () => {
-    if (count < MAX_COUNT) setCount(count + 1);
+    if (count < MAX_COUNT) {
+      setCount(count + 1);
+    }
   };
 
   const discounted = Math.floor(price * count * 0.9);

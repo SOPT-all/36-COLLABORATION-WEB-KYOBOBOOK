@@ -1,6 +1,6 @@
 import { FourthCartViewStyle as s } from './FourthCartView.style';
-import Icon from '@/components/Icon';
 
+import Icon from '@/components/Icon';
 import FoldableItem from '@/pages/HomeBestDetailCart/FourthCartView/FoldButton/FoldButton';
 
 const FourthCartView = () => {

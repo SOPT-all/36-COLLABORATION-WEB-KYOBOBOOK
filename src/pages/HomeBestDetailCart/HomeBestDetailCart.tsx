@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import { HomeBestDetailCartStyle as s } from '@/pages/HomeBestDetailCart/HomeBestDetailCart.style';
 
+import { HomeBestDetailCartStyle as s } from '@/pages/HomeBestDetailCart/HomeBestDetailCart.style';
 import Icon from '@/components/Icon';
 // import Chip from '@/components/Chip/Chip';
 
@@ -8,7 +8,6 @@ import FirstCartView from '@/pages/HomeBestDetailCart/FirstCartView/FirstCartVie
 // import SecondCartView from './components/SecondCartView';
 // import ThirdCartView from './components/ThirdCartView';
 import FourthCartView from '@/pages/HomeBestDetailCart/FourthCartView/ForthCartView';
-
 import routePath from '@/routes/routePath';
 
 const HomeBestDetailCart = () => {
