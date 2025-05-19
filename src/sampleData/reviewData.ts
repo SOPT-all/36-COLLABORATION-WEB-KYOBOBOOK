@@ -1,4 +1,4 @@
-export const data = {
+export const reviewData = {
   reviewCounts: 2,
   reviewList: [
     {

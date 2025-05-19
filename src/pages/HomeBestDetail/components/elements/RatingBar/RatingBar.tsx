@@ -1,12 +1,12 @@
 import { useTheme } from '@emotion/react';
 
-import StarRating from '@/pages/HomeBestDetail/StarRating/StarRating';
+import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
 import {
   ratingContainer,
   percentBar,
   fillBar,
   percentText,
-} from '@/pages/HomeBestDetail/RatingBar/RatingBar.style';
+} from '@/pages/HomeBestDetail/components/elements/RatingBar/RatingBar.style';
 
 type RatingTypes = {
   rating: number;

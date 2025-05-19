@@ -5,9 +5,15 @@ import { reviewCardStyle as s } from './ReviewCard.style';
 import sampleImage from '@/assets/img/sample.png';
 import Icon from '@/components/Icon';
 import type { ReviewTypes } from '@/types/reviewTypes';
+import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
 
 export default function ReviewCard({ reviewData }: { reviewData: ReviewTypes }) {
   const theme = useTheme();
+
+  const blindName = (name: string) => {
+    if (name.length <= 2) {return name;}
+    return name.slice(0, 2) + '*'.repeat(name.length - 2);
+  };
 
   return (
     <div css={s.cardContainer(theme)}>
@@ -15,14 +21,14 @@ export default function ReviewCard({ reviewData }: { reviewData: ReviewTypes }) 
 
       <div css={s.contentContainer}>
         <div css={s.topSection}>
-          <p css={s.writerText(theme)}>{reviewData.reviewer}</p>
+          <p css={s.writerText(theme)}>{blindName(reviewData.reviewer)}</p>
           <div css={s.iconWrapper}>
             <Icon name="viewDetail" width={14} height={14} fill={theme.colors.gray4} />
           </div>
         </div>
         <div css={s.metaSection}>
           <span>종이책</span>
-          <div>⭐️⭐️⭐️⭐️⭐️</div>
+          <StarRating rating={reviewData.star} width={14} height={14} />
           <p css={s.dateText(theme)}>{reviewData.reviewDate}</p>
         </div>
         <div css={s.descriptionSection}>
