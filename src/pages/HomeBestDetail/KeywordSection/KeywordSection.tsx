@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTheme } from '@emotion/react';
 
 import FilterButton from '@/pages/HomeBestDetail/KeywordSection/FilterButton/FilterButton';
 import {
@@ -11,15 +12,17 @@ import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll
 import Card from '@/components/Card/Card';
 
 const KeywordSection = () => {
+  const theme = useTheme();
+
   const [activeFilter, setActiveFilter] = useState(0);
 
   return (
     <>
       <div css={s.keywordSection}>
-        <section css={s.titleSection}>
-          <h2>키워드 Pick</h2>
+        <h2 css={s.titleSection(theme)}>
+          키워드 Pick
           <Icon name="info" width={24} height={24} />
-        </section>
+        </h2>
         <section css={s.filterButtonSection}>
           {FILTER_BUTTON_LIST.map((label, idx) => (
             <FilterButton

@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css, type Theme } from '@emotion/react';
 
 const keywordSection = css`
   display: flex;
@@ -6,11 +6,12 @@ const keywordSection = css`
   gap: 2rem;
 `;
 
-const titleSection = css`
+const titleSection = (theme: Theme) => css`
   display: flex;
   align-items: center;
   gap: 0.4rem;
   padding: 0 2.4rem;
+  ${theme.fonts.title1};
 `;
 
 const filterButtonSection = css`

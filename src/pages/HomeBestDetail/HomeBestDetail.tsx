@@ -1,9 +1,10 @@
-import KeywordSection from "./KeywordSection/KeywordSection";
+import KeywordSection from './KeywordSection/KeywordSection';
 
 import RatingBar from '@/pages/HomeBestDetail/RatingBar/RatingBar';
 import { data } from '@/pages/HomeBestDetail/EmotionBar/ReviewData';
 import BookMeta from '@/pages/HomeBestDetail/BookMeta/BookMeta';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
+import EventSection from '@/pages/HomeBestDetail/EventSection/EventSection';
 
 const HomeBestDetail = () => {
   const bookMeta = {
@@ -33,6 +34,7 @@ const HomeBestDetail = () => {
       </div>
 
       <KeywordSection />
+      <EventSection />
     </>
   );
 };
