@@ -3,6 +3,7 @@ import { useTheme } from '@emotion/react';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 import * as s from '@/pages/HomeBestDetail/components/sections/BookDescription/BookDescription.style';
 import BookMeta from '@/pages/HomeBestDetail/components/elements/BookMeta/BookMeta';
+import bookInfoImage from '@/assets/img/im_book_description.png';
 
 const BookDescription = () => {
   const theme = useTheme();
@@ -36,15 +37,29 @@ const BookDescription = () => {
             얻었다.『단 한 번의 삶』은 작가의 지난 산문들보다 더 사적이고 한층 내밀하다
             <div css={s.gradationBar} />
           </div>
-          <span css={s.addText(theme)}>더보기</span>
+          <p css={s.addText(theme)}>더보기</p>
         </div>
       </div>
-
       <HorizontalScrollList gap="0" sidePadding="0">
         {Object.entries(bookMeta).map(([title, content], index) => {
           return <BookMeta key={title} title={title} content={content} index={index} />;
         })}
       </HorizontalScrollList>
+      <div css={s.tocWrapper}>
+        <h3 css={s.titleText(theme)}>목차</h3>
+        <p css={s.tocText(theme)}>
+          일회용 인생 <br /> <br />
+          엄마의 비밀 <br />
+          아이와 로봇 <br />
+          야로의 희망우물 <br /> 정 자 천 개기대와 실망의 왈츠테세우스의 배모른다스캔들이 된 고통의
+          의미이탈사공이 없는 나룻배가 닿는 곳무용의 용인생의 그래프도덕적 운어떤 위안후기와 감사
+          그리고 ‘인생 사용법’
+        </p>
+        <p css={s.addText(theme)}>더보기</p>
+      </div>
+      <div css={s.imgWrapper}>
+        <img src={bookInfoImage} />
+      </div>
     </div>
   );
 };
