@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTheme } from '@emotion/react';
 
 import { mockBooks } from './mockBooks';
+import HomeBottomNav from '@/components/BottomNav/HomeBottomNav';
 
 import MenuButton from '@/pages/HomeBest/components/MenuButton/MenuButton';
 import {
@@ -78,6 +79,7 @@ const HomeBest = () => {
       </div>
 
       <Footer />
+      <HomeBottomNav />
     </>
   );
 };

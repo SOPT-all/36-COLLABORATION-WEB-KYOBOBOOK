@@ -16,6 +16,7 @@ import FacebookIcon from '../icons/svg/ic_facebook.svg?react';
 import FloatingIcon from '../icons/svg/ic_floating.svg?react';
 import FundingIcon from '../icons/svg/ic_funding.svg?react';
 import HomeIcon from '../icons/svg/ic_home.svg?react';
+import HomeGreenIcon from '../icons/svg/ic_home_green.svg?react';
 import Home2Icon from '../icons/svg/ic_home2.svg?react';
 import InfoIcon from '../icons/svg/ic_info.svg?react';
 import InstagramCircleIcon from '../icons/svg/ic_instagram_circle.svg?react';
@@ -79,6 +80,7 @@ export const iconMap = {
   floating: FloatingIcon,
   funding: FundingIcon,
   home: HomeIcon,
+  homegreen: HomeGreenIcon,
   home2: Home2Icon,
   info: InfoIcon,
   instagramCircle: InstagramCircleIcon,
