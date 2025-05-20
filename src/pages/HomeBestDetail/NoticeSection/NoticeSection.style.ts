@@ -65,7 +65,7 @@ const textStyle = (theme: Theme) => css`
   white-space: normal;
 `;
 
-const numbebrStyle = css`
+const numberStyle = css`
   white-space: nowrap;
 `;
 
@@ -79,5 +79,5 @@ export {
   textSection,
   subTitleSection,
   textStyle,
-  numbebrStyle,
+  numberStyle,
 };
