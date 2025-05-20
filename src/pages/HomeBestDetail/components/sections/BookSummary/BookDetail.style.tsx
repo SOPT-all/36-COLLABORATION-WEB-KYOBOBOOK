@@ -1,6 +1,8 @@
 import type { Theme } from '@emotion/react';
 import { css } from '@emotion/react';
 
+import { flexBetweenCenter, flexColumn, flexVerticalCenter } from '@/styles/sharedStyles';
+
 export const imageBackground = (theme: Theme) => css`
   display: flex;
   width: 100%;
@@ -9,8 +11,7 @@ export const imageBackground = (theme: Theme) => css`
 `;
 
 export const bookContainer = css`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn};
   gap: 1.6rem;
 `;
 
@@ -19,9 +20,7 @@ export const imageStyle = (theme: Theme) => css`
 `;
 
 export const previewContainer = (theme: Theme) => css`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  ${flexBetweenCenter};
   color: ${theme.colors.white};
   ${theme.fonts.caption3}
 `;
@@ -77,8 +76,7 @@ export const dateText = (theme: Theme) => css`
 `;
 
 export const bestContainer = css`
-  display: flex;
-  align-items: center;
+  ${flexVerticalCenter};
   gap: 0.2rem;
 `;
 
@@ -98,9 +96,3 @@ export const rankText = (theme: Theme) => css`
   color: ${theme.colors.black1};
   ${theme.fonts.caption2};
 `;
-//export const imageBackground = (theme: Theme) => css``;
-//export const imageBackground = (theme: Theme) => css``;
-//export const imageBackground = (theme: Theme) => css``;
-//export const imageBackground = (theme: Theme) => css``;
-//export const imageBackground = (theme: Theme) => css``;
-//export const imageBackground = (theme: Theme) => css``;
