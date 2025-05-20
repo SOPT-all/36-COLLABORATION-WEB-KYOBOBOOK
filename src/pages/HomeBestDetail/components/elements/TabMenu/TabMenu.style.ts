@@ -10,7 +10,7 @@ export const tabMenuContainer = (theme: Theme) => css`
 
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
   background-color: ${theme.colors.white};
 `;
 
