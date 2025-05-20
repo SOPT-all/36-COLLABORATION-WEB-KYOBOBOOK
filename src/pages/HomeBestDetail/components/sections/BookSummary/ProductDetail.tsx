@@ -85,12 +85,16 @@ const ProductDetail = () => {
         <div css={s.reviewBox(theme)}>
           <span css={s.ratingText(theme)}>4</span>
           <StarRating rating={4} />
-          <p css={s.reviewText(theme)}>(118개의 리뷰)</p>
+          <p css={s.reviewText(theme)}>
+            (<b css={s.countText(theme)}>118개</b>의 리뷰)
+          </p>
         </div>
         <div css={s.reviewBox(theme)}>
           <Icon name="quote" fill={theme.colors.purple7} />
           <span css={s.emotionText(theme)}>감동이에요</span>
-          <p css={s.reviewText(theme)}>(70%의 구매자)</p>
+          <p css={s.reviewText(theme)}>
+            (<b css={s.countText(theme)}>70%</b>의 구매자)
+          </p>
         </div>
       </div>
 

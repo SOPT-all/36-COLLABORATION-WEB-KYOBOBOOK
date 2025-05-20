@@ -211,6 +211,11 @@ export const ratingText = (theme: Theme) => css`
   ${theme.fonts.title3};
 `;
 
+export const countText = (theme: Theme) => css`
+  color: ${theme.colors.black1};
+  ${theme.fonts.caption3};
+`;
+
 export const emotionText = (theme: Theme) => css`
   color: ${theme.colors.purple7};
   ${theme.fonts.subtitle2};
