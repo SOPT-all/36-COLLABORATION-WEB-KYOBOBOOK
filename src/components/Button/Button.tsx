@@ -1,5 +1,6 @@
 import { buttonVariantStyles } from './Button.styles';
-import type { ButtonTypes } from './buttonTypes';
+
+import type { ButtonTypes } from '@/types/buttonTypes';
 
 export const Button = ({ variant, icon, children }: ButtonTypes) => {
   return (

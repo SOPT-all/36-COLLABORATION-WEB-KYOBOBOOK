@@ -1,5 +1,7 @@
 import { chipVariantStyles } from './Chip.styles';
-import type { ChipTypes } from './chipTypes';
+
+import type { ChipTypes } from '@/types/chipTypes';
+
 
 export const Chip = ({ variant, icon, children }: ChipTypes) => {
   return (
