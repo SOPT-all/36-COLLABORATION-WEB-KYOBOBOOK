@@ -1,8 +1,7 @@
 import { useTheme } from '@emotion/react';
+
 import { HomeBottomNavStyle as s } from '@/components/BottomNav/HomeBottomNav.style';
-
 import Icon from '@/components/Icon';
-
 import type { IconName } from '@/assets/icons';
 
 const navItems: { label: string; icon: IconName }[] = [

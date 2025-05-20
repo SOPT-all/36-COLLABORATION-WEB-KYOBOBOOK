@@ -3,8 +3,8 @@ import { useTheme } from '@emotion/react';
 import { useNavigate } from 'react-router-dom';
 
 import { mockBooks } from './mockBooks';
-import HomeBottomNav from '@/components/BottomNav/HomeBottomNav';
 
+import HomeBottomNav from '@/components/BottomNav/HomeBottomNav';
 import MenuButton from '@/pages/HomeBest/components/MenuButton/MenuButton';
 import {
   CategoryButtonList,
@@ -83,6 +83,64 @@ const HomeBest = () => {
       <div css={s.bookListWrapper}>
         {mockBooks.map((book) => (
           <BookItem key={book.rank} {...book} onClick={handleBookClick} />
+        ))}
+      </div>
+
+      <Footer />
+      <HomeBottomNav />
+    </>
+  );
+
+  return (
+    <>
+      <MainHeader />
+      <HorizontalScrollList gap="0.8rem">
+        {CategoryButtonList.map(({ label, iconName }) => (
+          <CategoryButton
+            key={`${label}-${iconName}`}
+            text={label}
+            iconName={iconName}
+            active={activeCategory === label}
+            onClick={() => setActiveCategory(label)}
+          />
+        ))}
+      </HorizontalScrollList>
+
+      <h2 css={s.titleStyle(theme)}>도서 종류</h2>
+      <HorizontalScrollList gap="0.6rem">
+        {MENU_BUTTON_LIST.map((label, idx) => (
+          <MenuButton
+            key={`${label}-${idx}`}
+            label={label}
+            active={activeMenu === idx}
+            onClick={() => setActiveMenu(idx)}
+          />
+        ))}
+      </HorizontalScrollList>
+
+      <div css={s.wrapper(theme)}>
+        <div css={s.leftGroup}>
+          <span css={s.date(theme)}>{formattedDate}</span>
+          <Icon name="info" width={16} height={16} />
+        </div>
+
+        <div css={s.rightGroup}>
+          <span css={s.label(theme)}>
+            <span>일간</span>
+            <Icon name="circleDown" width={20} height={20} fill={theme.colors.white} />
+          </span>
+          <button css={s.iconButton(theme)}>
+            <Icon name="view" width={16} height={16} />
+          </button>
+          <button css={s.iconButton(theme)}>
+            <Icon name="download" width={16} height={16} />
+          </button>
+        </div>
+      </div>
+
+      <div css={s.bookListWrapper}>
+        {mockBooks.map((book) => (
+          <BookItem key={book.rank} {...book} />
         ))}
       </div>
 
