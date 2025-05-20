@@ -1,20 +1,20 @@
 import { css } from '@emotion/react';
 import type { Theme } from '@emotion/react';
 
-const Wrapper = css`
+const Wrapper = (theme: Theme) => css`
   width: 100%;
   max-width: 73rem;
   min-width: 37.5rem;
-  background-color: #ffffff;
+  background-color: ${theme.colors.white};
 `;
 
-const firstBox = css`
-  background-color: #ffffff;
+const firstBox = (theme: Theme) => css`
+  background-color: ${theme.colors.white};
 `;
 
 const topWrapper = (theme: Theme) => css`
   width: 100%;
-  background-color: #ffffff;
+  background-color: ${theme.colors.white};
   padding: 2rem 1.6rem;
   border-bottom: 1px solid ${theme.colors.gray2};
 `;
@@ -61,7 +61,7 @@ const thingButton = (theme: Theme) => css`
   font: ${theme.fonts.caption3};
   color: ${theme.colors.black1};
   border: 1px solid ${theme.colors.gray3};
-  border-radius: 0.3rem;
+  border-radius: 4px;
   background-color: ${theme.colors.white};
   cursor: pointer;
 `;
@@ -80,7 +80,7 @@ const uniText = (theme: Theme) => css`
 `;
 
 const secondBox = (theme: Theme) => css`
-  background-color: #ffffff;
+  background-color: ${theme.colors.white};
   border-bottom: 1px solid ${theme.colors.gray2};
 `;
 
@@ -97,12 +97,12 @@ const sectionHeader = (theme: Theme) => css`
   }
 `;
 
-const Card = css`
+const Card = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
   padding: 2rem 1.6rem;
-  background-color: #ffffff;
+  background-color: ${theme.colors.white};
 `;
 
 const cardHeader = css`
@@ -211,7 +211,7 @@ const footerButton = (theme: Theme) => css`
   text-align: center;
   padding: 1rem;
   border: none;
-  border-radius: 0.4rem;
+  border-radius: 6px;
   cursor: pointer;
 `;
 
@@ -220,7 +220,7 @@ const Chip = (theme: Theme) => css`
   font: ${theme.fonts.caption1};
   color: ${theme.colors.purple7};
   background-color: ${theme.colors.purple1};
-  border-radius: 2.5rem;
+  border-radius: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
