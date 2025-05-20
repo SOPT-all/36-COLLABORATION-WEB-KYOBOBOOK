@@ -58,7 +58,3 @@ export const tocText = (theme: Theme) => css`
 export const imgWrapper = css`
   padding: 0 2.4rem;
 `;
-
-//export const titleText = (theme:Theme) =>css``;
-
-//export const titleText = (theme:Theme) => css``;
