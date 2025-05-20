@@ -17,7 +17,6 @@ import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll
 import * as s from '@/pages/HomeBest/HomeBest.style';
 import Icon from '@/components/Icon';
 import BookItem from '@/pages/HomeBest/components/BookItem/BookItem';
-import Footer from '@/components/Footer/Footer';
 import routePath from '@/routes/routePath';
 
 const HomeBest = () => {
@@ -84,9 +83,11 @@ const HomeBest = () => {
 
       <div css={s.bookListWrapper}>
         {enrichedBooks.map((book) => {
-          return <BookItem key={book.rank} {...book} />;
+          return <BookItem key={book.rank} {...book} onClick={handleBookClick} />;
         })}
       </div>
+      <div css={s.emptyContainer} />
+
       <HomeBottomNav />
     </>
   );

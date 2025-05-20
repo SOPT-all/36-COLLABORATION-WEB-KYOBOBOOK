@@ -58,4 +58,18 @@ const bookListWrapper = css`
   padding: 0 2.4rem 2rem 2.4rem;
 `;
 
-export { titleStyle, wrapper, leftGroup, date, rightGroup, label, iconButton, bookListWrapper };
+const emptyContainer = css`
+  height: 8.5rem;
+`;
+
+export {
+  titleStyle,
+  wrapper,
+  leftGroup,
+  date,
+  rightGroup,
+  label,
+  iconButton,
+  bookListWrapper,
+  emptyContainer,
+};
