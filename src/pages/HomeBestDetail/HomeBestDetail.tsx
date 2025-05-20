@@ -12,10 +12,16 @@ const HomeBestDetail = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < 500) {
-        setScrollState(1);
-      } else if (window.scrollY >= 500) {
+      const tabMenuElement = document.getElementById('tab-menu');
+      const tabTop = tabMenuElement?.offsetTop || 0;
+      const y = window.scrollY;
+
+      if (y >= tabTop) {
+        setScrollState(3);
+      } else if (y >= 500) {
         setScrollState(2);
+      } else {
+        setScrollState(1);
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -24,9 +30,9 @@ const HomeBestDetail = () => {
 
   return (
     <>
-      <DetailHeader scrollState={scrollState} />
+      {scrollState !== 3 && <DetailHeader scrollState={scrollState} />}
       <BookSummary />
-      <TabMenu type="default" />
+      <TabMenu type="default" id="tab-menu" />
       <BookDescription />
       <AuthorInfo />
       <BookReview />

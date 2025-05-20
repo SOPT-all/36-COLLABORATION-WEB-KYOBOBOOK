@@ -4,9 +4,14 @@ import { css } from '@emotion/react';
 export const tabMenuContainer = (theme: Theme) => css`
   display: flex;
   align-items: center;
-  height: 4.2rem;
+  height: 5rem;
   padding: 0 1.2rem;
   border-bottom: 1px solid ${theme.colors.gray3};
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: ${theme.colors.white};
 `;
 
 export const sortButton = (theme: Theme) => css`

@@ -13,9 +13,10 @@ const reviewTabs = ['전체 리뷰', '구매 리뷰'];
 
 type TabMenuTypes = {
   type: 'default' | 'review';
+  id?: string;
 };
 
-const TabMenu = ({ type }: TabMenuTypes) => {
+const TabMenu = ({ type, id }: TabMenuTypes) => {
   const theme = useTheme();
   const currentTabs = type === 'default' ? tabs : reviewTabs;
   const [selectedTab, setSelectedTab] = useState(currentTabs[0]);
@@ -29,7 +30,7 @@ const TabMenu = ({ type }: TabMenuTypes) => {
   };
 
   return (
-    <nav css={tabMenuContainer(theme)}>
+    <nav id={id} css={tabMenuContainer(theme)}>
       {currentTabs.map((tab) => (
         <TabButton
           key={tab}
