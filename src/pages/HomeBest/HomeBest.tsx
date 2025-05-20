@@ -87,8 +87,6 @@ const HomeBest = () => {
           return <BookItem key={book.rank} {...book} />;
         })}
       </div>
-
-      <Footer />
       <HomeBottomNav />
     </>
   );
