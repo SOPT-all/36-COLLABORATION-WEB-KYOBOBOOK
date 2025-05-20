@@ -3,6 +3,7 @@ import { useTheme } from '@emotion/react';
 import { useNavigate } from 'react-router-dom';
 
 import { mockBooks } from './mockBooks';
+import HomeBottomNav from '@/components/BottomNav/HomeBottomNav';
 
 import MenuButton from '@/pages/HomeBest/components/MenuButton/MenuButton';
 import {
@@ -86,6 +87,7 @@ const HomeBest = () => {
       </div>
 
       <Footer />
+      <HomeBottomNav />
     </>
   );
 };

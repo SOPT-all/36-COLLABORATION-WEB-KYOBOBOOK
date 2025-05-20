@@ -6,16 +6,19 @@ import BellIcon from '../icons/svg/ic_bell.svg?react';
 import BestIcon from '../icons/svg/ic_best.svg?react';
 import CaptionIcon from '../icons/svg/ic_caption.svg?react';
 import CartIcon from '../icons/svg/ic_cart.svg?react';
+import CartBookIcon from '../icons/svg/ic_cart_book.svg?react';
 import ChangeIcon from '../icons/svg/ic_change.svg?react';
 import CheckIcon from '../icons/svg/ic_check.svg?react';
 import CloseIcon from '../icons/svg/ic_close.svg?react';
 import DeliveryIcon from '../icons/svg/ic_delivery.svg?react';
+import DownIcon from '../icons/svg/ic_down.svg?react';
 import DownloadIcon from '../icons/svg/ic_download.svg?react';
 import FacebookCircleIcon from '../icons/svg/ic_facebook_circle.svg?react';
 import FacebookIcon from '../icons/svg/ic_facebook.svg?react';
 import FloatingIcon from '../icons/svg/ic_floating.svg?react';
 import FundingIcon from '../icons/svg/ic_funding.svg?react';
 import HomeIcon from '../icons/svg/ic_home.svg?react';
+import HomeGreenIcon from '../icons/svg/ic_home_green.svg?react';
 import Home2Icon from '../icons/svg/ic_home2.svg?react';
 import InfoIcon from '../icons/svg/ic_info.svg?react';
 import InstagramCircleIcon from '../icons/svg/ic_instagram_circle.svg?react';
@@ -44,14 +47,13 @@ import TotalIcon from '../icons/svg/ic_total.svg?react';
 import TrashIcon from '../icons/svg/ic_trash.svg?react';
 import UpIcon from '../icons/svg/ic_up.svg?react';
 import ViewDetailIcon from '../icons/svg/ic_view_detail.svg?react';
-import View from '../icons/svg/ic_view.svg?react';
+import ViewIcon from '../icons/svg/ic_view.svg?react';
 import WishFillIcon from '../icons/svg/ic_wish_fill.svg?react';
 import WishIcon from '../icons/svg/ic_wish.svg?react';
 import WriteIcon from '../icons/svg/ic_write.svg?react';
 import YoutubeCircleIcon from '../icons/svg/ic_youtube_circle.svg?react';
 import YoutubeIcon from '../icons/svg/ic_youtube.svg?react';
 import kyoboLogo from '../icons/svg/ic_kyobo_logo.svg?react';
-import Down from '../icons/svg/ic_down.svg?react';
 import CircleDown from '../icons/svg/ic_circle_down.svg?react';
 import Dot from '../icons/svg/ic_dot.svg?react';
 import NavHottracks from '../icons/svg/ic_nav_hottracks.svg?react';
@@ -69,16 +71,19 @@ export const iconMap = {
   best: BestIcon,
   caption: CaptionIcon,
   cart: CartIcon,
+  cartBook: CartBookIcon,
   change: ChangeIcon,
   check: CheckIcon,
   close: CloseIcon,
   delivery: DeliveryIcon,
+  down: DownIcon,
   download: DownloadIcon,
   facebookCircle: FacebookCircleIcon,
   facebook: FacebookIcon,
   floating: FloatingIcon,
   funding: FundingIcon,
   home: HomeIcon,
+  homegreen: HomeGreenIcon,
   home2: Home2Icon,
   info: InfoIcon,
   instagramCircle: InstagramCircleIcon,
@@ -107,14 +112,13 @@ export const iconMap = {
   trash: TrashIcon,
   up: UpIcon,
   viewDetail: ViewDetailIcon,
-  view: View,
+  view: ViewIcon,
   wishFill: WishFillIcon,
   wish: WishIcon,
   write: WriteIcon,
   youtubeCircle: YoutubeCircleIcon,
   youtube: YoutubeIcon,
   kyoboLogo: kyoboLogo,
-  down: Down,
   circleDown: CircleDown,
   dot: Dot,
   navHottracks: NavHottracks,

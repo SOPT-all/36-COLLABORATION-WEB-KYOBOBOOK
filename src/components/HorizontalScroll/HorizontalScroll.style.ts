@@ -6,6 +6,7 @@ const rowScrollStyle = (gap: string, effect: boolean, theme: Theme) => css`
   flex-direction: row;
   gap: ${gap};
   overflow-x: auto;
+  width: 100%;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   &::-webkit-scrollbar {
