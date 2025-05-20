@@ -10,7 +10,7 @@ const Card = ({ imgUrl, title, type = 'rectangular' }: CardTypes) => {
   return (
     <div css={cardStyle}>
       <img css={imgStyle(imgHeight)} src={imgUrl} alt={`책 표지 이미지 - ${title}`} />
-      <p css={titleStyle(theme)}>{title}</p>
+      {title && <p css={titleStyle(theme)}>{title}</p>}
     </div>
   );
 };

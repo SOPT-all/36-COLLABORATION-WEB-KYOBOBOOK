@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTheme } from '@emotion/react';
+import { useNavigate } from 'react-router-dom';
 
 import { mockBooks } from './mockBooks';
 import HomeBottomNav from '@/components/BottomNav/HomeBottomNav';
@@ -17,13 +18,20 @@ import * as s from '@/pages/HomeBest/HomeBest.style';
 import Icon from '@/components/Icon';
 import BookItem from '@/pages/HomeBest/components/BookItem/BookItem';
 import Footer from '@/components/Footer/Footer';
+import routePath from '@/routes/routePath';
 
 const HomeBest = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
+
   const [activeCategory, setActiveCategory] = useState<CategoryButtonTypes['label']>('종합');
   const [activeMenu, setActiveMenu] = useState(0);
   const today = new Date();
   const formattedDate = `${today.getFullYear()}.${String(today.getMonth() + 1).padStart(2, '0')}.${String(today.getDate()).padStart(2, '0')}`;
+
+  const handleBookClick = () => {
+    navigate(routePath.HOME_BEST_DETAIL);
+  };
 
   return (
     <>
@@ -74,7 +82,7 @@ const HomeBest = () => {
 
       <div css={s.bookListWrapper}>
         {mockBooks.map((book) => (
-          <BookItem key={book.rank} {...book} />
+          <BookItem key={book.rank} {...book} onClick={handleBookClick} />
         ))}
       </div>
 
