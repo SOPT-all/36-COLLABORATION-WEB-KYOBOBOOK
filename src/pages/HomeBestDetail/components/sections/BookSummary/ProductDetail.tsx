@@ -31,8 +31,14 @@ import {
   alarmButton,
   alarmButtonText,
   alarmSecondLineText,
+  reviewWrapper,
+  reviewBox,
+  reviewText,
+  ratingText,
+  emotionText,
 } from '@/pages/HomeBestDetail/components/sections/BookSummary/ProductDetail.style';
 import Icon from '@/components/Icon';
+import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
 
 const ProductDetail = () => {
   const theme = useTheme();
@@ -108,6 +114,19 @@ const ProductDetail = () => {
           <p css={alarmSecondLineText(theme)}>
             사은품 ‘영하의 무물' 한정판 별책 (포인트 차감, 추가결제)
           </p>
+        </div>
+      </div>
+
+      <div css={reviewWrapper(theme)}>
+        <div css={reviewBox(theme)}>
+          <span css={ratingText(theme)}>4</span>
+          <StarRating rating={4} />
+          <p css={reviewText(theme)}>(118개의 리뷰)</p>
+        </div>
+        <div css={reviewBox(theme)}>
+          <Icon name="quote" fill={theme.colors.purple7} />
+          <span css={emotionText(theme)}>감동이에요</span>
+          <p css={reviewText(theme)}>(70%의 구매자)</p>
         </div>
       </div>
     </div>

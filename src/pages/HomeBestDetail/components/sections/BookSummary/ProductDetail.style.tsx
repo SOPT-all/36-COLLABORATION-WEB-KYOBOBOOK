@@ -186,3 +186,47 @@ export const alarmSecondLineText = (theme: Theme) => css`
   color: ${theme.colors.gray5};
   ${theme.fonts.caption3};
 `;
+
+export const reviewWrapper = (theme: Theme) => css`
+  display: flex;
+  height: 10.8rem;
+  width: 32.7rem;
+  margin: auto;
+  border: 1px solid ${theme.colors.gray2};
+  border-radius: 12px;
+`;
+export const reviewBox = (theme: Theme) => css`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  &:first-of-type::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 1px;
+    height: 3.3rem;
+    background-color: ${theme.colors.gray2};
+  }
+`;
+export const ratingText = (theme: Theme) => css`
+  color: ${theme.colors.green1};
+  ${theme.fonts.title3};
+`;
+
+export const emotionText = (theme: Theme) => css`
+  color: ${theme.colors.purple7};
+  ${theme.fonts.subtitle2};
+`;
+
+export const reviewText = (theme: Theme) => css`
+  padding-top: 0.4rem;
+  color: ${theme.colors.gray5};
+  ${theme.fonts.caption3};
+`;
