@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react';
 
-import * as s from '@/pages/HomeBestDetail/NoticeSection/NoticeSection.style';
+import * as s from '@/pages/HomeBestDetail/components/sections/NoticeSection/NoticeSection.style';
 
 const NoticeSection = () => {
   const theme = useTheme();

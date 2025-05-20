@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react';
 
-import * as s from '@/pages/HomeBestDetail/KeywordSection/FilterButton/FilterButton.style';
+import * as s from '@/pages/HomeBestDetail/components/sections/KeywordSection/FilterButton/FilterButton.style';
 
 interface FilterButtonTypes {
   label: string;
