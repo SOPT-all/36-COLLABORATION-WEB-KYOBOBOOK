@@ -1,5 +1,3 @@
-import type { ReactNode } from 'react';
-
 import { buttonVariantStyles } from '@/components/Button/Button.styles';
 
 export type ButtonVariant = keyof typeof buttonVariantStyles;
