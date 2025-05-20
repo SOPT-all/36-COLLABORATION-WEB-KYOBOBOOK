@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react';
 
-import * as s from '@/pages/HomeBestDetail/EventSection/EventCard/EventCard.style';
+import * as s from '@/pages/HomeBestDetail/components/sections/EventSection/EventCard/EventCard.style';
 
 interface EventCardProps {
   imgUrl: string;

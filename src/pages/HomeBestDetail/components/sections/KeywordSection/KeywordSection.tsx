@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useTheme } from '@emotion/react';
 
-import FilterButton from '@/pages/HomeBestDetail/KeywordSection/FilterButton/FilterButton';
+import FilterButton from '@/pages/HomeBestDetail/components/sections/KeywordSection/FilterButton/FilterButton';
 import {
   FILTER_BUTTON_LIST,
   KEYWORD_IMAGE_LIST,
-} from '@/pages/HomeBestDetail/KeywordSection/KeywordSection.constants';
+} from '@/pages/HomeBestDetail/components/sections/KeywordSection/KeywordSection.constants';
 import Icon from '@/components/Icon';
-import * as s from '@/pages/HomeBestDetail/KeywordSection/KeywordSection.style';
+import * as s from '@/pages/HomeBestDetail/components/sections/KeywordSection/KeywordSection.style';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 import Card from '@/components/Card/Card';
 
