@@ -14,7 +14,7 @@ type EmotionTypes = {
   percent: number;
 };
 
-export default function EmotionBar({ emotion, percent }: EmotionTypes) {
+const EmotionBar = ({ emotion, percent }: EmotionTypes) => {
   const theme = useTheme();
 
   return (
@@ -27,4 +27,5 @@ export default function EmotionBar({ emotion, percent }: EmotionTypes) {
       </div>
     </div>
   );
-}
+};
+export default EmotionBar;

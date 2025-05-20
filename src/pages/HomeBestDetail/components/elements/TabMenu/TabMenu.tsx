@@ -15,7 +15,7 @@ type TabMenuTypes = {
   type: 'default' | 'review';
 };
 
-export default function TabMenu({ type }: TabMenuTypes) {
+const TabMenu = ({ type }: TabMenuTypes) => {
   const theme = useTheme();
   const currentTabs = type === 'default' ? tabs : reviewTabs;
   const [selectedTab, setSelectedTab] = useState(currentTabs[0]);
@@ -46,4 +46,5 @@ export default function TabMenu({ type }: TabMenuTypes) {
       )}
     </nav>
   );
-}
+};
+export default TabMenu;

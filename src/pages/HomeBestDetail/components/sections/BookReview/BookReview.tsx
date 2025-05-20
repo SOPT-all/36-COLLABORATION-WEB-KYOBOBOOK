@@ -12,7 +12,7 @@ import EmotionBar from '@/pages/HomeBestDetail/components/elements/EmotionBar/Em
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
 import { bookReviewStyles as s } from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview.style';
 
-export default function BookReview() {
+const BookReview = () => {
   const theme = useTheme();
 
   const sortedStar = Object.entries(ratingData.starDistribution).sort(
@@ -72,4 +72,5 @@ export default function BookReview() {
       </div>
     </>
   );
-}
+};
+export default BookReview;

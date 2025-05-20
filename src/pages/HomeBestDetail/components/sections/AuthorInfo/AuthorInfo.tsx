@@ -7,7 +7,7 @@ import AuthorImage from '@/assets/img/im_author.svg';
 import Card from '@/components/Card/Card';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 
-export default function AuthorInfo() {
+const AuthorInfo = () => {
   const theme = useTheme();
   const [isLiked, setIsLiked] = useState(false);
 
@@ -95,4 +95,6 @@ export default function AuthorInfo() {
       </div>
     </>
   );
-}
+};
+
+export default AuthorInfo;
