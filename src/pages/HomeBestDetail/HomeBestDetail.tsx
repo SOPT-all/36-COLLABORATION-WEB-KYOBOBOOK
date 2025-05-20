@@ -1,11 +1,13 @@
+import TabMenu from '@/pages/HomeBestDetail/components/elements/TabMenu/TabMenu';
 import AuthorInfo from '@/pages/HomeBestDetail/components/sections/AuthorInfo/AuthorInfo';
+import BookDescription from '@/pages/HomeBestDetail/components/sections/BookDescription/BookDescription';
 import BookReview from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview';
-import BookSummary from '@/pages/HomeBestDetail/components/sections/BookSummary/BookSummary';
 
 const HomeBestDetail = () => {
   return (
     <>
-      <BookSummary />
+      <TabMenu type="default" />
+      <BookDescription />
       <AuthorInfo />
       <BookReview />
     </>
