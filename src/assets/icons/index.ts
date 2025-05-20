@@ -6,10 +6,12 @@ import BellIcon from '../icons/svg/ic_bell.svg?react';
 import BestIcon from '../icons/svg/ic_best.svg?react';
 import CaptionIcon from '../icons/svg/ic_caption.svg?react';
 import CartIcon from '../icons/svg/ic_cart.svg?react';
+import CartBookIcon from '../icons/svg/ic_cart_book.svg?react';
 import ChangeIcon from '../icons/svg/ic_change.svg?react';
 import CheckIcon from '../icons/svg/ic_check.svg?react';
 import CloseIcon from '../icons/svg/ic_close.svg?react';
 import DeliveryIcon from '../icons/svg/ic_delivery.svg?react';
+import DownIcon from '../icons/svg/ic_down.svg?react';
 import DownloadIcon from '../icons/svg/ic_download.svg?react';
 import FacebookCircleIcon from '../icons/svg/ic_facebook_circle.svg?react';
 import FacebookIcon from '../icons/svg/ic_facebook.svg?react';
@@ -45,7 +47,7 @@ import TotalIcon from '../icons/svg/ic_total.svg?react';
 import TrashIcon from '../icons/svg/ic_trash.svg?react';
 import UpIcon from '../icons/svg/ic_up.svg?react';
 import ViewDetailIcon from '../icons/svg/ic_view_detail.svg?react';
-import View from '../icons/svg/ic_view.svg?react';
+import ViewIcon from '../icons/svg/ic_view.svg?react';
 import WishFillIcon from '../icons/svg/ic_wish_fill.svg?react';
 import WishIcon from '../icons/svg/ic_wish.svg?react';
 import WriteIcon from '../icons/svg/ic_write.svg?react';
@@ -70,10 +72,12 @@ export const iconMap = {
   best: BestIcon,
   caption: CaptionIcon,
   cart: CartIcon,
+  cartBook: CartBookIcon,
   change: ChangeIcon,
   check: CheckIcon,
   close: CloseIcon,
   delivery: DeliveryIcon,
+  down: DownIcon,
   download: DownloadIcon,
   facebookCircle: FacebookCircleIcon,
   facebook: FacebookIcon,
@@ -109,14 +113,13 @@ export const iconMap = {
   trash: TrashIcon,
   up: UpIcon,
   viewDetail: ViewDetailIcon,
-  view: View,
+  view: ViewIcon,
   wishFill: WishFillIcon,
   wish: WishIcon,
   write: WriteIcon,
   youtubeCircle: YoutubeCircleIcon,
   youtube: YoutubeIcon,
   kyoboLogo: kyoboLogo,
-  down: Down,
   circleDown: CircleDown,
   dot: Dot,
   navHottracks: NavHottracks,
