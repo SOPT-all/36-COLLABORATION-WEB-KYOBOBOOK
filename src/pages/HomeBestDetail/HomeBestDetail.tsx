@@ -1,5 +1,13 @@
+import AuthorInfo from '@/pages/HomeBestDetail/components/sections/AuthorInfo/AuthorInfo';
+import BookReview from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview';
+
 const HomeBestDetail = () => {
-  return <div>홈 베스트 상세 페이지입니다</div>;
+  return (
+    <>
+      <AuthorInfo />
+      <BookReview />
+    </>
+  );
 };
 
 export default HomeBestDetail;

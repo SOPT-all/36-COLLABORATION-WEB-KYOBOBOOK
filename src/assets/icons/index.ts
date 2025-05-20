@@ -16,6 +16,7 @@ import FacebookIcon from '../icons/svg/ic_facebook.svg?react';
 import FloatingIcon from '../icons/svg/ic_floating.svg?react';
 import FundingIcon from '../icons/svg/ic_funding.svg?react';
 import HomeIcon from '../icons/svg/ic_home.svg?react';
+import HomeGreenIcon from '../icons/svg/ic_home_green.svg?react';
 import Home2Icon from '../icons/svg/ic_home2.svg?react';
 import InfoIcon from '../icons/svg/ic_info.svg?react';
 import InstagramCircleIcon from '../icons/svg/ic_instagram_circle.svg?react';
@@ -50,6 +51,15 @@ import WishIcon from '../icons/svg/ic_wish.svg?react';
 import WriteIcon from '../icons/svg/ic_write.svg?react';
 import YoutubeCircleIcon from '../icons/svg/ic_youtube_circle.svg?react';
 import YoutubeIcon from '../icons/svg/ic_youtube.svg?react';
+import kyoboLogo from '../icons/svg/ic_kyobo_logo.svg?react';
+import Down from '../icons/svg/ic_down.svg?react';
+import CircleDown from '../icons/svg/ic_circle_down.svg?react';
+import Dot from '../icons/svg/ic_dot.svg?react';
+import NavHottracks from '../icons/svg/ic_nav_hottracks.svg?react';
+import NavSam from '../icons/svg/ic_nav_sam.svg?react';
+import NavEbook from '../icons/svg/ic_nav_ebook.svg?react';
+import NavLogoBackground from '../icons/svg/ic_nav_logo_background.svg?react';
+import IcHeaderLogo from '../icons/svg/ic_header_logo.svg?react';
 
 export const iconMap = {
   account: AccountIcon,
@@ -70,6 +80,7 @@ export const iconMap = {
   floating: FloatingIcon,
   funding: FundingIcon,
   home: HomeIcon,
+  homegreen: HomeGreenIcon,
   home2: Home2Icon,
   info: InfoIcon,
   instagramCircle: InstagramCircleIcon,
@@ -104,6 +115,15 @@ export const iconMap = {
   write: WriteIcon,
   youtubeCircle: YoutubeCircleIcon,
   youtube: YoutubeIcon,
+  kyoboLogo: kyoboLogo,
+  down: Down,
+  circleDown: CircleDown,
+  dot: Dot,
+  navHottracks: NavHottracks,
+  navSam: NavSam,
+  navEbook: NavEbook,
+  navLogoBackground: NavLogoBackground,
+  icHeaderLogo: IcHeaderLogo,
 };
 
 export type IconName = keyof typeof iconMap;
