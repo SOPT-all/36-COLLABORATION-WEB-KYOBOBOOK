@@ -15,4 +15,5 @@ export interface AddBookTypes extends BookTypes {
   point: number;
   deliveryDate: string;
   isLiked: boolean;
+  onClick?: () => void;
 }
