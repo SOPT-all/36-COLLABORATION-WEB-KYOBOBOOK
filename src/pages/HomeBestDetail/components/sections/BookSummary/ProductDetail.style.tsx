@@ -1,14 +1,21 @@
 import type { Theme } from '@emotion/react';
 import { css } from '@emotion/react';
 
-export const productWrapper = (theme: Theme) => css`
+import {
+  flexCenter,
+  flexVerticalCenter,
+  flexBetweenCenter,
+  flexColumn,
+  flexColumnCenter,
+} from '@/styles/sharedStyles';
+
+export const productWrapper = css`
   padding: 0 2.4rem;
 `;
 
-export const priceWrapper = (theme: Theme) => css`
+export const priceWrapper = css`
   margin: 2.6rem 0 1.6rem 0;
-  display: flex;
-  align-items: center;
+  ${flexVerticalCenter};
   gap: 0.4rem;
 `;
 
@@ -32,9 +39,7 @@ export const beforeText = (theme: Theme) => css`
 `;
 
 export const benefitWrapper = (theme: Theme) => css`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  ${flexBetweenCenter};
   padding: 1.6rem 0;
   border-top: 1px solid ${theme.colors.gray2};
 `;
@@ -43,10 +48,8 @@ export const benefitText = (theme: Theme) => css`
   ${theme.fonts.subtitle4};
 `;
 
-export const pointWrapper = (theme: Theme) => css`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+export const pointWrapper = css`
+  ${flexBetweenCenter};
   gap: 0.8rem;
 `;
 
@@ -56,20 +59,17 @@ export const pointText = (theme: Theme) => css`
 `;
 
 export const deliverWrapper = (theme: Theme) => css`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn};
   gap: 1rem;
   padding: 1.6rem 0;
   border-top: 1px solid ${theme.colors.gray2};
 `;
 
-export const deliverFistWrapper = (theme: Theme) => css`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+export const deliverFistWrapper = css`
+  ${flexBetweenCenter};
 `;
 
-export const deliverRightWrapper = (theme: Theme) => css`
+export const deliverRightWrapper = css`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -78,8 +78,7 @@ export const deliverRightWrapper = (theme: Theme) => css`
 
 // 칩 오면 수정
 export const deliverChip = (theme: Theme) => css`
-  display: flex;
-  align-items: center;
+  ${flexVerticalCenter};
   padding: 0 0.8rem;
   height: 2rem;
   border-radius: 4rem;
@@ -97,8 +96,7 @@ export const arriveText = (theme: Theme) => css`
 `;
 
 export const deliverInfoWrapper = (theme: Theme) => css`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn};
   gap: 1.4rem;
   padding: 1.6rem 0;
   border-top: 1px solid ${theme.colors.gray2};
@@ -122,10 +120,10 @@ export const infoWrapper = (theme: Theme) => css`
   border-radius: 8px;
 `;
 
-export const firstLineContainer = (theme: Theme) => css`
+export const firstLineContainer = css`
+  ${flexVerticalCenter};
   display: flex;
   gap: 0.2rem;
-  align-items: center;
 `;
 
 export const firstLineText = (theme: Theme) => css`
@@ -133,8 +131,7 @@ export const firstLineText = (theme: Theme) => css`
 `;
 
 export const moreButton = (theme: Theme) => css`
-  display: flex;
-  align-items: center;
+  ${flexVerticalCenter}
   gap: 0.2rem;
   padding: 0 0.2rem 0 0.6rem;
   margin-left: auto;
@@ -153,9 +150,8 @@ export const secondLineText = (theme: Theme) => css`
   ${theme.fonts.caption3};
 `;
 
-export const alarmInfoContainer = (theme: Theme) => css`
-  display: flex;
-  justify-content: space-between;
+export const alarmInfoContainer = css`
+  ${flexBetweenCenter};
 `;
 
 export const alarmText = (theme: Theme) => css`
@@ -165,9 +161,7 @@ export const alarmText = (theme: Theme) => css`
 `;
 
 export const alarmButton = (theme: Theme) => css`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${flexCenter};
   gap: 0.2rem;
   padding: 0 0.8rem;
   height: 2.8rem;
@@ -188,7 +182,7 @@ export const alarmSecondLineText = (theme: Theme) => css`
 `;
 
 export const reviewWrapper = (theme: Theme) => css`
-  display: flex;
+  ${flexVerticalCenter};
   height: 10.8rem;
   width: 100%;
   margin: auto;
@@ -197,10 +191,7 @@ export const reviewWrapper = (theme: Theme) => css`
 `;
 export const reviewBox = (theme: Theme) => css`
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  ${flexColumnCenter};
 
   position: relative;
 
@@ -232,9 +223,7 @@ export const reviewText = (theme: Theme) => css`
 `;
 
 export const locationButton = (theme: Theme) => css`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${flexCenter};
   gap: 0.2rem;
   width: 100%;
   padding: 0.7rem 0;
@@ -248,18 +237,14 @@ export const locationText = (theme: Theme) => css`
   ${theme.fonts.body3};
 `;
 
-export const buttonWrapper = (theme: Theme) => css`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+export const buttonWrapper = css`
+  ${flexCenter};
   width: 100%;
 `;
 
-export const buttonContainer = (theme: Theme) => css`
+export const buttonContainer = css`
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${flexCenter};
   gap: 0.4rem;
   padding: 1.2rem 0;
   background-color: transparent;
