@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { useTheme } from '@emotion/react';
+import { useNavigate } from 'react-router-dom';
 
-import { mockBooks } from './mockBooks';
-
+import { mockBooks } from '@/pages/HomeBest/mockBooks';
+import { addBookInfo } from '@/pages/HomeBest/utils/addBookInfo';
+import HomeBottomNav from '@/components/BottomNav/HomeBottomNav';
 import MenuButton from '@/pages/HomeBest/components/MenuButton/MenuButton';
 import {
   CategoryButtonList,
@@ -15,14 +17,22 @@ import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll
 import * as s from '@/pages/HomeBest/HomeBest.style';
 import Icon from '@/components/Icon';
 import BookItem from '@/pages/HomeBest/components/BookItem/BookItem';
-import Footer from '@/components/Footer/Footer';
+import routePath from '@/routes/routePath';
 
 const HomeBest = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
+
   const [activeCategory, setActiveCategory] = useState<CategoryButtonTypes['label']>('종합');
   const [activeMenu, setActiveMenu] = useState(0);
   const today = new Date();
   const formattedDate = `${today.getFullYear()}.${String(today.getMonth() + 1).padStart(2, '0')}.${String(today.getDate()).padStart(2, '0')}`;
+
+  const enrichedBooks = mockBooks.map(addBookInfo);
+
+  const handleBookClick = () => {
+    navigate(routePath.HOME_BEST_DETAIL);
+  };
 
   return (
     <>
@@ -72,12 +82,13 @@ const HomeBest = () => {
       </div>
 
       <div css={s.bookListWrapper}>
-        {mockBooks.map((book) => (
-          <BookItem key={book.rank} {...book} />
-        ))}
+        {enrichedBooks.map((book) => {
+          return <BookItem key={book.rank} {...book} onClick={handleBookClick} />;
+        })}
       </div>
+      <div css={s.emptyContainer} />
 
-      <Footer />
+      <HomeBottomNav />
     </>
   );
 };
