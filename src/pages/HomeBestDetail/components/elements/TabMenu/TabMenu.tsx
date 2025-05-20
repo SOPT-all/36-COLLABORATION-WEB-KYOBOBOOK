@@ -21,7 +21,7 @@ const TabMenu = ({ type }: TabMenuTypes) => {
   const [selectedTab, setSelectedTab] = useState(currentTabs[0]);
 
   useEffect(() => {
-    setSelectedTab(currentTabs[0]);
+    setSelectedTab(type === 'default' ? tabs[0] : reviewTabs[0]);
   }, [type]);
 
   const handleTab = (tab: string) => {
