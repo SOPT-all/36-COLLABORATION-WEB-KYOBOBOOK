@@ -190,7 +190,7 @@ export const alarmSecondLineText = (theme: Theme) => css`
 export const reviewWrapper = (theme: Theme) => css`
   display: flex;
   height: 10.8rem;
-  width: 32.7rem;
+  width: 100%;
   margin: auto;
   border: 1px solid ${theme.colors.gray2};
   border-radius: 12px;
@@ -228,5 +228,49 @@ export const emotionText = (theme: Theme) => css`
 export const reviewText = (theme: Theme) => css`
   padding-top: 0.4rem;
   color: ${theme.colors.gray5};
+  ${theme.fonts.caption3};
+`;
+
+export const locationButton = (theme: Theme) => css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  width: 100%;
+  padding: 0.7rem 0;
+  margin: 2rem 0;
+  background-color: ${theme.colors.white};
+  border: 1px solid ${theme.colors.gray3};
+  border-radius: 6px;
+`;
+
+export const locationText = (theme: Theme) => css`
+  ${theme.fonts.body3};
+`;
+
+export const buttonWrapper = (theme: Theme) => css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
+export const buttonContainer = (theme: Theme) => css`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.2rem 0;
+  background-color: transparent;
+  border: none;
+`;
+
+export const buttonText = (theme: Theme) => css`
+  ${theme.fonts.body2};
+`;
+
+export const wishCountText = (theme: Theme) => css`
+  color: ${theme.colors.gray4};
   ${theme.fonts.caption3};
 `;

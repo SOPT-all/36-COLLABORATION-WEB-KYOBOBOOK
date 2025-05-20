@@ -36,6 +36,12 @@ import {
   reviewText,
   ratingText,
   emotionText,
+  locationButton,
+  locationText,
+  buttonWrapper,
+  buttonContainer,
+  buttonText,
+  wishCountText,
 } from '@/pages/HomeBestDetail/components/sections/BookSummary/ProductDetail.style';
 import Icon from '@/components/Icon';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
@@ -128,6 +134,23 @@ const ProductDetail = () => {
           <span css={emotionText(theme)}>감동이에요</span>
           <p css={reviewText(theme)}>(70%의 구매자)</p>
         </div>
+      </div>
+
+      <button css={locationButton(theme)}>
+        <Icon name="map" width={16} height={16} />
+        <p css={locationText(theme)}>매장 재고·위치</p>
+      </button>
+
+      <div css={buttonWrapper(theme)}>
+        <button css={buttonContainer(theme)}>
+          <Icon name="share" />
+          <span css={buttonText(theme)}>공유</span>
+        </button>
+        <button css={buttonContainer(theme)}>
+          <Icon name="wish" />
+          <span css={buttonText(theme)}>찜</span>
+          <span css={wishCountText(theme)}>(1,529)</span>
+        </button>
       </div>
     </div>
   );
