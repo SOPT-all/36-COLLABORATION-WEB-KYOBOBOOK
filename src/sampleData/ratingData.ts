@@ -1,4 +1,4 @@
-export const data = {
+export const ratingData = {
   averageStar: 4.0,
   starDistribution: {
     '5': 90,

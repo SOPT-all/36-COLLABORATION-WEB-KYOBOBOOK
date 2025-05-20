@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react';
 
 import Icon from '@/components/Icon';
-import { starContainer } from '@/pages/HomeBestDetail/StarRating/StarRating.style';
+import { starContainer } from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating.style';
 
 type starTypes = {
   rating: number;
