@@ -5,7 +5,7 @@ import Icon from '@/components/Icon';
 import type { ReviewTypes } from '@/types/reviewTypes';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
 
-export default function ReviewCard({ reviewData }: { reviewData: ReviewTypes }) {
+const ReviewCard = ({ reviewData }: { reviewData: ReviewTypes }) => {
   const theme = useTheme();
 
   const blindName = (name: string) => {
@@ -43,4 +43,6 @@ export default function ReviewCard({ reviewData }: { reviewData: ReviewTypes }) 
       </div>
     </div>
   );
-}
+};
+
+export default ReviewCard;

@@ -9,7 +9,7 @@ type starTypes = {
   height?: number;
 };
 
-export default function StarRating({ rating, width, height }: starTypes) {
+const StarRating = ({ rating, width, height }: starTypes) => {
   const theme = useTheme();
   const totalRating = 5;
 
@@ -26,4 +26,6 @@ export default function StarRating({ rating, width, height }: starTypes) {
       ))}
     </div>
   );
-}
+};
+
+export default StarRating;

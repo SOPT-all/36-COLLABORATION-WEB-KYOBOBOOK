@@ -12,7 +12,7 @@ type TabTypes = {
   onClick: () => void;
 };
 
-export default function TabButton({ tab, isActive, onClick }: TabTypes) {
+const TabButton = ({ tab, isActive, onClick }: TabTypes) => {
   const theme = useTheme();
 
   const reviewText = (tab: string) => {
@@ -33,4 +33,6 @@ export default function TabButton({ tab, isActive, onClick }: TabTypes) {
       </span>
     </button>
   );
-}
+};
+
+export default TabButton;

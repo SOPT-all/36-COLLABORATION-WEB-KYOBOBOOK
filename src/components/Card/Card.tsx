@@ -3,7 +3,7 @@ import { useTheme } from '@emotion/react';
 import type { CardTypes } from '@/types/cardTypes';
 import { cardStyle, imgStyle, titleStyle } from '@/components/Card/Card.styles';
 
-export default function Card({ imgUrl, title, type = 'rectangular' }: CardTypes) {
+const Card = ({ imgUrl, title, type = 'rectangular' }: CardTypes) => {
   const theme = useTheme();
   const imgHeight = type === 'rectangular' ? '18.8rem' : '12.8rem';
 
@@ -13,4 +13,6 @@ export default function Card({ imgUrl, title, type = 'rectangular' }: CardTypes)
       <p css={titleStyle(theme)}>{title}</p>
     </div>
   );
-}
+};
+
+export default Card;

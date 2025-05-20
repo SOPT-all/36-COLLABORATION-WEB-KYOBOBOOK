@@ -12,7 +12,7 @@ type BookMetaTypes = {
   index: number;
 };
 
-export default function BookMeta({ title, content, index }: BookMetaTypes) {
+const BookMeta = ({ title, content, index }: BookMetaTypes) => {
   const theme = useTheme();
 
   return (
@@ -21,4 +21,6 @@ export default function BookMeta({ title, content, index }: BookMetaTypes) {
       <span css={contentText(theme)}>{content}</span>
     </div>
   );
-}
+};
+
+export default BookMeta;
