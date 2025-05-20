@@ -12,4 +12,5 @@ export const iconWrapper = css`
   padding: 0.6rem;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 `;
