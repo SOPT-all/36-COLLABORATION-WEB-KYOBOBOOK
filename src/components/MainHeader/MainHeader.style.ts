@@ -42,11 +42,28 @@ const cartIconWrapper = css`
 `;
 
 const headerTabWrapper = (theme: Theme) => css`
+  position: sticky;
+
   display: flex;
   padding: 0.8rem 2.4rem;
   height: 6.6rem;
   gap: 1.6rem;
   background-color: ${theme.colors.white};
+  z-index: 2;
+`;
+
+const headerTabSticky = (theme: Theme) => css`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: ${theme.colors.white};
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+`;
+
+const emptyContainer = css`
+  height: 6.6rem;
 `;
 
 const layeredWrapper = (theme: Theme) => css`
@@ -86,4 +103,6 @@ export {
   headerTabWrapper,
   layeredWrapper,
   layeredIconWrapper,
+  headerTabSticky,
+  emptyContainer,
 };
