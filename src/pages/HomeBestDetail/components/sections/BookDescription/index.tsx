@@ -1,7 +1,7 @@
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 import BookMeta from '@/pages/HomeBestDetail/components/elements/BookMeta/BookMeta';
 
-export default function BookDescription() {
+const index = () => {
   const bookMeta = {
     카테고리: '한국에세이',
     출간일: '2025.04.06',
@@ -17,4 +17,6 @@ export default function BookDescription() {
       })}
     </HorizontalScrollList>
   );
-}
+};
+
+export default index;

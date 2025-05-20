@@ -13,7 +13,7 @@ type RatingTypes = {
   percent: number;
 };
 
-export default function RatingBar({ rating, percent }: RatingTypes) {
+const RatingBar = ({ rating, percent }: RatingTypes) => {
   const theme = useTheme();
 
   return (
@@ -26,4 +26,6 @@ export default function RatingBar({ rating, percent }: RatingTypes) {
       <div css={percentText(theme)}>{percent}%</div>
     </div>
   );
-}
+};
+
+export default RatingBar;
