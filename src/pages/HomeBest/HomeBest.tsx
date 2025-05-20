@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useTheme } from '@emotion/react';
 
-import { mockBooks } from './mockBooks';
-
+import { mockBooks } from '@/pages/HomeBest/mockBooks';
+import { addBookInfo } from '@/pages/HomeBest/utils/addBookInfo';
 import MenuButton from '@/pages/HomeBest/components/MenuButton/MenuButton';
 import {
   CategoryButtonList,
@@ -23,6 +23,7 @@ const HomeBest = () => {
   const [activeMenu, setActiveMenu] = useState(0);
   const today = new Date();
   const formattedDate = `${today.getFullYear()}.${String(today.getMonth() + 1).padStart(2, '0')}.${String(today.getDate()).padStart(2, '0')}`;
+  const enrichedBooks = mockBooks.map(addBookInfo);
 
   return (
     <>
@@ -72,9 +73,9 @@ const HomeBest = () => {
       </div>
 
       <div css={s.bookListWrapper}>
-        {mockBooks.map((book) => (
-          <BookItem key={book.rank} {...book} />
-        ))}
+        {enrichedBooks.map((book) => {
+          return <BookItem key={book.rank} {...book} />;
+        })}
       </div>
 
       <Footer />

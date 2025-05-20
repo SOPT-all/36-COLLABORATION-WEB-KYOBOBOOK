@@ -1,0 +1,18 @@
+import type { BookTypes, AddBookTypes } from '@/pages/HomeBest/types/book';
+
+export const addBookInfo = (book: BookTypes): AddBookTypes => {
+  const discountRate = 10;
+  const point = Math.floor(book.price * 0.05);
+  const today = new Date();
+  const deliveryDate = `오늘(${today.getMonth() + 1}/${today.getDate()}, ${
+    ['일', '월', '화', '수', '목', '금', '토'][today.getDay()]
+  })`;
+
+  return {
+    ...book,
+    discountRate,
+    point,
+    deliveryDate,
+    isLiked: false,
+  };
+};

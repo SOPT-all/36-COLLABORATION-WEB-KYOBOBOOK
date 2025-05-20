@@ -4,36 +4,23 @@ import { useTheme } from '@emotion/react';
 import * as s from '@/pages/HomeBest/components/BookItem/BookItem.style';
 import { getRankBadgeInfo } from '@/pages/HomeBest/utils/getRankBadgeStyle';
 import Icon from '@/components/Icon';
-
-interface BookItemPropTypes {
-  rank: number;
-  title: string;
-  author: string;
-  publisher: string;
-  discountRate: number;
-  price: number;
-  point: number;
-  rating: number;
-  review: string;
-  deliveryDate: string;
-  isLiked: boolean;
-  imageUrl: string;
-}
+import type { AddBookTypes } from '@/pages/HomeBest/types/book';
 
 const BookItem = ({
   rank,
   title,
   author,
   publisher,
-  discountRate,
   price,
+  star,
+  bestEmotion,
+  imageUrl,
+
+  discountRate,
   point,
-  rating,
-  review,
   deliveryDate,
   isLiked: defaultLiked,
-  imageUrl,
-}: BookItemPropTypes) => {
+}: AddBookTypes) => {
   const theme = useTheme();
 
   const { text, isTop3 } = getRankBadgeInfo(rank);
@@ -86,12 +73,12 @@ const BookItem = ({
 
         <div css={s.reviewRow}>
           <span css={s.rating(theme)}>
-            <Icon name="star" width={14} height={14} /> {rating}
+            <Icon name="star" width={14} height={14} /> {star}
           </span>
           <span css={s.separator(theme)}>/</span>
           <span css={s.review(theme)}>
             <Icon name="quote" width={14} height={14} />
-            {review}
+            {bestEmotion}
           </span>
         </div>
 
