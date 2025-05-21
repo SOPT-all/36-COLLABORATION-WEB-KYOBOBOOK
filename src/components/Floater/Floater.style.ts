@@ -11,6 +11,11 @@ const wrapper = css`
   bottom: 12rem;
   transform: translateX(30rem);
   z-index: 100;
+
+  @media (max-width: 375px) {
+    right: 1.6rem;
+    transform: translateX(0);
+  }
 `;
 
 const floatingButton = css`
