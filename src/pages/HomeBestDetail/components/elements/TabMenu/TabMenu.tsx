@@ -10,6 +10,7 @@ import Icon from '@/components/Icon';
 
 const tabs = ['상품정보', '리뷰 (118)', '이벤트', '교환/반품/품절'];
 const reviewTabs = ['전체 리뷰', '구매 리뷰'];
+const NAVIGATE_TAB_NAME = '리뷰';
 
 type TabMenuTypes = {
   type: 'default' | 'review';
@@ -22,11 +23,19 @@ const TabMenu = ({ type, id }: TabMenuTypes) => {
   const [selectedTab, setSelectedTab] = useState(currentTabs[0]);
 
   useEffect(() => {
-    setSelectedTab(type === 'default' ? tabs[0] : reviewTabs[0]);
+    const firstTab = type === 'default' ? tabs[0] : reviewTabs[0];
+    setSelectedTab(firstTab);
   }, [type]);
 
   const handleTab = (tab: string) => {
     setSelectedTab(tab);
+  };
+
+  const goReviewSection = () => {
+    const reviewElement = document.getElementById('review-section');
+    if (reviewElement) {
+      reviewElement.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -36,7 +45,12 @@ const TabMenu = ({ type, id }: TabMenuTypes) => {
           key={tab}
           tab={tab}
           isActive={selectedTab === tab}
-          onClick={() => handleTab(tab)}
+          onClick={() => {
+            handleTab(tab);
+            if (type === 'default' && tab.includes('리뷰')) {
+              goReviewSection();
+            }
+          }}
         />
       ))}
       {type === 'review' && (

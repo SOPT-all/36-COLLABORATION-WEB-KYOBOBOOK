@@ -12,7 +12,7 @@ import EmotionBar from '@/pages/HomeBestDetail/components/elements/EmotionBar/Em
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
 import * as s from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview.style';
 
-const BookReview = () => {
+const BookReview = ({ id }: { id: string }) => {
   const theme = useTheme();
 
   const sortedStar = Object.entries(ratingData.starDistribution).sort(
@@ -21,7 +21,7 @@ const BookReview = () => {
 
   return (
     <>
-      <div css={s.wrapper}>
+      <div id={id} css={s.wrapper}>
         <div>
           <div css={s.title}>
             <h3 css={s.titleText(theme)}>리뷰 ({reviewData.reviewCounts})</h3>

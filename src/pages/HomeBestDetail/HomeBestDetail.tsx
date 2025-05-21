@@ -47,7 +47,7 @@ const HomeBestDetail = () => {
           <AuthorInfo />
         </section>
         <section>
-          <BookReview />
+          <BookReview id="review-section" />
         </section>
         <section>
           <KeywordSection />
