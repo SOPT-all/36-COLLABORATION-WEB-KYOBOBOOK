@@ -22,7 +22,7 @@ const HomeBestDetail = () => {
     const handleScroll = () => {
       const tabMenuElement = document.getElementById('tab-menu');
       const tabTop = tabMenuElement?.offsetTop || 0;
-      const y = window.scrollY;
+      const y = Math.ceil(window.scrollY);
 
       if (y >= tabTop) {
         setScrollState(3);
