@@ -4,6 +4,7 @@ import BookImage from '@/assets/img/im_book_main.png';
 import * as s from '@/pages/HomeBestDetail/components/sections/BookSummary/BookDetail.style';
 import Icon from '@/components/Icon';
 import Divider from '@/components/Divider/Divider';
+import { Chip } from '@/components/Chip/Chip';
 
 const BookDetail = () => {
   const theme = useTheme();
@@ -24,12 +25,12 @@ const BookDetail = () => {
 
       <div css={s.bookDetail}>
         <div css={s.tagContainer}>
-          <span css={s.tag}>2025년 04월 04일 오늘의 선택</span>
-          <span css={s.tag}>MD의 선택</span>
-          <span css={s.tag}>무료배송</span>
-          <span css={s.tag}>사은품</span>
-          <span css={s.tag}>이벤트</span>
-          <span css={s.tag}>소득공제</span>
+          <Chip variant="outlinedPurple">2025년 05월 24일 오늘의 선택</Chip>
+          <Chip variant="outlinedPurple">MD의 선택</Chip>
+          <Chip variant="outlinedGray">무료배송</Chip>
+          <Chip variant="outlinedGray">사은품</Chip>
+          <Chip variant="outlinedGray">이벤트</Chip>
+          <Chip variant="outlinedGray">소득공제</Chip>
         </div>
 
         <h3 css={s.titleText(theme)}>단 한번의 삶</h3>

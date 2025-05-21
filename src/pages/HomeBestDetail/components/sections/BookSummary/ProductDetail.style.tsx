@@ -76,17 +76,6 @@ export const deliverRightWrapper = css`
   gap: 0.4rem;
 `;
 
-// 칩 오면 수정
-export const deliverChip = (theme: Theme) => css`
-  ${flexVerticalCenter};
-  padding: 0 0.8rem;
-  height: 2rem;
-  border-radius: 4rem;
-  background-color: ${theme.colors.purple1};
-  color: ${theme.colors.purple7};
-  ${theme.fonts.caption3};
-`;
-
 export const deliverText = (theme: Theme) => css`
   ${theme.fonts.body2};
 `;
