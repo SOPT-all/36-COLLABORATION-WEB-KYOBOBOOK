@@ -12,7 +12,7 @@ import NoticeSection from '@/pages/HomeBestDetail/components/sections/NoticeSect
 import BookDescription from '@/pages/HomeBestDetail/components/sections/BookDescription/BookDescription';
 import { mainStyle } from '@/pages/HomeBestDetail/HomeBestDetail.Style';
 import Footer from '@/components/Footer/Footer';
-import { SECTION_IDS } from '@/utils/scrollTargetIds';
+import { SECTION_IDS } from '@/utils/constants/scrollTargetIds';
 
 const HomeBestDetail = () => {
   const [scrollState, setScrollState] = useState(1);
