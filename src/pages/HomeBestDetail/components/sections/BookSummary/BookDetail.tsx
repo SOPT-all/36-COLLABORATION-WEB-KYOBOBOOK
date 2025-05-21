@@ -3,7 +3,6 @@ import { useTheme } from '@emotion/react';
 import BookImage from '@/assets/img/im_book_main.png';
 import * as s from '@/pages/HomeBestDetail/components/sections/BookSummary/BookDetail.style';
 import Icon from '@/components/Icon';
-import Divider from '@/components/Divider/Divider';
 import { Chip } from '@/components/Chip/Chip';
 
 const BookDetail = () => {
@@ -52,8 +51,6 @@ const BookDetail = () => {
           </div>
         </div>
       </div>
-
-      <Divider />
     </>
   );
 };
