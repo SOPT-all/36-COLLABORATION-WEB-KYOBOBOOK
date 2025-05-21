@@ -1,4 +1,4 @@
-export const queryKey = {
+export const QUERY_KEYS = {
   TOP_BOOKS: 'topBooks',
   BEST_BOOKS: 'bestBooks',
   BOOK_DETAIL: 'bookDetails',

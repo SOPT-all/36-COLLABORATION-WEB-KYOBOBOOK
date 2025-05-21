@@ -1,5 +1,9 @@
-export interface ApiResponse<T> {
-  code: number;
+export interface ApiErrorResponseType {
   message: string;
+}
+
+export interface ApiResponseType<T> {
+  success: boolean;
   data: T;
+  error: ApiErrorResponseType | null;
 }
