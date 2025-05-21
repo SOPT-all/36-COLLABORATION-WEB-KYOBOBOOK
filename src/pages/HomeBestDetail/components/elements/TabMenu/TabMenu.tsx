@@ -12,7 +12,6 @@ import { SECTION_IDS } from '@/utils/scrollTargetIds';
 
 const tabs = ['상품정보', '리뷰 (118)', '이벤트', '교환/반품/품절'];
 const reviewTabs = ['전체 리뷰', '구매 리뷰'];
-const NAVIGATE_TAB_NAME = '리뷰';
 
 type TabMenuTypes = {
   type: 'default' | 'review';

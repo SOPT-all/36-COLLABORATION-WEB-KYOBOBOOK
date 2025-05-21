@@ -28,7 +28,7 @@ const ReviewCard = ({ reviewData }: { reviewData: ReviewTypes }) => {
           </div>
         </div>
         <div css={s.metaSection}>
-          <span>종이책</span>
+          <Chip variant="filledRoundGray">종이책</Chip>
           <StarRating rating={reviewData.star} width={14} height={14} />
           <p css={s.dateText(theme)}>{reviewData.reviewDate}</p>
         </div>

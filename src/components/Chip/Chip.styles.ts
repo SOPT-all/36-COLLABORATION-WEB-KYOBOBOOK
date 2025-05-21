@@ -39,6 +39,19 @@ export const chipVariantStyles = {
     background-color: ${theme.colors.purple1};
     border-radius: 40px;
   `,
+  filledRoundGray: css`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    padding: 0 0.8rem;
+    gap: 1rem;
+    ${theme.fonts.caption3};
+    text-align: right;
+    color: ${theme.colors.black1};
+    background-color: ${theme.colors.gray1};
+    border-radius: 40px;
+  `,
   filledGreenText: css`
     display: inline-flex;
     align-items: center;
