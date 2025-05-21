@@ -68,7 +68,7 @@ const BookReview = ({ id }: { id: string }) => {
       <TabMenu type="review" />
       <div css={s.cardWrapper}>
         <HorizontalScrollList gap="1rem" sidePadding="0" effect={true}>
-          {(reviewData?.reviewList ?? []).map((review: ReviewTypes) => (
+          {(reviewData?.reviewList.slice(0, 2) ?? []).map((review: ReviewTypes) => (
             <ReviewCard key={review.id} reviewData={review} />
           ))}
         </HorizontalScrollList>
