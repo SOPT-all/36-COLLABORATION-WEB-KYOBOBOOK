@@ -3,5 +3,5 @@ export const QUERY_KEYS = {
   BEST_BOOKS: 'bestBooks',
   BOOK_DETAIL: 'bookDetails',
   BOOK_REVIEWs: 'bookReviews',
-  BOOK_REVIEWs_STATISTIC: 'bookReviewStatistic',
+  BOOK_REVIEWS_STATISTIC: 'bookReviewStatistic',
 } as const;
