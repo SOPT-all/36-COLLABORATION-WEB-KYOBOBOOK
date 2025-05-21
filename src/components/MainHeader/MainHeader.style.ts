@@ -55,11 +55,10 @@ const headerTabWrapper = (theme: Theme) => css`
 const headerTabSticky = (theme: Theme) => css`
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
   background-color: ${theme.colors.white};
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    z-index: ${theme.zIndex.one};
+
 `;
 
 const emptyContainer = css`
@@ -77,10 +76,10 @@ const layeredWrapper = (theme: Theme) => css`
 
 const layeredIconWrapper = (index: number) => {
   const styles = [
-    { zIndex: 1, left: '0', bottom: '0' },
-    { zIndex: 2, left: '0', bottom: '0' },
-    { zIndex: 3, left: '0', bottom: '0' },
-    { zIndex: 4, left: '0', bottom: '0' },
+    { zIndex: 1, left: '0.1rem', bottom: '0' },
+    { zIndex: 2, left: '0.1rem', bottom: '0' },
+    { zIndex: 3, left: '0.1rem', bottom: '0' },
+    { zIndex: 4, left: '0', bottom: '-0.1rem' },
     { zIndex: 5, left: '2.4rem', bottom: '0' },
   ];
 
