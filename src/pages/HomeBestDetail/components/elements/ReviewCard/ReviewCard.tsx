@@ -4,6 +4,7 @@ import { reviewCardStyle as s } from '@/pages/HomeBestDetail/components/elements
 import Icon from '@/components/Icon';
 import type { ReviewTypes } from '@/types/reviewTypes';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
+import { Chip } from '@/components/Chip/Chip';
 
 const ReviewCard = ({ reviewData }: { reviewData: ReviewTypes }) => {
   const theme = useTheme();
@@ -35,9 +36,9 @@ const ReviewCard = ({ reviewData }: { reviewData: ReviewTypes }) => {
           <p css={s.descriptionText}>{reviewData.description}</p>
         </div>
         <div css={s.emotionTagSection}>
-          <span>감동이에요</span>
-          <span>감동이에요</span>
-          <span>감동이에요</span>
+          <Chip variant="filledRoundPurple">감동이에요</Chip>
+          <Chip variant="filledRoundPurple">감동이에요</Chip>
+          <Chip variant="filledRoundPurple">감동이에요</Chip>
         </div>
         <p css={s.seeMore(theme)}>자세히보기</p>
       </div>
