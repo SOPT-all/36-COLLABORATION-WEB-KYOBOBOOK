@@ -2,10 +2,10 @@ import { useTheme } from '@emotion/react';
 
 import * as s from '@/pages/HomeBestDetail/components/sections/NoticeSection/NoticeSection.style';
 
-const NoticeSection = () => {
+const NoticeSection = ({ id }: { id: string }) => {
   const theme = useTheme();
   return (
-    <div css={s.noticeSection}>
+    <div id={id} css={s.noticeSection}>
       <h2 css={s.titleSection(theme)}>교환/반품/품절 안내</h2>
       <section css={s.buttonStyle}>
         <button css={s.leftButtonStyle(theme)}>반품/교환 신청</button>

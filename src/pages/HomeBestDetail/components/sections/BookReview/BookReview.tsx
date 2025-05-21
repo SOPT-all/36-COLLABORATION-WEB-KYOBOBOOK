@@ -8,13 +8,16 @@ import TabMenu from '@/pages/HomeBestDetail/components/elements/TabMenu/TabMenu'
 import Icon from '@/components/Icon';
 import EmotionBar from '@/pages/HomeBestDetail/components/elements/EmotionBar/EmotionBar';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
-import { bookReviewStyles as s } from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview.style';
+import * as s from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview.style';
 import { useGetReviews } from '@/apis/homeBestDetail/queries';
 import type { ReviewTypes } from '@/types/reviewTypes';
+import { useBookId } from '@/utils/useBookId';
 
-const BookReview = () => {
+const BookReview = ({ id }: { id: string }) => {
   const theme = useTheme();
-  const { data: reviewData } = useGetReviews(1);
+  const bookId = useBookId();
+
+  const { data: reviewData } = useGetReviews(Number(bookId));
 
   const sortedStar = Object.entries(ratingData.starDistribution).sort(
     ([a], [b]) => Number(b) - Number(a),
@@ -22,7 +25,7 @@ const BookReview = () => {
 
   return (
     <>
-      <div css={s.wrapper}>
+      <div id={id} css={s.wrapper}>
         <div>
           <div css={s.title}>
             <h3 css={s.titleText(theme)}>리뷰 ({reviewData?.reviewCounts})</h3>
@@ -56,7 +59,10 @@ const BookReview = () => {
             <EmotionBar key={emotion} emotion={emotion} percent={percent} />
           ))}
         </div>
-        <button>리뷰작성</button>
+        <button css={s.buttonContainer(theme)}>
+          <Icon name="write" width={12} height={12} fill={theme.colors.purple6} />
+          <span css={s.buttonText(theme)}>리뷰 작성</span>
+        </button>
       </div>
 
       <TabMenu type="review" />
