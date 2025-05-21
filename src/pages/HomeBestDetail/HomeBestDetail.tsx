@@ -6,6 +6,7 @@ import AuthorInfo from '@/pages/HomeBestDetail/components/sections/AuthorInfo/Au
 import BookDescription from '@/pages/HomeBestDetail/components/sections/BookDescription/BookDescription';
 import BookReview from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview';
 import BookSummary from '@/pages/HomeBestDetail/components/sections/BookSummary/BookSummary';
+import DetailBottomNav from '@/components/BottomNav/DetailBottomNav';
 
 const HomeBestDetail = () => {
   const [scrollState, setScrollState] = useState(1);
@@ -36,6 +37,7 @@ const HomeBestDetail = () => {
       <BookDescription />
       <AuthorInfo />
       <BookReview />
+      <DetailBottomNav />
     </>
   );
 };
