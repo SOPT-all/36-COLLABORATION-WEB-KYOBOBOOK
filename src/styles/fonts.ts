@@ -3,7 +3,7 @@ export const fonts = {
   header1: `
       font-family: "Pretendard";
       font-weight: 700;
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       line-height: 1.4;
     `,
 

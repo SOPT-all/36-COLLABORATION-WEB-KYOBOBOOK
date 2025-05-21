@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react';
-import { FloaterStyle as s } from '@/components/Floater/Floater.style';
 
+import { FloaterStyle as s } from '@/components/Floater/Floater.style';
 import Icon from '@/components/Icon';
 
 export default function Floater() {

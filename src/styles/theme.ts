@@ -60,6 +60,14 @@ declare module '@emotion/react' {
       shadow4: string;
       blur1: string;
     };
+    zIndex: {
+      one: number;
+      two: number;
+      three: number;
+      four: number;
+      five: number;
+      six: number;
+    };
   }
 }
 
@@ -102,5 +110,13 @@ export const theme: Theme = {
     shadow3: '0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06)',
     shadow4: '0px 4px 4px rgba(0, 0, 0, 0.06)',
     blur1: 'blur(40px)',
+  },
+  zIndex: {
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5,
+    six: 6,
   },
 };

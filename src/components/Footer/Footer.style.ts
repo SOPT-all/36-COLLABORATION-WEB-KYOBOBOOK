@@ -84,6 +84,9 @@ const designSystemWrapper = (theme: Theme) => css`
   color: ${theme.colors.gray4};
 `;
 
+const emptyContanier = css`
+  height: 2.8rem;
+`;
 export {
   noticeContainer,
   noticeStyle,
@@ -98,4 +101,5 @@ export {
   snsButtonContainer,
   snsButtonWrapper,
   designSystemWrapper,
+  emptyContanier,
 };

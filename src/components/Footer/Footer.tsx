@@ -6,7 +6,11 @@ import { AUTH_BUTTON_LABELS, LEGAL_BUTTON_LABELS } from '@/components/Footer/Foo
 import Icon from '@/components/Icon';
 import ButtonList from '@/components/Footer/ButtonList/ButtonList';
 
-const Footer = () => {
+interface FooterTypes {
+  hideSns?: boolean;
+}
+
+const Footer = ({ hideSns = false }: FooterTypes) => {
   const theme = useTheme();
 
   return (
@@ -36,17 +40,21 @@ const Footer = () => {
         <Dropdown />
       </div>
 
-      <div css={s.snsButtonContainer}>
-        <span css={s.snsButtonWrapper}>
-          <Icon name="youtubeCircle" width={30} height={30} fill={theme.colors.white} />
-          <Icon name="facebookCircle" width={30} height={30} fill={theme.colors.white} />
-          <Icon name="instagramCircle" width={30} height={30} fill={theme.colors.white} />
-        </span>
-        <span css={s.designSystemWrapper(theme)}>
-          교보문고 디자인 시스템
-          <Icon name="arrowCircle" width={18} height={18} />
-        </span>
-      </div>
+      {hideSns ? (
+        <div css={s.emptyContanier} />
+      ) : (
+        <div css={s.snsButtonContainer}>
+          <span css={s.snsButtonWrapper}>
+            <Icon name="youtubeCircle" width={30} height={30} fill={theme.colors.white} />
+            <Icon name="facebookCircle" width={30} height={30} fill={theme.colors.white} />
+            <Icon name="instagramCircle" width={30} height={30} fill={theme.colors.white} />
+          </span>
+          <span css={s.designSystemWrapper(theme)}>
+            교보문고 디자인 시스템
+            <Icon name="arrowCircle" width={18} height={18} />
+          </span>
+        </div>
+      )}
     </>
   );
 };

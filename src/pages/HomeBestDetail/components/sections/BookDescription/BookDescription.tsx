@@ -5,7 +5,7 @@ import * as s from '@/pages/HomeBestDetail/components/sections/BookDescription/B
 import BookMeta from '@/pages/HomeBestDetail/components/elements/BookMeta/BookMeta';
 import bookInfoImage from '@/assets/img/im_book_description.png';
 
-const BookDescription = () => {
+const BookDescription = ({ id }: { id: string }) => {
   const theme = useTheme();
 
   const bookMeta = {
@@ -17,7 +17,7 @@ const BookDescription = () => {
   };
 
   return (
-    <div css={s.descriptionWrapper}>
+    <div id={id} css={s.descriptionWrapper}>
       <div css={s.bookInfoWrapper}>
         <div>
           <h3 css={s.titleText(theme)}>책 소개</h3>
