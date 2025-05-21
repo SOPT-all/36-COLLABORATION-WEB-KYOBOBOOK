@@ -1,10 +1,15 @@
 import type { Theme } from '@emotion/react';
 import { css } from '@emotion/react';
 
-import { flexBetweenCenter, flexColumn, flexVerticalCenter } from '@/styles/sharedStyles';
+import {
+  flexBetweenCenter,
+  flexCenter,
+  flexColumn,
+  flexVerticalCenter,
+} from '@/styles/sharedStyles';
 
 export const imageBackground = (theme: Theme) => css`
-  display: flex;
+  ${flexCenter};
   width: 100%;
   padding: 8.6rem 5.7rem 4.8rem 5.8rem;
   background-color: ${theme.colors.gray4};
