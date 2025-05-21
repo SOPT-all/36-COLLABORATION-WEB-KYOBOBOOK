@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTheme } from '@emotion/react';
 
 import TabButton from '@/pages/HomeBestDetail/components/elements/TabMenu/TabButton';
@@ -20,12 +20,9 @@ type TabMenuTypes = {
 const TabMenu = ({ type, id }: TabMenuTypes) => {
   const theme = useTheme();
   const currentTabs = type === 'default' ? tabs : reviewTabs;
-  const [selectedTab, setSelectedTab] = useState(currentTabs[0]);
+  const initialTab = type === 'default' ? tabs[0] : reviewTabs[1];
 
-  useEffect(() => {
-    const firstTab = type === 'default' ? tabs[0] : reviewTabs[0];
-    setSelectedTab(firstTab);
-  }, [type]);
+  const [selectedTab, setSelectedTab] = useState(initialTab);
 
   const handleTab = (tab: string) => {
     setSelectedTab(tab);
