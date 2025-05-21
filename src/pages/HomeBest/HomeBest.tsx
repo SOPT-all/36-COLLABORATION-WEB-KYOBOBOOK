@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTheme } from '@emotion/react';
-import { useNavigate } from 'react-router-dom';
+import { generatePath, useNavigate } from 'react-router-dom';
 
 import { addBookInfo } from '@/pages/HomeBest/utils/addBookInfo';
 import MenuButton from '@/pages/HomeBest/components/MenuButton/MenuButton';
@@ -30,10 +30,11 @@ const HomeBest = () => {
   const enrichedBooks = (responseData ?? []).map(addBookInfo);
   const navigate = useNavigate();
 
-  const handleBookClick = (bookId: number) => {
-    navigate(routePath.HOME_BEST_DETAIL.replace(':bookId', String(bookId)));
+    const navigateToDetail = (bookId: number) => {
+    const path = generatePath(routePath.HOME_BEST_DETAIL, { bookId });
+    navigate(path);
   };
-
+  
   return (
     <>
       <MainHeader />
@@ -86,7 +87,7 @@ const HomeBest = () => {
           <BookItem
             key={`${book.bookId}-${book.title}`}
             {...book}
-            onClick={() => handleBookClick(book.bookId)}
+            onClick={() => navigateToDetail(book.bookId)}
           />
         ))}
       </div>
