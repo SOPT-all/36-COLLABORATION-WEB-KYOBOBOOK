@@ -31,7 +31,7 @@ const HomeBest = () => {
   const navigate = useNavigate();
 
   const handleBookClick = (bookId: number) => {
-    navigate(routePath.HOME_BEST_DETAIL(bookId));
+    navigate(routePath.HOME_BEST_DETAIL.replace(':bookId', String(bookId)));
   };
 
   return (
