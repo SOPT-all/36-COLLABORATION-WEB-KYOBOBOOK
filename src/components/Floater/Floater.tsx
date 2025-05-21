@@ -13,7 +13,7 @@ export default function Floater() {
 
   return (
     <div css={s.wrapper}>
-      <button css={s.floatingButton(theme)}>
+      <button css={s.floatingButton}>
         <Icon name="floating" width={44} height={44} />
       </button>
       <button css={s.scrollTopButton(theme)} onClick={handleScrollToTop}>

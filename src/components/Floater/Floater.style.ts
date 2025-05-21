@@ -13,9 +13,9 @@ const wrapper = css`
   z-index: 100;
 `;
 
-const floatingButton = (theme: Theme) => css`
+const floatingButton = css`
   border: none;
-  background-color: ${theme.colors.white};
+  background-color: transparent;
   cursor: pointer;
 `;
 
