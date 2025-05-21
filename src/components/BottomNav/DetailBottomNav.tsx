@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@emotion/react';
-import { DetailBottomNavStyle as s } from '@/components/BottomNav/DetailBottomNav.style';
 
+import { DetailBottomNavStyle as s } from '@/components/BottomNav/DetailBottomNav.style';
 import Icon from '@/components/Icon';
 import routePath from '@/routes/routePath';
 

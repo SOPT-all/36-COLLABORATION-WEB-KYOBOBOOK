@@ -3,10 +3,14 @@ import { useEffect, useState } from 'react';
 import DetailHeader from '@/components/DetailHeader/DetailHeader';
 import TabMenu from '@/pages/HomeBestDetail/components/elements/TabMenu/TabMenu';
 import AuthorInfo from '@/pages/HomeBestDetail/components/sections/AuthorInfo/AuthorInfo';
-import BookDescription from '@/pages/HomeBestDetail/components/sections/BookDescription/BookDescription';
 import BookReview from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview';
 import BookSummary from '@/pages/HomeBestDetail/components/sections/BookSummary/BookSummary';
 import DetailBottomNav from '@/components/BottomNav/DetailBottomNav';
+import EventSection from '@/pages/HomeBestDetail/components/sections/EventSection/EventSection';
+import KeywordSection from '@/pages/HomeBestDetail/components/sections/KeywordSection/KeywordSection';
+import NoticeSection from '@/pages/HomeBestDetail/components/sections/NoticeSection/NoticeSection';
+import BookDescription from '@/pages/HomeBestDetail/components/sections/BookDescription/BookDescription';
+import { mainStyle } from '@/pages/HomeBestDetail/HomeBestDetail.Style';
 
 const HomeBestDetail = () => {
   const [scrollState, setScrollState] = useState(1);
@@ -32,12 +36,31 @@ const HomeBestDetail = () => {
   return (
     <>
       {scrollState !== 3 && <DetailHeader scrollState={scrollState} />}
-      <BookSummary />
-      <TabMenu type="default" id="tab-menu" />
-      <BookDescription />
-      <AuthorInfo />
-      <BookReview />
-      <DetailBottomNav />
+      <main css={mainStyle}>
+        <section>
+          <BookSummary />
+          <TabMenu type="default" id="tab-menu" />
+        </section>
+        <section>
+          <BookDescription />
+          <AuthorInfo />
+        </section>
+        <section>
+          <BookReview />
+        </section>
+        <section>
+          <KeywordSection />
+        </section>
+        <section>
+          <EventSection />
+        </section>
+        <section>
+          <NoticeSection />
+        </section>
+        <section>
+          <DetailBottomNav />
+        </section>
+      </main>
     </>
   );
 };
