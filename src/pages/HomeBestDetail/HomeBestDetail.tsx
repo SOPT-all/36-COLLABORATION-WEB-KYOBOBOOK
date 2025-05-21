@@ -11,6 +11,7 @@ import KeywordSection from '@/pages/HomeBestDetail/components/sections/KeywordSe
 import NoticeSection from '@/pages/HomeBestDetail/components/sections/NoticeSection/NoticeSection';
 import BookDescription from '@/pages/HomeBestDetail/components/sections/BookDescription/BookDescription';
 import { mainStyle } from '@/pages/HomeBestDetail/HomeBestDetail.Style';
+import Footer from '@/components/Footer/Footer';
 
 const HomeBestDetail = () => {
   const [scrollState, setScrollState] = useState(1);
@@ -58,9 +59,10 @@ const HomeBestDetail = () => {
           <NoticeSection />
         </section>
         <section>
-          <DetailBottomNav />
+          <Footer />
         </section>
       </main>
+      <DetailBottomNav />
     </>
   );
 };

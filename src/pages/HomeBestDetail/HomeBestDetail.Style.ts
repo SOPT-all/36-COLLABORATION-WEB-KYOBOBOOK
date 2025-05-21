@@ -1,6 +1,9 @@
 import { css } from '@emotion/react';
 
+import { flexColumn } from '@/styles/sharedStyles';
+
 export const mainStyle = css`
-  display: flex;
+  ${flexColumn};
   gap: 6rem;
+  padding-bottom: 3.8rem;
 `;

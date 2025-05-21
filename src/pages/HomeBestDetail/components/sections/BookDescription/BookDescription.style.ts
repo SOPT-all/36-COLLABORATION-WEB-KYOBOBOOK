@@ -5,7 +5,7 @@ import { multilineEllipsis } from '@/styles/textStyles';
 import { flexCenter } from '@/styles/sharedStyles';
 
 export const descriptionWrapper = css`
-  margin: 6rem 0 3.8rem 0;
+  margin-bottom: 3.8rem;
   display: flex;
   flex-direction: column;
   gap: 3.8rem;
