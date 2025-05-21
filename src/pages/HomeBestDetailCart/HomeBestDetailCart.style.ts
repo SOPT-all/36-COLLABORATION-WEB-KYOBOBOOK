@@ -46,6 +46,7 @@ const switchButton = (theme: Theme) => css`
   display: flex;
   align-items: center;
   gap: 0.2rem;
+  border: none;
   background-color: ${theme.colors.white};
   font: ${theme.fonts.body2};
   color: ${theme.colors.purple6};
