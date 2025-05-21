@@ -47,7 +47,7 @@ const TabMenu = ({ type, id }: TabMenuTypes) => {
           isActive={selectedTab === tab}
           onClick={() => {
             handleTab(tab);
-            if (type === 'default' && tab.includes('리뷰')) {
+            if (type === 'default' && tab.includes(NAVIGATE_TAB_NAME)) {
               goReviewSection();
             }
           }}
