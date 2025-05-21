@@ -1,7 +1,8 @@
-const scrollToSection = (sectionId: string) => {
+const scrollToSection = (sectionId: string, offset: number) => {
   const sectionElement = document.getElementById(sectionId);
   if (sectionElement) {
-    sectionElement.scrollIntoView({ behavior: 'smooth' });
+    const top = sectionElement.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
   }
 };
 

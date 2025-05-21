@@ -39,7 +39,7 @@ const TabMenu = ({ type, id }: TabMenuTypes) => {
           onClick={() => {
             handleTab(tab);
             if (type === 'default') {
-              scrollToSection(Object.values(SECTION_IDS)[idx]);
+              scrollToSection(Object.values(SECTION_IDS)[idx], 60);
             }
           }}
         />
