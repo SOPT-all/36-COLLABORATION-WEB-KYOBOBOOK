@@ -4,6 +4,7 @@ import { reviewCardStyle as s } from '@/pages/HomeBestDetail/components/elements
 import Icon from '@/components/Icon';
 import type { ReviewTypes } from '@/types/reviewTypes';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
+import { Chip } from '@/components/Chip/Chip';
 
 const ReviewCard = ({ reviewData }: { reviewData: ReviewTypes }) => {
   const theme = useTheme();
@@ -27,7 +28,7 @@ const ReviewCard = ({ reviewData }: { reviewData: ReviewTypes }) => {
           </div>
         </div>
         <div css={s.metaSection}>
-          <span>종이책</span>
+          <Chip variant="filledRoundGray">종이책</Chip>
           <StarRating rating={reviewData.star} width={14} height={14} />
           <p css={s.dateText(theme)}>{reviewData.reviewDate}</p>
         </div>
@@ -35,9 +36,9 @@ const ReviewCard = ({ reviewData }: { reviewData: ReviewTypes }) => {
           <p css={s.descriptionText}>{reviewData.description}</p>
         </div>
         <div css={s.emotionTagSection}>
-          <span>감동이에요</span>
-          <span>감동이에요</span>
-          <span>감동이에요</span>
+          <Chip variant="filledRoundPurple">감동이에요</Chip>
+          <Chip variant="filledRoundPurple">감동이에요</Chip>
+          <Chip variant="filledRoundPurple">감동이에요</Chip>
         </div>
         <p css={s.seeMore(theme)}>자세히보기</p>
       </div>

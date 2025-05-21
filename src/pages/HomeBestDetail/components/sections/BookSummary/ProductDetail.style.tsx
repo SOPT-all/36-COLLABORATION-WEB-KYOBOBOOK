@@ -76,17 +76,6 @@ export const deliverRightWrapper = css`
   gap: 0.4rem;
 `;
 
-// 칩 오면 수정
-export const deliverChip = (theme: Theme) => css`
-  ${flexVerticalCenter};
-  padding: 0 0.8rem;
-  height: 2rem;
-  border-radius: 4rem;
-  background-color: ${theme.colors.purple1};
-  color: ${theme.colors.purple7};
-  ${theme.fonts.caption3};
-`;
-
 export const deliverText = (theme: Theme) => css`
   ${theme.fonts.body2};
 `;
@@ -189,11 +178,13 @@ export const reviewWrapper = (theme: Theme) => css`
   border: 1px solid ${theme.colors.gray2};
   border-radius: 12px;
 `;
+
 export const reviewBox = (theme: Theme) => css`
   flex: 1;
   ${flexColumnCenter};
 
   position: relative;
+  z-index: ${theme.zIndex.one};
 
   &:first-of-type::after {
     content: '';

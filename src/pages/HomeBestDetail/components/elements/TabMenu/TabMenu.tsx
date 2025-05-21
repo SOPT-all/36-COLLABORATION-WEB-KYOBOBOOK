@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTheme } from '@emotion/react';
 
 import TabButton from '@/pages/HomeBestDetail/components/elements/TabMenu/TabButton';
@@ -7,35 +7,41 @@ import {
   tabMenuContainer,
 } from '@/pages/HomeBestDetail/components/elements/TabMenu/TabMenu.style';
 import Icon from '@/components/Icon';
+import scrollToSection from '@/utils/constants/scrollToSection';
+import { SECTION_IDS } from '@/utils/constants/scrollTargetIds';
 
 const tabs = ['상품정보', '리뷰 (118)', '이벤트', '교환/반품/품절'];
 const reviewTabs = ['전체 리뷰', '구매 리뷰'];
 
 type TabMenuTypes = {
   type: 'default' | 'review';
+  id?: string;
 };
 
-const TabMenu = ({ type }: TabMenuTypes) => {
+const TabMenu = ({ type, id }: TabMenuTypes) => {
   const theme = useTheme();
   const currentTabs = type === 'default' ? tabs : reviewTabs;
-  const [selectedTab, setSelectedTab] = useState(currentTabs[0]);
+  const initialTab = type === 'default' ? tabs[0] : reviewTabs[1];
 
-  useEffect(() => {
-    setSelectedTab(type === 'default' ? tabs[0] : reviewTabs[0]);
-  }, [type]);
+  const [selectedTab, setSelectedTab] = useState(initialTab);
 
   const handleTab = (tab: string) => {
     setSelectedTab(tab);
   };
 
   return (
-    <nav css={tabMenuContainer(theme)}>
-      {currentTabs.map((tab) => (
+    <nav id={id} css={tabMenuContainer(type, theme)}>
+      {currentTabs.map((tab, idx) => (
         <TabButton
           key={tab}
           tab={tab}
           isActive={selectedTab === tab}
-          onClick={() => handleTab(tab)}
+          onClick={() => {
+            handleTab(tab);
+            if (type === 'default') {
+              scrollToSection(Object.values(SECTION_IDS)[idx], 60);
+            }
+          }}
         />
       ))}
       {type === 'review' && (

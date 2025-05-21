@@ -3,6 +3,7 @@ import { useTheme } from '@emotion/react';
 import * as s from '@/pages/HomeBestDetail/components/sections/BookSummary/ProductDetail.style';
 import Icon from '@/components/Icon';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
+import { Chip } from '@/components/Chip/Chip';
 
 const ProductDetail = () => {
   const theme = useTheme();
@@ -34,7 +35,7 @@ const ProductDetail = () => {
           </div>
         </div>
         <div css={s.deliverRightWrapper}>
-          <span css={s.deliverChip(theme)}>당일배송</span>
+          <Chip variant="filledRoundPurple">당일배송</Chip>
           <b css={s.arriveText(theme)}>오늘 (4/24,목) 도착</b>
           <Icon name="info" fill={theme.colors.white} width={18} height={18} />
         </div>
