@@ -20,6 +20,7 @@ const BookItem = ({
   point,
   deliveryDate,
   isLiked: defaultLiked,
+  onClick,
 }: AddBookTypes) => {
   const theme = useTheme();
 
@@ -31,7 +32,7 @@ const BookItem = ({
   };
 
   return (
-    <div css={s.container(theme)}>
+    <div css={s.container(theme)} onClick={onClick}>
       <div css={s.imageWrapper}>
         <img src={imageUrl} alt={title} css={s.bookImage} />
       </div>

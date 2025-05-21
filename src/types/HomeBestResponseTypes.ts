@@ -17,4 +17,5 @@ export interface AddBookTypes extends HomeBestTypes {
   point: number;
   deliveryDate: string;
   isLiked: boolean;
+  onClick: () => void;
 }

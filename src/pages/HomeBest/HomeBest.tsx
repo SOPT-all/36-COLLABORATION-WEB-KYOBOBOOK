@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTheme } from '@emotion/react';
+import { useNavigate } from 'react-router-dom';
 
 import { addBookInfo } from '@/pages/HomeBest/utils/addBookInfo';
 import MenuButton from '@/pages/HomeBest/components/MenuButton/MenuButton';
@@ -16,6 +17,7 @@ import Icon from '@/components/Icon';
 import BookItem from '@/pages/HomeBest/components/BookItem/BookItem';
 import { useGetBestBooks } from '@/apis/homeBest/queries';
 import HomeBottomNav from '@/components/BottomNav/HomeBottomNav';
+import routePath from '@/routes/routePath';
 
 const HomeBest = () => {
   const theme = useTheme();
@@ -26,6 +28,11 @@ const HomeBest = () => {
   const today = new Date();
   const formattedDate = `${today.getFullYear()}.${String(today.getMonth() + 1).padStart(2, '0')}.${String(today.getDate()).padStart(2, '0')}`;
   const enrichedBooks = (responseData ?? []).map(addBookInfo);
+  const navigate = useNavigate();
+
+  const handleBookClick = (bookId: number) => {
+    navigate(routePath.HOME_BEST_DETAIL(bookId));
+  };
 
   return (
     <>
@@ -76,7 +83,11 @@ const HomeBest = () => {
 
       <div css={s.bookListWrapper}>
         {enrichedBooks.map((book) => (
-          <BookItem key={`${book.bookId}-${book.ranking}-${book.title}`} {...book} />
+          <BookItem
+            key={`${book.bookId}-${book.title}`}
+            {...book}
+            onClick={() => handleBookClick(book.bookId)}
+          />
         ))}
       </div>
       <div css={s.emptyContainer} />
