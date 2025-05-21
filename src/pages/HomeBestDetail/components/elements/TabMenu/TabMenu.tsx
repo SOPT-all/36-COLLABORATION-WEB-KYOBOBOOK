@@ -7,6 +7,8 @@ import {
   tabMenuContainer,
 } from '@/pages/HomeBestDetail/components/elements/TabMenu/TabMenu.style';
 import Icon from '@/components/Icon';
+import scrollToSection from '@/utils/scrollToSection';
+import { SECTION_IDS } from '@/utils/scrollTargetIds';
 
 const tabs = ['상품정보', '리뷰 (118)', '이벤트', '교환/반품/품절'];
 const reviewTabs = ['전체 리뷰', '구매 리뷰'];
@@ -28,25 +30,16 @@ const TabMenu = ({ type, id }: TabMenuTypes) => {
     setSelectedTab(tab);
   };
 
-  const goReviewSection = () => {
-    const reviewElement = document.getElementById('review-section');
-    if (reviewElement) {
-      reviewElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <nav id={id} css={tabMenuContainer(theme)}>
-      {currentTabs.map((tab) => (
+      {currentTabs.map((tab, idx) => (
         <TabButton
           key={tab}
           tab={tab}
           isActive={selectedTab === tab}
           onClick={() => {
             handleTab(tab);
-            if (type === 'default' && tab.includes(NAVIGATE_TAB_NAME)) {
-              goReviewSection();
-            }
+            scrollToSection(Object.values(SECTION_IDS)[idx]);
           }}
         />
       ))}

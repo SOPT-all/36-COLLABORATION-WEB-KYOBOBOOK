@@ -12,6 +12,7 @@ import NoticeSection from '@/pages/HomeBestDetail/components/sections/NoticeSect
 import BookDescription from '@/pages/HomeBestDetail/components/sections/BookDescription/BookDescription';
 import { mainStyle } from '@/pages/HomeBestDetail/HomeBestDetail.Style';
 import Footer from '@/components/Footer/Footer';
+import { SECTION_IDS } from '@/utils/scrollTargetIds';
 
 const HomeBestDetail = () => {
   const [scrollState, setScrollState] = useState(1);
@@ -40,23 +41,23 @@ const HomeBestDetail = () => {
       <main css={mainStyle}>
         <section>
           <BookSummary />
-          <TabMenu type="default" id="tab-menu" />
+          <TabMenu type="default" id="tab-section" />
         </section>
         <section>
           <BookDescription />
           <AuthorInfo />
         </section>
         <section>
-          <BookReview id="review-section" />
+          <BookReview id={SECTION_IDS.REVIEW} />
         </section>
         <section>
           <KeywordSection />
         </section>
         <section>
-          <EventSection />
+          <EventSection id={SECTION_IDS.EVENT} />
         </section>
         <section>
-          <NoticeSection />
+          <NoticeSection id={SECTION_IDS.NOTICE} />
         </section>
         <section>
           <Footer />
