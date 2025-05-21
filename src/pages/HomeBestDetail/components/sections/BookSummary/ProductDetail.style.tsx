@@ -178,11 +178,13 @@ export const reviewWrapper = (theme: Theme) => css`
   border: 1px solid ${theme.colors.gray2};
   border-radius: 12px;
 `;
+
 export const reviewBox = (theme: Theme) => css`
   flex: 1;
   ${flexColumnCenter};
 
   position: relative;
+  z-index: ${theme.zIndex.one};
 
   &:first-of-type::after {
     content: '';

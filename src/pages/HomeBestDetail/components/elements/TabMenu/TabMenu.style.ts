@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 
 export const tabMenuContainer = (type: string, theme: Theme) => css`
   display: flex;
+  height: 5rem;
   align-items: center;
   padding: 0 1.5rem;
   border-bottom: 1px solid ${theme.colors.gray3};

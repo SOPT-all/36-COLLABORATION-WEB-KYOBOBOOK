@@ -5,6 +5,7 @@ export const headerWrapper = (theme: Theme, scrollState: number) => css`
   padding: 0.9rem 1.4rem;
   width: 100%;
   position: fixed;
+  z-index: ${theme.zIndex.two};
   background-color: ${scrollState === 1 ? 'transparent' : theme.colors.white};
 `;
 
