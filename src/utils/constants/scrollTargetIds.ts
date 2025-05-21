@@ -1,5 +1,5 @@
 export const SECTION_IDS = {
-  DEFAULT: '',
+  PRODUCT: 'detail-section',
   REVIEW: 'review-section',
   EVENT: 'event-section',
   NOTICE: 'notice-section',

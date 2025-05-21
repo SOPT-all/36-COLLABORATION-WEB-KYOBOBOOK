@@ -41,10 +41,10 @@ const HomeBestDetail = () => {
       <main css={mainStyle}>
         <section>
           <BookSummary />
-          <TabMenu type="default" id="tab-section" />
         </section>
+        <TabMenu type="default" id="tab-menu" />
         <section>
-          <BookDescription />
+          <BookDescription id={SECTION_IDS.PRODUCT} />
           <AuthorInfo />
         </section>
         <section>
