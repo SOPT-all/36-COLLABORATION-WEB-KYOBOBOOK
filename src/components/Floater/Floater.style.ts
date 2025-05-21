@@ -12,9 +12,21 @@ const wrapper = css`
   transform: translateX(30rem);
   z-index: 100;
 
-  @media (max-width: 375px) {
+  @media (max-width: 1024px) {
+    transform: translateX(28rem);
+  }
+
+  @media (max-width: 768px) {
+    transform: translateX(26rem);
+  }
+
+  @media (max-width: 630px) {
+    transform: none;
     right: 1.6rem;
-    transform: translateX(0);
+  }
+
+  @media (max-width: 375px) {
+    right: 1.2rem;
   }
 `;
 
