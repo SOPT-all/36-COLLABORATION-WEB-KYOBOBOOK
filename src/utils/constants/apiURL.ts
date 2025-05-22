@@ -5,5 +5,5 @@ export const END_URL = {
   GET_BEST_BOOKS: '/books',
   GET_BOOK_DETAIL: (bookId: number) => `/books/${bookId}`,
   GET_BOOK_REVIEWS: (bookId: number) => `/reviews/${bookId}`,
-  GET_BOOK_REVIEWs_STATISTIC: (bookId: number) => `/reviews/statistic/${bookId}`,
+  GET_BOOK_REVIEWS_STATISTIC: (bookId: number) => `/reviews/statistic/${bookId}`,
 };
