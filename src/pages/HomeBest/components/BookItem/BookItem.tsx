@@ -4,10 +4,10 @@ import { useTheme } from '@emotion/react';
 import * as s from '@/pages/HomeBest/components/BookItem/BookItem.style';
 import { getRankBadgeInfo } from '@/pages/HomeBest/utils/getRankBadgeStyle';
 import Icon from '@/components/Icon';
-import type { AddBookTypes } from '@/pages/HomeBest/types/book';
+import type { AddBookTypes } from '@/types/HomeBestResponseTypes';
 
 const BookItem = ({
-  rank,
+  ranking,
   title,
   author,
   publisher,
@@ -24,7 +24,7 @@ const BookItem = ({
 }: AddBookTypes) => {
   const theme = useTheme();
 
-  const { text, isTop3 } = getRankBadgeInfo(rank);
+  const { text, isTop3 } = getRankBadgeInfo(ranking);
   const [isLiked, setIsLiked] = useState(defaultLiked);
 
   const toggleLike = () => {
@@ -57,7 +57,7 @@ const BookItem = ({
           </button>
         </div>
         <div css={s.titleContainer}>
-          <h3 css={s.title(theme)}>{title}</h3>
+          <p css={s.title(theme)}>{title}</p>
           <div css={s.subtitle(theme)}>
             {author} · {publisher}
           </div>
@@ -66,7 +66,7 @@ const BookItem = ({
         <div css={s.priceRow}>
           <span css={s.discount(theme)}>{discountRate}%</span>
           <div>
-            <span css={s.price(theme)}>{price.toLocaleString()}</span>
+            <span css={s.price(theme)}>{parseInt(price, 10).toLocaleString()}</span>
             <span css={s.won(theme)}>원</span>
           </div>
           <span css={s.point(theme)}>({point}P)</span>

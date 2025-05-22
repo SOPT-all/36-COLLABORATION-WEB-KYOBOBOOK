@@ -24,6 +24,7 @@ const content = css`
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  min-width: 0;
 `;
 
 const topRow = css`
@@ -67,6 +68,12 @@ const titleContainer = css`
 `;
 
 const title = (theme: Theme) => css`
+  width: 100%;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
   ${theme.fonts.subtitle4};
 `;
 
