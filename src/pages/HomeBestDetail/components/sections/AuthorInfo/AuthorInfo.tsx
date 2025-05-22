@@ -1,5 +1,4 @@
 import { useTheme } from '@emotion/react';
-import { useState } from 'react';
 
 import { authorStyles as s } from '@/pages/HomeBestDetail/components/sections/AuthorInfo/AuthorInfo.style';
 import Icon from '@/components/Icon';
