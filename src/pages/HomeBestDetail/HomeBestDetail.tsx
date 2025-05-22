@@ -16,6 +16,7 @@ import { SECTION_IDS } from '@/utils/constants/scrollTargetIds';
 import Floater from '@/components/Floater/Floater';
 import { useBookId } from '@/utils/useBookId';
 import { useGetRatings, useGetReviews } from '@/apis/homeBestDetail/queries';
+import { useScrollState } from '@/hooks/useScrollState';
 
 const HomeBestDetail = () => {
   const bookId = useBookId();
@@ -23,25 +24,7 @@ const HomeBestDetail = () => {
   const { data: ratingData } = useGetRatings(bookId);
   const { data: reviewData } = useGetReviews(bookId);
 
-  const [scrollState, setScrollState] = useState(1);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const tabMenuElement = document.getElementById('tab-menu');
-      const tabTop = tabMenuElement?.offsetTop || 0;
-      const y = Math.ceil(window.scrollY);
-
-      if (y >= tabTop) {
-        setScrollState(3);
-      } else if (y >= 500) {
-        setScrollState(2);
-      } else {
-        setScrollState(1);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const scrollState = useScrollState();
 
   return (
     <>
