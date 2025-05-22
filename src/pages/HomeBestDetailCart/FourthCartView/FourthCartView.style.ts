@@ -1,11 +1,11 @@
 import { css } from '@emotion/react';
 import type { Theme } from '@emotion/react';
 
-const Wrapper = css`
+const Wrapper = (theme: Theme) => css`
   width: 100%;
   max-width: 73rem;
   min-width: 37.5rem;
-  background-color: #ffffff;
+  background-color: ${theme.colors.white};
   padding: 2.8rem 1.6rem;
 `;
 
@@ -42,7 +42,6 @@ const cartBox = (theme: Theme) => css`
   h3 {
     font: ${theme.fonts.subtitle4};
     color: ${theme.colors.black1};
-    font-weight: bold;
     margin-bottom: 1rem;
   }
 `;
