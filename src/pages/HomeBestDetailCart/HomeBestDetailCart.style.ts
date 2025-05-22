@@ -12,7 +12,7 @@ const Header = (theme: Theme) => css`
   background-color: ${theme.colors.white};
   padding: 1.4rem 1.5rem;
   top: 0;
-  z-index: 100;
+  z-index: ${theme.zIndex.two};
 `;
 
 const headerTop = css`

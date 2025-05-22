@@ -24,7 +24,6 @@ export const barFill = (percent: number, theme: Theme) => css`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
 `;
 
 export const barContent = (theme: Theme) => css`
@@ -39,7 +38,7 @@ export const barContent = (theme: Theme) => css`
 
 export const emotionText = (theme: Theme) => css`
   ${theme.fonts.body1};
-  z-index: 1;
+  z-index: ${theme.zIndex.one};
 `;
 
 export const percentText = (theme: Theme) => css`
