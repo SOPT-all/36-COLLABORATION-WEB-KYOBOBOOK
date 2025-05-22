@@ -14,8 +14,15 @@ import { mainStyle } from '@/pages/HomeBestDetail/HomeBestDetail.Style';
 import Footer from '@/components/Footer/Footer';
 import { SECTION_IDS } from '@/utils/constants/scrollTargetIds';
 import Floater from '@/components/Floater/Floater';
+import { useBookId } from '@/utils/useBookId';
+import { useGetRatings, useGetReviews } from '@/apis/homeBestDetail/queries';
 
 const HomeBestDetail = () => {
+  const bookId = useBookId();
+
+  const { data: ratingData } = useGetRatings(bookId);
+  const { data: reviewData } = useGetReviews(bookId);
+
   const [scrollState, setScrollState] = useState(1);
 
   useEffect(() => {
@@ -43,13 +50,13 @@ const HomeBestDetail = () => {
         <section>
           <BookSummary />
         </section>
-        <TabMenu type="default" id="tab-menu" />
+        <TabMenu type="default" id="tab-menu" reviewCounts={reviewData?.reviewCounts} />
         <section>
           <BookDescription id={SECTION_IDS.PRODUCT} />
           <AuthorInfo />
         </section>
         <section>
-          <BookReview id={SECTION_IDS.REVIEW} />
+          <BookReview id={SECTION_IDS.REVIEW} ratingData={ratingData} reviewData={reviewData} />
         </section>
         <section>
           <KeywordSection />

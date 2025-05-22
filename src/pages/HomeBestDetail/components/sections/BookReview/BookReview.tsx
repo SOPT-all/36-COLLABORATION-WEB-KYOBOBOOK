@@ -8,16 +8,18 @@ import Icon from '@/components/Icon';
 import EmotionBar from '@/pages/HomeBestDetail/components/elements/EmotionBar/EmotionBar';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
 import * as s from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview.style';
-import { useGetRatings, useGetReviews } from '@/apis/homeBestDetail/queries';
+import { useGetReviews } from '@/apis/homeBestDetail/queries';
 import type { ReviewTypes } from '@/types/reviewTypes';
-import { useBookId } from '@/utils/useBookId';
+import type { ratingResponseTypes } from '@/types/ratingReponseTypes';
+import type { ReviewResponseTypes } from '@/types/reviewResponseTypes';
 
-const BookReview = ({ id }: { id: string }) => {
+type BookReviewTypes = {
+  id: string;
+  ratingData?: ratingResponseTypes;
+  reviewData?: ReviewResponseTypes;
+};
+const BookReview = ({ id, ratingData, reviewData }: BookReviewTypes) => {
   const theme = useTheme();
-  const bookId = useBookId();
-
-  const { data: reviewData } = useGetReviews(bookId);
-  const { data: ratingData } = useGetRatings(bookId);
 
   const sortedStar = Object.entries(ratingData?.starDistribution ?? {}).sort(
     ([a], [b]) => Number(b) - Number(a),
