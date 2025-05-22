@@ -17,6 +17,9 @@ import Floater from '@/components/Floater/Floater';
 import { useBookId } from '@/utils/useBookId';
 import { useGetRatings, useGetReviews } from '@/apis/homeBestDetail/queries';
 import useScrollState from '@/hooks/useScrollState';
+import BookDetail from '@/pages/HomeBestDetail/components/sections/BookSummary/BookDetail';
+import Divider from '@/components/Divider/Divider';
+import ProductDetail from '@/pages/HomeBestDetail/components/sections/BookSummary/ProductDetail';
 
 const HomeBestDetail = () => {
   const bookId = useBookId();
@@ -31,7 +34,10 @@ const HomeBestDetail = () => {
       {scrollState !== 3 && <DetailHeader scrollState={scrollState} />}
       <main css={mainStyle}>
         <section>
-          <BookSummary />
+          <BookDetail />
+          <Divider />
+          <ProductDetail />
+          <Divider />
         </section>
         <TabMenu type="default" id="tab-menu" reviewCounts={reviewData?.reviewCounts} />
         <section>
