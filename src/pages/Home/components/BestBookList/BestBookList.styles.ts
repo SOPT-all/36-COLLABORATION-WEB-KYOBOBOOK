@@ -107,13 +107,12 @@ export const rightSection = css`
 
 export const chipWrapper = css`
   display: inline-block;
-  max-width: 4.6rem;     // 46px
-  height: 2.1rem;        // 21px
+  max-width: 4.6rem;
+  height: 2.1rem;
   overflow: hidden;
   white-space: nowrap;
   margin-bottom: 0.2rem;
 `;
-
 
 export const absoluteChipWrapper = css`
   position: absolute;
@@ -143,4 +142,31 @@ export const title = css`
 export const author = css`
   ${theme.fonts.caption3};
   color: ${theme.colors.gray4};
+`;
+
+export const loadingContainer = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  ${theme.fonts.body1};
+  color: ${theme.colors.gray4};
+`;
+
+export const errorContainer = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 2rem;
+  text-align: center;
+  ${theme.fonts.body1};
+  color: ${theme.colors.black1};
+`;
+
+export const errorMessage = css`
+  margin-top: 1rem;
+  ${theme.fonts.caption1};
+  color: ${theme.colors.red};
 `;

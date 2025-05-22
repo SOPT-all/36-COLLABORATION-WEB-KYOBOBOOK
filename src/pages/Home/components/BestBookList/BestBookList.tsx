@@ -1,65 +1,55 @@
+import { useNavigate } from 'react-router-dom';
+
 import * as S from './BestBookList.styles';
 
+import { useGetTopBooks } from '@/apis/home/queries';
 import { Chip } from '@/components/Chip/Chip';
-import book1Img from '@/assets/img/home_best_1.jpg';
-import book2Img from '@/assets/img/home_best_2.jpg';
-import book3Img from '@/assets/img/home_best_3.jpg';
-import book4Img from '@/assets/img/home_best_4.jpg';
-import book5Img from '@/assets/img/home_best_5.jpg';
-import addIcon from '@/assets/icons/svg/ic_add.svg';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
-
-const BOOKS = [
-  {
-    rank: 1,
-    title: '단 한 번의 삶',
-    author: '김영하 · 복복서가',
-    image: book1Img,
-  },
-  {
-    rank: 2,
-    title: '2025 시대에듀 All-New KB 국민은행 필기전형 봉투모의고사 9회분+무료NCS강의',
-    author: 'SDC · 시대고시기획',
-    image: book2Img,
-  },
-  {
-    rank: 3,
-    title: '모순',
-    author: '양귀자 · 쓰다',
-    image: book3Img,
-  },
-  {
-    rank: 4,
-    title: '결국 국민이 합니다',
-    author: '이재명 · 오마이북',
-    image: book4Img,
-  },
-  {
-    rank: 5,
-    title: '듀얼 브레인',
-    author: '이선 몰릭 · 상상스퀘어',
-    image: book5Img,
-  },
-];
+import addIcon from '@/assets/icons/svg/ic_add.svg';
+import ROUTE_PATH from '@/routes/routePath';
 
 const TABS = ['전체', '국내도서', '외국도서', 'ebook', 'sam', '핫트랙스', '교보only'];
 
 const BestBookList = () => {
+  const navigate = useNavigate();
+  const { data: books = [], isLoading, isError, error } = useGetTopBooks();
+
+  if (isLoading) {
+    return (
+      <section css={S.wrapper}>
+        <div css={S.loadingContainer}>데이터를 불러오는 중입니다...</div>
+      </section>
+    );
+  }
+
+  if (isError) {
+    return (
+      <section css={S.wrapper}>
+        <div css={S.errorContainer}>
+          <p>데이터를 불러오는데 실패했습니다.</p>
+          <p css={S.errorMessage}>
+            {error instanceof Error ? error.message : '알 수 없는 에러가 발생했습니다.'}
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section css={S.wrapper}>
-      {/* 1. 베스트 / 스테디 / 더보기+ */}
+      {/* 베스트/스테디/더보기+ */}
       <div css={S.titleRow}>
         <div css={S.titleTabs}>
           <span css={S.best}>베스트</span>
           <span css={S.steady}>스테디</span>
         </div>
-        <button css={S.moreButton}>
+        <button css={S.moreButton} onClick={() => navigate(ROUTE_PATH.HOME_BEST)}>
           <span css={S.moreText}>더보기</span>
           <img src={addIcon} alt="더보기 아이콘" width={20} height={20} />
         </button>
       </div>
 
-      {/* 2. 카테고리 탭 */}
+      {/* 카테고리 탭 */}
       <HorizontalScrollList gap="0">
         {TABS.map((tab, index) => (
           <div key={tab} css={S.tabItem}>
@@ -69,15 +59,15 @@ const BestBookList = () => {
         ))}
       </HorizontalScrollList>
 
-      {/* 3. 리스트 */}
+      {/* 베스트 도서 리스트 */}
       <ul css={S.bookList}>
-        {BOOKS.map(({ rank, title, author, image }) => (
-          <li key={rank} css={S.bookItem}>
-            <img src={image} alt={title} css={S.thumbnail} />
+        {books.map(({ ranking, title, author, imageUrl }) => (
+          <li key={ranking} css={S.bookItem}>
+            <img src={imageUrl} alt={title} css={S.thumbnail} />
             <div css={S.textContainer}>
               <div css={S.chipWrapper}>
-                <Chip variant={rank <= 3 ? 'filledGreenText' : 'filledGrayCount'}>
-                  {rank === 1 ? `Best ${rank}` : rank}
+                <Chip variant={ranking <= 3 ? 'filledGreenText' : 'filledGrayCount'}>
+                  {ranking === 1 ? `Best ${ranking}` : ranking}
                 </Chip>
               </div>
               <div css={S.title}>{title}</div>
