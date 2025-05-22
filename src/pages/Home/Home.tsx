@@ -1,5 +1,6 @@
 import { BannerWrapper, BannerImage } from './Home.style';
 import CategoryButton from './components/CategoryButton/CategoryButton';
+import BestBookList from './components/BestBookList/BestBookList';
 
 import HomeBottomNav from '@/components/BottomNav/HomeBottomNav';
 import Floater from '@/components/Floater/Floater';
@@ -14,6 +15,7 @@ const Home = () => {
         <img src={homeBanner} alt="6분 클래식" css={BannerImage} />
       </div>
       <CategoryButton />
+      <BestBookList />
       <div>홈페이지입니다.</div>
       <Floater />
       <HomeBottomNav />

@@ -17,12 +17,12 @@ export const titleRow = css`
   width: 100%;
   max-width: 37.5rem;
   height: auto;
-  padding: 0 0.6rem;
+  padding: 0.8rem 0.6rem;
 `;
 
 export const titleTabs = css`
   display: flex;
-  gap: 1.2rem;
+  gap: 1.6rem;
 `;
 
 export const best = css`
@@ -54,20 +54,6 @@ export const moreText = css`
 `;
 
 // ===== [2] 탭 버튼 =====
-export const tabWrapper = css`
-  display: flex;
-  gap: 1.2rem;
-  padding: 0 0.6rem;
-  width: 35.1rem;
-  height: auto;
-  overflow-x: auto;
-  white-space: nowrap;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
-
 export const tabButton = (isSelected: boolean) => css`
   ${isSelected ? theme.fonts.subtitle4 : theme.fonts.body2};
   color: ${isSelected ? theme.colors.purple7 : theme.colors.gray4};
@@ -76,6 +62,19 @@ export const tabButton = (isSelected: boolean) => css`
   height: 2rem;
   padding: 0;
   cursor: pointer;
+`;
+
+export const tabItem = css`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const tabDivider = css`
+  width: 1px;
+  height: 1.4rem;
+  background-color: ${theme.colors.gray4};
+  margin: 0 0.6rem;
 `;
 
 // ===== [3] 책 리스트 공통 =====
@@ -96,13 +95,13 @@ export const bookItem = css`
 export const thumbnail = css`
   width: 6rem;
   height: 8.6rem;
-  object-fill: cover;
+  object-fit: cover;
   flex-shrink: 0;
 `;
 
 export const rightSection = css`
   display: flex;
-  felx-direction: column;
+  flex-direction: column;
   gap: 0.2rem;
 `;
 
