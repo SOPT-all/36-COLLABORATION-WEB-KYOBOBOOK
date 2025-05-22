@@ -51,13 +51,6 @@ export const tagContainer = css`
   margin-bottom: 1.2rem;
 `;
 
-// 칩 오면 수정
-export const tag = css`
-  padding: 0.2rem 0.6rem;
-  border: 1px solid black;
-  border-radius: 4px;
-`;
-
 export const titleText = (theme: Theme) => css`
   padding-bottom: 0.8rem;
   ${theme.fonts.header1};

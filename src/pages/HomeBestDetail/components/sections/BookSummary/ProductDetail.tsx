@@ -4,9 +4,11 @@ import * as s from '@/pages/HomeBestDetail/components/sections/BookSummary/Produ
 import Icon from '@/components/Icon';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
 import { Chip } from '@/components/Chip/Chip';
+import useToggle from '@/hooks/useToggle';
 
 const ProductDetail = () => {
   const theme = useTheme();
+  const { isLiked, handleLike } = useToggle();
 
   return (
     <div css={s.productWrapper}>
@@ -109,8 +111,11 @@ const ProductDetail = () => {
           <Icon name="share" />
           <span css={s.buttonText(theme)}>공유</span>
         </button>
-        <button css={s.buttonContainer}>
-          <Icon name="wish" />
+        <button css={s.buttonContainer} onClick={handleLike}>
+          <Icon
+            name={isLiked ? 'wishFill' : 'wish'}
+            fill={isLiked ? undefined : theme.colors.gray4}
+          />
           <span css={s.buttonText(theme)}>찜</span>
           <span css={s.wishCountText(theme)}>(1,529)</span>
         </button>
