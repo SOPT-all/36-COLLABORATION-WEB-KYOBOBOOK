@@ -1,6 +1,8 @@
 import { css } from '@emotion/react';
 import type { Theme } from '@emotion/react';
 
+import { theme } from "@/styles/theme";
+
 const wrapper = css`
   display: flex;
   flex-direction: column;
@@ -10,7 +12,7 @@ const wrapper = css`
   right: 50%;
   bottom: 12rem;
   transform: translateX(30rem);
-  z-index: 100;
+  z-index: ${theme.zIndex.six};
 
   @media (max-width: 1024px) {
     transform: translateX(28rem);
