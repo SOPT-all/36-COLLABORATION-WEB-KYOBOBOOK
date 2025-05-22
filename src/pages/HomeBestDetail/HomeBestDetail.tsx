@@ -1,10 +1,7 @@
-import { useEffect, useState } from 'react';
-
 import DetailHeader from '@/components/DetailHeader/DetailHeader';
 import TabMenu from '@/pages/HomeBestDetail/components/elements/TabMenu/TabMenu';
 import AuthorInfo from '@/pages/HomeBestDetail/components/sections/AuthorInfo/AuthorInfo';
 import BookReview from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview';
-import BookSummary from '@/pages/HomeBestDetail/components/sections/BookSummary/BookSummary';
 import DetailBottomNav from '@/components/BottomNav/DetailBottomNav';
 import EventSection from '@/pages/HomeBestDetail/components/sections/EventSection/EventSection';
 import KeywordSection from '@/pages/HomeBestDetail/components/sections/KeywordSection/KeywordSection';

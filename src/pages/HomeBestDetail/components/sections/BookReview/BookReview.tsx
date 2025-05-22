@@ -8,7 +8,6 @@ import Icon from '@/components/Icon';
 import EmotionBar from '@/pages/HomeBestDetail/components/elements/EmotionBar/EmotionBar';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
 import * as s from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview.style';
-import { useGetReviews } from '@/apis/homeBestDetail/queries';
 import type { ReviewTypes } from '@/types/reviewTypes';
 import type { ratingResponseTypes } from '@/types/ratingReponseTypes';
 import type { ReviewResponseTypes } from '@/types/reviewResponseTypes';
