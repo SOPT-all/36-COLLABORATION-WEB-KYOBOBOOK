@@ -1,6 +1,8 @@
 import { css, type Theme } from '@emotion/react';
 
 const menuButtonStyle = (active: boolean, theme: Theme) => css`
+  display: flex;
+  align-items: center;
   padding: 0.8rem 1.4rem;
   border: none;
   border-radius: 40px;
