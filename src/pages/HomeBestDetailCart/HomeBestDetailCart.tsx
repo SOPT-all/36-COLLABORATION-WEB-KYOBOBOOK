@@ -1,10 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-
 import { HomeBestDetailCartStyle as s } from '@/pages/HomeBestDetailCart/HomeBestDetailCart.style';
 import Icon from '@/components/Icon';
 import CartBottomNav from '@/components/BottomNav/CartBottomNav';
 import Floater from '@/components/Floater/Floater';
-// import Chip from '@/components/Chip/Chip';
 import FirstCartView from '@/pages/HomeBestDetailCart/FirstCartView/FirstCartView';
 import SecondCartView from '@/pages/HomeBestDetailCart/SecondCartView/SecondCartView';
 import ThirdCartView from '@/pages/HomeBestDetailCart/ThirdCartView/ThirdCartView';
