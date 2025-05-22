@@ -12,13 +12,12 @@ export const Row = css`
 `;
 
 export const Item = css`
-width: 6.8rem;
+  width: 6.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   svg {
-    
     fill: ${theme.colors.purple6}; 
   }
 
