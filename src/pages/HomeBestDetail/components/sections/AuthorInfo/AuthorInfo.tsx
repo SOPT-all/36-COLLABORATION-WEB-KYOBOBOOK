@@ -6,14 +6,12 @@ import Icon from '@/components/Icon';
 import AuthorImage from '@/assets/img/im_author.svg';
 import Card from '@/components/Card/Card';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
+import useToggle from '@/hooks/useToggle';
 
 const AuthorInfo = () => {
   const theme = useTheme();
-  const [isLiked, setIsLiked] = useState(false);
+  const { isLiked, handleLike } = useToggle();
 
-  const handleLike = () => {
-    setIsLiked((prev) => !prev);
-  };
   const books = [
     {
       src: '/src/assets/img/im_author_book1.png',

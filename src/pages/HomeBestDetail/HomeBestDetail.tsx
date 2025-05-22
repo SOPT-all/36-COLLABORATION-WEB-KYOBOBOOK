@@ -16,7 +16,7 @@ import { SECTION_IDS } from '@/utils/constants/scrollTargetIds';
 import Floater from '@/components/Floater/Floater';
 import { useBookId } from '@/utils/useBookId';
 import { useGetRatings, useGetReviews } from '@/apis/homeBestDetail/queries';
-import { useScrollState } from '@/hooks/useScrollState';
+import useScrollState from '@/hooks/useScrollState';
 
 const HomeBestDetail = () => {
   const bookId = useBookId();
