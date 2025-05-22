@@ -1,5 +1,7 @@
 import { css, type Theme } from '@emotion/react';
 
+import { theme } from '@/styles/theme';
+
 const headerContainer = css`
   display: flex;
   flex-direction: column;
@@ -49,16 +51,19 @@ const headerTabWrapper = (theme: Theme) => css`
   height: 6.6rem;
   gap: 1.6rem;
   background-color: ${theme.colors.white};
-  z-index: 2;
+  z-index: ${theme.zIndex.one};
 `;
 
 const headerTabSticky = (theme: Theme) => css`
   position: fixed;
   top: 0;
+  width: 100%;
+  max-width: 73rem;
+  min-width: 37.5rem;
+
   background-color: ${theme.colors.white};
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-    z-index: ${theme.zIndex.one};
-
+  z-index: ${theme.zIndex.one};
 `;
 
 const emptyContainer = css`
@@ -76,11 +81,11 @@ const layeredWrapper = (theme: Theme) => css`
 
 const layeredIconWrapper = (index: number) => {
   const styles = [
-    { zIndex: 1, left: '0.1rem', bottom: '0' },
-    { zIndex: 2, left: '0.1rem', bottom: '0' },
-    { zIndex: 3, left: '0.1rem', bottom: '0' },
-    { zIndex: 4, left: '0', bottom: '-0.1rem' },
-    { zIndex: 5, left: '2.4rem', bottom: '0' },
+    { zIndex: `${theme.zIndex.one}`, left: '0.1rem', bottom: '0' },
+    { zIndex: `${theme.zIndex.two}`, left: '0.1rem', bottom: '0' },
+    { zIndex: `${theme.zIndex.three}`, left: '0.1rem', bottom: '0' },
+    { zIndex: `${theme.zIndex.four}`, left: '0', bottom: '-0.1rem' },
+    { zIndex: `${theme.zIndex.five}`, left: '2.4rem', bottom: '0' },
   ];
 
   const { zIndex, left, bottom } = styles[index] ?? styles[0];

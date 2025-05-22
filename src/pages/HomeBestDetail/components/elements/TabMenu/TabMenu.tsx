@@ -7,19 +7,21 @@ import {
   tabMenuContainer,
 } from '@/pages/HomeBestDetail/components/elements/TabMenu/TabMenu.style';
 import Icon from '@/components/Icon';
-import scrollToSection from '@/utils/constants/scrollToSection';
+import scrollToSection from '@/utils/scrollToSection';
 import { SECTION_IDS } from '@/utils/constants/scrollTargetIds';
-
-const tabs = ['상품정보', '리뷰 (118)', '이벤트', '교환/반품/품절'];
-const reviewTabs = ['전체 리뷰', '구매 리뷰'];
 
 type TabMenuTypes = {
   type: 'default' | 'review';
   id?: string;
+  reviewCounts?: number;
 };
 
-const TabMenu = ({ type, id }: TabMenuTypes) => {
+const TabMenu = ({ type, id, reviewCounts }: TabMenuTypes) => {
   const theme = useTheme();
+
+  const tabs = ['상품정보', `리뷰 (${reviewCounts})`, '이벤트', '교환/반품/품절'];
+  const reviewTabs = ['전체 리뷰', '구매 리뷰'];
+
   const currentTabs = type === 'default' ? tabs : reviewTabs;
   const initialTab = type === 'default' ? tabs[0] : reviewTabs[1];
 

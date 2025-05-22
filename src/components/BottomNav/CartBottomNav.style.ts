@@ -13,7 +13,7 @@ const wrapper = (theme: Theme) => css`
   width: 100%;
   max-width: 73rem;
   min-width: 37.5rem;
-  z-index: 100;
+  z-index: ${theme.zIndex.three};
 `;
 
 const priceWrapper = css`
