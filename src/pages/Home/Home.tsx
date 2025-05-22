@@ -1,3 +1,4 @@
+import { BannerWrapper, BannerImage } from './Home.style';
 import CategoryButton from './components/CategoryButton/CategoryButton';
 
 import HomeBottomNav from '@/components/BottomNav/HomeBottomNav';
@@ -9,18 +10,8 @@ const Home = () => {
   return (
     <>
       <MainHeader />
-      <div
-        style={{ position: 'relative', left: 0, width: '100%' }}>
-        <img
-          src={homeBanner}
-          alt="6분 클래식"
-          style={{
-            width: '100%',
-            height: 'auto',
-            objectFit: 'contain',
-            display: 'block',
-          }}
-        />
+      <div css={BannerWrapper}>
+        <img src={homeBanner} alt="6분 클래식" css={BannerImage} />
       </div>
       <CategoryButton />
       <div>홈페이지입니다.</div>

@@ -4,8 +4,7 @@ import { theme } from '@/styles/theme';
 
 export const Row = css`
   display: flex;
-  justify-content: space-between; 
-  gap: 1.2rem;
+  justify-content: center; 
   width: 100%;                  
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;  
