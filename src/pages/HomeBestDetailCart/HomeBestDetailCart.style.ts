@@ -1,11 +1,12 @@
 import { css } from '@emotion/react';
 import type { Theme } from '@emotion/react';
 
-const Wrapper = css`
+const Wrapper = (theme: Theme) => css`
   width: 100%;
   max-width: 73rem;
   min-width: 37.5rem;
-  background-color: #ffffff;
+  background-color: ${theme.colors.white};
+  padding-bottom: 8.55rem;
 `;
 
 const Header = (theme: Theme) => css`
@@ -45,6 +46,7 @@ const switchButton = (theme: Theme) => css`
   display: flex;
   align-items: center;
   gap: 0.2rem;
+  border: none;
   background-color: ${theme.colors.white};
   font: ${theme.fonts.body2};
   color: ${theme.colors.purple6};

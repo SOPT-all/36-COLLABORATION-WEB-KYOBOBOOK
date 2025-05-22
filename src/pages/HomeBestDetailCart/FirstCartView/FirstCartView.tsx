@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { FirstCartViewStyle as s } from './FirstCartView.style';
 
 import Icon from '@/components/Icon';
-// import Chip from '@/components/Chip/Chip';
 
 const FirstCartView = () => {
   const [count, setCount] = useState(1);
