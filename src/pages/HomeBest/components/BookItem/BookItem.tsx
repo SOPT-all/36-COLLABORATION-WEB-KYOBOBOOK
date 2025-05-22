@@ -27,7 +27,8 @@ const BookItem = ({
   const { text, isTop3 } = getRankBadgeInfo(ranking);
   const [isLiked, setIsLiked] = useState(defaultLiked);
 
-  const toggleLike = () => {
+  const toggleLike = (e: React.MouseEvent) => {
+    e.stopPropagation();
     setIsLiked((prev) => !prev);
   };
 
