@@ -1,6 +1,8 @@
 import { css } from '@emotion/react';
 import type { Theme } from '@emotion/react';
 
+import { theme } from "@/styles/theme";
+
 const wrapper = css`
   display: flex;
   flex-direction: column;
@@ -10,12 +12,29 @@ const wrapper = css`
   right: 50%;
   bottom: 12rem;
   transform: translateX(30rem);
-  z-index: 100;
+  z-index: ${theme.zIndex.six};
+
+  @media (max-width: 1024px) {
+    transform: translateX(28rem);
+  }
+
+  @media (max-width: 768px) {
+    transform: translateX(26rem);
+  }
+
+  @media (max-width: 630px) {
+    transform: none;
+    right: 1.6rem;
+  }
+
+  @media (max-width: 375px) {
+    right: 1.2rem;
+  }
 `;
 
-const floatingButton = (theme: Theme) => css`
+const floatingButton = css`
   border: none;
-  background-color: ${theme.colors.white};
+  background-color: transparent;
   cursor: pointer;
 `;
 

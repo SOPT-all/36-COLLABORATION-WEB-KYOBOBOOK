@@ -1,16 +1,18 @@
-export interface BookTypes {
-  id: number;
+export interface HomeBestTypes {
+  bookId: number;
   title: string;
   author: string;
   publisher: string;
-  price: number;
-  rank: number;
+  price: string;
+  ranking: number;
   imageUrl: string;
   star: number;
   bestEmotion: string;
 }
 
-export interface AddBookTypes extends BookTypes {
+export type HomeBestResponseTypes = HomeBestTypes[];
+
+export interface AddBookTypes extends HomeBestTypes {
   discountRate: number;
   point: number;
   deliveryDate: string;

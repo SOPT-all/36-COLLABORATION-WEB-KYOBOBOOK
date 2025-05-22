@@ -36,7 +36,7 @@ export const gradationBar = (theme: Theme) => css`
   width: 100%;
   height: 2rem;
   background: ${theme.colors.whiteGr};
-  z-index: 1;
+  z-index: ${theme.zIndex.one};
 `;
 
 export const addText = (theme: Theme) => css`

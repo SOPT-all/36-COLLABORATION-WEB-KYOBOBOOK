@@ -4,10 +4,9 @@ import { HomeBestDetailCartStyle as s } from '@/pages/HomeBestDetailCart/HomeBes
 import Icon from '@/components/Icon';
 import CartBottomNav from '@/components/BottomNav/CartBottomNav';
 import Floater from '@/components/Floater/Floater';
-// import Chip from '@/components/Chip/Chip';
 import FirstCartView from '@/pages/HomeBestDetailCart/FirstCartView/FirstCartView';
-// import SecondCartView from './components/SecondCartView';
-// import ThirdCartView from './components/ThirdCartView';
+import SecondCartView from '@/pages/HomeBestDetailCart/SecondCartView/SecondCartView';
+import ThirdCartView from '@/pages/HomeBestDetailCart/ThirdCartView/ThirdCartView';
 import FourthCartView from '@/pages/HomeBestDetailCart/FourthCartView/ForthCartView';
 import routePath from '@/routes/routePath';
 
@@ -65,6 +64,8 @@ const HomeBestDetailCart = () => {
 
       <main css={s.Body}>
         <FirstCartView />
+        <SecondCartView />
+        <ThirdCartView />
         <FourthCartView />
       </main>
       <Floater />
