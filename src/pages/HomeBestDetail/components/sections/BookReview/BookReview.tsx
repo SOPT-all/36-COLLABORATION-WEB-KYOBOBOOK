@@ -1,6 +1,5 @@
 import { useTheme } from '@emotion/react';
 
-import { ratingData } from '@/sampleData/ratingData';
 import ReviewCard from '@/pages/HomeBestDetail/components/elements/ReviewCard/ReviewCard';
 import RatingBar from '@/pages/HomeBestDetail/components/elements/RatingBar/RatingBar';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
@@ -9,7 +8,7 @@ import Icon from '@/components/Icon';
 import EmotionBar from '@/pages/HomeBestDetail/components/elements/EmotionBar/EmotionBar';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
 import * as s from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview.style';
-import { useGetReviews } from '@/apis/homeBestDetail/queries';
+import { useGetRatings, useGetReviews } from '@/apis/homeBestDetail/queries';
 import type { ReviewTypes } from '@/types/reviewTypes';
 import { useBookId } from '@/utils/useBookId';
 
@@ -17,9 +16,10 @@ const BookReview = ({ id }: { id: string }) => {
   const theme = useTheme();
   const bookId = useBookId();
 
-  const { data: reviewData } = useGetReviews(Number(bookId));
+  const { data: reviewData } = useGetReviews(bookId);
+  const { data: ratingData } = useGetRatings(bookId);
 
-  const sortedStar = Object.entries(ratingData.starDistribution).sort(
+  const sortedStar = Object.entries(ratingData?.starDistribution ?? {}).sort(
     ([a], [b]) => Number(b) - Number(a),
   );
 
@@ -36,9 +36,9 @@ const BookReview = ({ id }: { id: string }) => {
 
         <div>
           <div css={s.ratingTitle(theme)}>
-            <StarRating rating={ratingData.averageStar} width={26} height={26} />
+            {ratingData && <StarRating rating={ratingData?.averageStar} width={26} height={26} />}{' '}
             <span>
-              <b css={s.ratingText(theme)}>{ratingData.averageStar}</b>/5
+              <b css={s.ratingText(theme)}>{ratingData?.averageStar}</b>/5
             </span>
           </div>
           {sortedStar.map(([key, percent]) => {
@@ -55,7 +55,7 @@ const BookReview = ({ id }: { id: string }) => {
               <b css={s.perfect(theme)}>최고예요 </b> 라고 응답했어요
             </span>
           </p>
-          {Object.entries(ratingData.emotionDistribution).map(([emotion, percent]) => (
+          {Object.entries(ratingData?.emotionDistribution ?? {}).map(([emotion, percent]) => (
             <EmotionBar key={emotion} emotion={emotion} percent={percent} />
           ))}
         </div>
