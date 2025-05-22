@@ -1,7 +1,5 @@
 import { useTheme } from '@emotion/react';
 
-import type { ReviewTypes } from '@/types/reviewTypes';
-import { reviewData } from '@/sampleData/reviewData';
 import { ratingData } from '@/sampleData/ratingData';
 import ReviewCard from '@/pages/HomeBestDetail/components/elements/ReviewCard/ReviewCard';
 import RatingBar from '@/pages/HomeBestDetail/components/elements/RatingBar/RatingBar';
@@ -10,10 +8,16 @@ import TabMenu from '@/pages/HomeBestDetail/components/elements/TabMenu/TabMenu'
 import Icon from '@/components/Icon';
 import EmotionBar from '@/pages/HomeBestDetail/components/elements/EmotionBar/EmotionBar';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
-import { bookReviewStyles as s } from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview.style';
+import * as s from '@/pages/HomeBestDetail/components/sections/BookReview/BookReview.style';
+import { useGetReviews } from '@/apis/homeBestDetail/queries';
+import type { ReviewTypes } from '@/types/reviewTypes';
+import { useBookId } from '@/utils/useBookId';
 
-const BookReview = () => {
+const BookReview = ({ id }: { id: string }) => {
   const theme = useTheme();
+  const bookId = useBookId();
+
+  const { data: reviewData } = useGetReviews(Number(bookId));
 
   const sortedStar = Object.entries(ratingData.starDistribution).sort(
     ([a], [b]) => Number(b) - Number(a),
@@ -21,10 +25,10 @@ const BookReview = () => {
 
   return (
     <>
-      <div css={s.wrapper}>
+      <div id={id} css={s.wrapper}>
         <div>
           <div css={s.title}>
-            <h3 css={s.titleText(theme)}>리뷰 ({reviewData.reviewCounts})</h3>
+            <h3 css={s.titleText(theme)}>리뷰 ({reviewData?.reviewCounts})</h3>
             <Icon name="info" />
           </div>
           <p css={s.description(theme)}>* 구매 후 리뷰 작성 시, e교환권 200원 적립</p>
@@ -55,13 +59,16 @@ const BookReview = () => {
             <EmotionBar key={emotion} emotion={emotion} percent={percent} />
           ))}
         </div>
-        <button>리뷰작성</button>
+        <button css={s.buttonContainer(theme)}>
+          <Icon name="write" width={12} height={12} fill={theme.colors.purple6} />
+          <span css={s.buttonText(theme)}>리뷰 작성</span>
+        </button>
       </div>
 
       <TabMenu type="review" />
       <div css={s.cardWrapper}>
         <HorizontalScrollList gap="1rem" sidePadding="0" effect={true}>
-          {reviewData.reviewList.map((review: ReviewTypes) => (
+          {(reviewData?.reviewList.slice(0, 2) ?? []).map((review: ReviewTypes) => (
             <ReviewCard key={review.id} reviewData={review} />
           ))}
         </HorizontalScrollList>

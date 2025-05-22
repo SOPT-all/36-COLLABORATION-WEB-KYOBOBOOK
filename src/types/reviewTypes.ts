@@ -1,9 +1,9 @@
 export type ReviewTypes = {
   id: number;
   reviewer: string;
-  description: string;
+  content: string;
   star: number;
-  image: string;
+  reviewImage: string;
   emotionTags: string[];
-  reviewDate: string;
+  date: string;
 };

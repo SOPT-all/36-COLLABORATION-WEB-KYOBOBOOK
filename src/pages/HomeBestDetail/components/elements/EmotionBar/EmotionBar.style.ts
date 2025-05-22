@@ -20,11 +20,10 @@ export const barFill = (percent: number, theme: Theme) => css`
       : theme.colors.purple1};
   width: ${percent}%;
   height: 100%;
-  border-radius: 4px 0 0 0.4px;
+  border-radius: 4px 0 0 4px;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
 `;
 
 export const barContent = (theme: Theme) => css`
@@ -33,13 +32,13 @@ export const barContent = (theme: Theme) => css`
   align-items: center;
   padding: 0.6rem 1.6rem;
   width: 100%;
-  border-radius: 0.4rem;
+  border-radius: 4px;
   background-color: ${theme.colors.gray1};
 `;
 
 export const emotionText = (theme: Theme) => css`
   ${theme.fonts.body1};
-  z-index: 1;
+  z-index: ${theme.zIndex.one};
 `;
 
 export const percentText = (theme: Theme) => css`

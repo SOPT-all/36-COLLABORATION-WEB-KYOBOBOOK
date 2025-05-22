@@ -2,9 +2,10 @@ import type { Theme } from '@emotion/react';
 import { css } from '@emotion/react';
 
 import { multilineEllipsis } from '@/styles/textStyles';
+import { flexCenter } from '@/styles/sharedStyles';
 
 export const descriptionWrapper = css`
-  margin: 6rem 0 3.8rem 0;
+  margin-bottom: 3.8rem;
   display: flex;
   flex-direction: column;
   gap: 3.8rem;
@@ -35,7 +36,7 @@ export const gradationBar = (theme: Theme) => css`
   width: 100%;
   height: 2rem;
   background: ${theme.colors.whiteGr};
-  z-index: 1;
+  z-index: ${theme.zIndex.one};
 `;
 
 export const addText = (theme: Theme) => css`
@@ -56,5 +57,5 @@ export const tocText = (theme: Theme) => css`
 `;
 
 export const imgWrapper = css`
-  padding: 0 2.4rem;
+  ${flexCenter};
 `;

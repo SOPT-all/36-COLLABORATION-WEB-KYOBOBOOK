@@ -1,9 +1,10 @@
 import { useTheme } from '@emotion/react';
 
-import { reviewCardStyle as s } from '@/pages/HomeBestDetail/components/elements/ReviewCard/ReviewCard.style';
+import * as s from '@/pages/HomeBestDetail/components/elements/ReviewCard/ReviewCard.style';
 import Icon from '@/components/Icon';
 import type { ReviewTypes } from '@/types/reviewTypes';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
+import { Chip } from '@/components/Chip/Chip';
 
 const ReviewCard = ({ reviewData }: { reviewData: ReviewTypes }) => {
   const theme = useTheme();
@@ -17,7 +18,7 @@ const ReviewCard = ({ reviewData }: { reviewData: ReviewTypes }) => {
 
   return (
     <div css={s.cardContainer(theme)}>
-      <img src={reviewData.image} css={s.imgSection} alt="리뷰 이미지" />
+      <img src={reviewData.reviewImage} css={s.imgSection} alt="리뷰 이미지" />
 
       <div css={s.contentContainer}>
         <div css={s.topSection}>
@@ -27,17 +28,21 @@ const ReviewCard = ({ reviewData }: { reviewData: ReviewTypes }) => {
           </div>
         </div>
         <div css={s.metaSection}>
-          <span>종이책</span>
+          <Chip variant="filledRoundGray">종이책</Chip>
           <StarRating rating={reviewData.star} width={14} height={14} />
-          <p css={s.dateText(theme)}>{reviewData.reviewDate}</p>
+          <p css={s.dateText(theme)}>{reviewData.date}</p>
         </div>
         <div css={s.descriptionSection}>
-          <p css={s.descriptionText}>{reviewData.description}</p>
+          <p css={s.descriptionText}>{reviewData.content}</p>
         </div>
         <div css={s.emotionTagSection}>
-          <span>감동이에요</span>
-          <span>감동이에요</span>
-          <span>감동이에요</span>
+          {reviewData.emotionTags.map((tag) => {
+            return (
+              <Chip key={tag} variant="filledRoundPurple">
+                {tag}
+              </Chip>
+            );
+          })}
         </div>
         <p css={s.seeMore(theme)}>자세히보기</p>
       </div>
