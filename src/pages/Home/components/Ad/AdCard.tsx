@@ -1,4 +1,3 @@
-// AdCard.tsx
 import * as S from './AdCard.style';
 
 type AdCardProps = {
