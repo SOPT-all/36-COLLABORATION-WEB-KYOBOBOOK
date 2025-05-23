@@ -43,7 +43,7 @@ export const tabBlock = css`
 
 export const tabButton = (selected: boolean, isFirst: boolean) => css`
   ${isFirst ? theme.fonts.subtitle4 : theme.fonts.body2};
-  color: ${selected ? theme.colors.purple6 : theme.colors.gray4};
+  color: ${selected ? theme.colors.purple7 : theme.colors.gray4};
   background: none;
   border: none;
   cursor: pointer;
