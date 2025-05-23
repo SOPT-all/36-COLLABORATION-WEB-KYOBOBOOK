@@ -9,6 +9,8 @@
 ## 📖 KYOBOBOOK
 교보문고의 주요 기능을 모바일 웹 화면에 최적화된 UI/UX로 재구성하여 사용자 경험을 개선합니다.
 
+## 📌 배포 URL
+
 ## 🤙 WEB Developer
 
 | <center>한수정</center>| <center>권새봄</center>| <center>문혜성</center>| <center>한승우</center>|
@@ -53,7 +55,7 @@
 ## 🤙 컨벤션 및 브랜치 전략
 자세한 컨벤션 및 브랜치 전략(https://bumpy-soy-5c5.notion.site/1ed40dbe228280eeb0bdd3ed6861f2f9?pvs=4)
 
-### 커밋컨벤션
+### 🎯 커밋 컨벤션
 
 | 커밋 유형  | 의미                                                                                  |
 | ---------- | ------------------------------------------------------------------------------------- |
@@ -67,7 +69,7 @@
 | `!hotfix`   | 급하게 치명적인 버그를 고쳐야 하는 경우에 대한 커밋 |
 
 
-### 폴더 구조
+### 📁 폴더 구조
 
 ```plaintext
 |-- 📁 node_modules
@@ -112,4 +114,16 @@
 ```
 
 ## 🤙 기술 스택
-[![My Skills](https://skillicons.dev/icons?i=html,css,react,ts,emotion,tanstack-query)](https://skillicons.dev)
+<div align=left> 
+  <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> 
+  <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
+  <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> 
+  <img src="https://img.shields.io/badge/reactquery-ff4154?style=for-the-badge&logo=reactquery&logoColor=white"> 
+  <img src="https://img.shields.io/badge/emotion-DB7093?style=for-the-badge&logo=styled-components&logoColor=black" />
+
+
+  <br>
+</div>
+
