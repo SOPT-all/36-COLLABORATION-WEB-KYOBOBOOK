@@ -23,6 +23,7 @@ export const titleRow = css`
 
 export const titleText = css`
   ${theme.fonts.title1};
+  padding: 0.8rem 0;
   color: ${theme.colors.black1};
 `;
 
