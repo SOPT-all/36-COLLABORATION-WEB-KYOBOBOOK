@@ -20,6 +20,8 @@ export const getRatings = async (bookId: number) => {
 };
 
 export const getBookDetail = async (bookId: number) => {
-  const res = await instance.get<ApiResponseType<BookDetailResponse>>(`/books/${bookId}`);
+  const res = await instance.get<ApiResponseType<BookDetailResponse>>(
+    END_URL.GET_BOOK_DETAIL(bookId),
+  );
   return res.data.data;
 };

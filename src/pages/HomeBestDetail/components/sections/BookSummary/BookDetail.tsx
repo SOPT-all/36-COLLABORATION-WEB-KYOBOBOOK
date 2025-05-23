@@ -1,18 +1,36 @@
 import { useTheme } from '@emotion/react';
 
-import BookImage from '@/assets/img/im_book_main.png';
+// import BookImage from '@/assets/img/im_book_main.png';
 import * as s from '@/pages/HomeBestDetail/components/sections/BookSummary/BookDetail.style';
 import Icon from '@/components/Icon';
 import { Chip } from '@/components/Chip/Chip';
+import { useBookId } from '@/utils/useBookId';
+import { useGetBookDetail } from '@/apis/homeBestDetail/queries';
+import type { BookDetailResponse } from '@/types/bookDetailTypes';
 
-const BookDetail = () => {
+interface BookDetailProps {
+  bookData?: BookDetailResponse;
+}
+
+const BookDetail = ({ bookData }: BookDetailProps) => {
   const theme = useTheme();
+  const bookId = useBookId();
+  const { data: bookDetailData } = useGetBookDetail(bookId);
+  const formatDate = (dateStr?: string) => {
+    if (!dateStr) return '';
+    const [year, month, day] = dateStr.split('-');
+    return `${year}년 ${month}월 ${day}일`;
+  };
 
   return (
     <>
       <div css={s.imageBackground(theme)}>
         <div css={s.bookContainer}>
-          <img css={s.imageStyle(theme)} src={BookImage} alt="책 대표 이미지" />
+          <img
+            css={s.imageStyle(theme)}
+            src={bookDetailData?.imageUrl ?? ''}
+            alt={`책 대표 이미지 - ${bookDetailData?.title}`}
+          />
           <div css={s.previewContainer(theme)}>
             <span css={s.previewText(theme)}>미리보기</span>
             <span>
@@ -32,11 +50,10 @@ const BookDetail = () => {
           <Chip variant="outlinedGray">소득공제</Chip>
         </div>
 
-        <h3 css={s.titleText(theme)}>단 한번의 삶</h3>
-        <p css={s.publisherText(theme)}>양장본 Hardcover</p>
-        <p css={s.authorText(theme)}>김영하 저자(글)</p>
-        <p css={s.dateText(theme)}>복복서가 · 2025년 04월 06일</p>
-
+        <h3 css={s.titleText(theme)}>{bookDetailData?.title ?? ''}</h3>
+        <p css={s.publisherText(theme)}>{bookDetailData?.publisher ?? ''}</p>
+        <p css={s.authorText(theme)}>{bookDetailData?.author ?? ''} 저자 (글)</p>
+        <p css={s.dateText(theme)}>{formatDate(bookDetailData?.date)}</p>
         <div css={s.bestContainer}>
           <Icon name="best" />
           <strong css={s.bestText(theme)}>주간베스트</strong>

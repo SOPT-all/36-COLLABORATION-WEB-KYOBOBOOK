@@ -22,6 +22,7 @@ export const bookContainer = css`
 
 export const imageStyle = (theme: Theme) => css`
   box-shadow: ${theme.effects.shadow1};
+  width: 17rem;
 `;
 
 export const previewContainer = (theme: Theme) => css`

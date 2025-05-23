@@ -5,25 +5,34 @@ import Icon from '@/components/Icon';
 import StarRating from '@/pages/HomeBestDetail/components/elements/StarRating/StarRating';
 import { Chip } from '@/components/Chip/Chip';
 import useToggle from '@/hooks/useToggle';
+import type { BookDetailResponse } from '@/types/bookDetailTypes';
 
-const ProductDetail = () => {
+interface ProductDetailProps {
+  productData: BookDetailResponse | undefined;
+}
+
+const ProductDetail = ({ productData }: ProductDetailProps) => {
   const theme = useTheme();
   const { isLiked, handleLike } = useToggle();
+
+  const discountedPrice = Number(productData?.price?.replace('원', '') ?? '0');
+  const originalPrice = Math.floor(discountedPrice / 0.9);
+  const point = Math.floor(discountedPrice * 0.05);
 
   return (
     <div css={s.productWrapper}>
       <div css={s.priceWrapper}>
         <span css={s.saleText(theme)}>10%</span>
         <span css={s.priceText(theme)}>
-          <b css={s.priceNumber(theme)}>15,120</b>원
+          <b css={s.priceNumber(theme)}>{discountedPrice.toLocaleString()}</b>원
         </span>
-        <span css={s.beforeText(theme)}>16,800원</span>
+        <span css={s.beforeText(theme)}>{originalPrice.toLocaleString()}원</span>
       </div>
 
       <div css={s.benefitWrapper(theme)}>
         <p css={s.benefitText(theme)}>적립/혜택</p>
         <div css={s.pointWrapper}>
-          <span css={s.pointText(theme)}>840P</span>
+          <span css={s.pointText(theme)}>{point.toLocaleString()}P</span>
           <Icon name="circleDown" fill={theme.colors.white} width={20} height={20} />
         </div>
       </div>
