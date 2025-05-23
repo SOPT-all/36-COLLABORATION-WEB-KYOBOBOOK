@@ -18,7 +18,7 @@ const CategoryButton = () => {
         <div key={name} css={Item}>
           <Button
             variant="mainOutlined"
-            icon={<Icon name={name} width={36} height={36} />}
+            icon={<Icon name={name} width={30} height={30} />}
           >
             <span css={Label}>{label}</span>
           </Button>
