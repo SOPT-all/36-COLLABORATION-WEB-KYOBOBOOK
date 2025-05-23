@@ -1,4 +1,4 @@
-import { Wrapper, TitleText, AdBadge, ScrollWrapper, textWrapper } from './PublisherPick.style';
+import { Wrapper, TitleText, AdBadge } from './PublisherPick.style';
 
 import Img1 from '@/assets/img/img_recommend1.png';
 import Img2 from '@/assets/img/img_recommend2.png';
