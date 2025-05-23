@@ -17,12 +17,14 @@ import useScrollState from '@/hooks/useScrollState';
 import BookDetail from '@/pages/HomeBestDetail/components/sections/BookSummary/BookDetail';
 import Divider from '@/components/Divider/Divider';
 import ProductDetail from '@/pages/HomeBestDetail/components/sections/BookSummary/ProductDetail';
+import { useGetBookDetail } from '@/apis/homeBestDetail/queries';
 
 const HomeBestDetail = () => {
   const bookId = useBookId();
 
   const { data: ratingData } = useGetRatings(bookId);
   const { data: reviewData } = useGetReviews(bookId);
+  const { data: bookDetailData } = useGetBookDetail(bookId);
 
   const scrollState = useScrollState();
 
@@ -31,9 +33,9 @@ const HomeBestDetail = () => {
       {scrollState !== 3 && <DetailHeader scrollState={scrollState} />}
       <main css={mainStyle}>
         <section>
-          <BookDetail />
+          <BookDetail bookData={bookDetailData} />
           <Divider />
-          <ProductDetail />
+          <ProductDetail productData={bookDetailData} />
           <Divider />
         </section>
         <TabMenu type="default" id="tab-menu" reviewCounts={reviewData?.reviewCounts} />
