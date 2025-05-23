@@ -25,6 +25,13 @@ export const BannerControls = css`
   z-index: 1;
 `;
 
+export const AdWrapper = css`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.4rem; 
+`;
+
 export const PauseIcon = css`
   width: 2.8rem;
   height: 2.8rem;
