@@ -220,9 +220,21 @@ const footerButton = (theme: Theme) => css`
 
 const Chip = (theme: Theme) => css`
   padding: 0.125rem 0.5rem;
-  font: ${theme.fonts.caption1};
+  font: ${theme.fonts.caption3};
   color: ${theme.colors.purple7};
   background-color: ${theme.colors.purple1};
+  border-radius: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const secondChip = (theme: Theme) => css`
+  padding: 0.125rem 0.5rem;
+  font: ${theme.fonts.caption3};
+  color: ${theme.colors.purple6};
+  background-color: ${theme.colors.white};
+  border: 1px solid ${theme.colors.purple6};
   border-radius: 40px;
   display: inline-flex;
   align-items: center;
@@ -249,4 +261,5 @@ export const FirstCartViewStyle = {
   cardBody,
   footerButton,
   Chip,
+  secondChip,
 };

@@ -103,7 +103,7 @@ const FirstCartView = ({ bookData }: BookDetailProps) => {
                 <span>오늘(4/24, 목) 도착</span>
               </div>
               <div className="line">
-                <span css={s.Chip}>바로드림</span>
+                <span css={s.secondChip}>바로드림</span>
                 <span>9시간 이후 수령 가능</span>
               </div>
             </div>
