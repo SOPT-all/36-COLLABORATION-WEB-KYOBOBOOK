@@ -19,6 +19,8 @@ const topWrapper = (theme: Theme) => css`
   border-bottom: 1px solid ${theme.colors.gray2};
 `;
 
+const imageStyle = () => css``;
+
 const Banner = css`
   display: flex;
   justify-content: space-between;
@@ -111,15 +113,16 @@ const cardHeader = css`
   justify-content: space-between;
 `;
 
-const bookTag = (theme: Theme) => css`
+const bookTag = () => css`
   display: flex;
   gap: 0.5rem;
   align-items: center;
   justify-content: space-between;
-  .title {
-    font: ${theme.fonts.body1};
-    color: ${theme.colors.black1};
-  }
+`;
+
+const titleText = (theme: Theme) => css`
+  font: ${theme.fonts.body1};
+  color: ${theme.colors.black1};
 `;
 
 const cardBody = (theme: Theme) => css`
@@ -217,9 +220,21 @@ const footerButton = (theme: Theme) => css`
 
 const Chip = (theme: Theme) => css`
   padding: 0.125rem 0.5rem;
-  font: ${theme.fonts.caption1};
+  font: ${theme.fonts.caption3};
   color: ${theme.colors.purple7};
   background-color: ${theme.colors.purple1};
+  border-radius: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const secondChip = (theme: Theme) => css`
+  padding: 0.125rem 0.5rem;
+  font: ${theme.fonts.caption3};
+  color: ${theme.colors.purple6};
+  background-color: ${theme.colors.white};
+  border: 1px solid ${theme.colors.purple6};
   border-radius: 40px;
   display: inline-flex;
   align-items: center;
@@ -230,6 +245,7 @@ export const FirstCartViewStyle = {
   Wrapper,
   firstBox,
   topWrapper,
+  imageStyle,
   Banner,
   bannerTop,
   iconButton,
@@ -241,7 +257,9 @@ export const FirstCartViewStyle = {
   Card,
   cardHeader,
   bookTag,
+  titleText,
   cardBody,
   footerButton,
   Chip,
+  secondChip,
 };
