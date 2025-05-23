@@ -5,7 +5,7 @@ import * as S from './BestBookList.styles';
 import { useGetTopBooks } from '@/apis/home/queries';
 import { Chip } from '@/components/Chip/Chip';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
-import addIcon from '@/assets/icons/svg/ic_add.svg';
+import Icon from '@/components/Icon';
 import ROUTE_PATH from '@/routes/routePath';
 
 const TABS = ['전체', '국내도서', '외국도서', 'ebook', 'sam', '핫트랙스', '교보only'];
@@ -45,7 +45,7 @@ const BestBookList = () => {
         </div>
         <button css={S.moreButton} onClick={() => navigate(ROUTE_PATH.HOME_BEST)}>
           <span css={S.moreText}>더보기</span>
-          <img src={addIcon} alt="더보기 아이콘" width={20} height={20} />
+          <Icon name="add" width={20} height={20} />
         </button>
       </div>
 

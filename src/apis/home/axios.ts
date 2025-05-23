@@ -1,10 +1,11 @@
 import { instance } from '@/apis/instance';
-import type { TopBookResponseType } from '@/types/TopBookResponseType';
+import { END_URL } from '@/utils/constants/apiURL';
 import type { ApiResponseType } from '@/types/apiResponseType';
+import type { TopBookResponseType } from '@/types/TopBookResponseType';
 
 export const getTopBooks = async (): Promise<TopBookResponseType> => {
   const response = await instance.get<ApiResponseType<TopBookResponseType>>(
-    'http://3.39.227.247:8082/books/top5'
+    END_URL.GET_TOP_BOOKS
   );
 
   if (!response.data.success) {
