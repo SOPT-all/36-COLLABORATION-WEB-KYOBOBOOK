@@ -10,6 +10,7 @@ import ThirdCartView from '@/pages/HomeBestDetailCart/ThirdCartView/ThirdCartVie
 import FourthCartView from '@/pages/HomeBestDetailCart/FourthCartView/ForthCartView';
 import routePath from '@/routes/routePath';
 import { useGetBookDetail } from '@/apis/homeBestDetail/queries';
+import { useState } from 'react';
 
 const HomeBestDetailCart = () => {
   const navigate = useNavigate();
@@ -17,6 +18,8 @@ const HomeBestDetailCart = () => {
 
   const numericBookId = Number(bookId || '0');
   const { data: bookDetailData } = useGetBookDetail(numericBookId);
+
+  const [totalPrice, setTotalPrice] = useState(0);
 
   if (!bookId || isNaN(numericBookId)) {
     return <div>잘못된 접근입니다.</div>;
@@ -72,13 +75,13 @@ const HomeBestDetailCart = () => {
       </div>
 
       <main css={s.Body}>
-        <FirstCartView bookData={bookDetailData} />
+        <FirstCartView bookData={bookDetailData} onTotalPriceChange={setTotalPrice} />
         <SecondCartView />
         <ThirdCartView />
         <FourthCartView />
       </main>
       <Floater />
-      <CartBottomNav />
+      <CartBottomNav totalPrice={totalPrice} />
     </div>
   );
 };

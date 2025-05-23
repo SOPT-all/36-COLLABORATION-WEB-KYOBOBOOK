@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { FirstCartViewStyle as s } from './FirstCartView.style';
 
@@ -7,9 +7,10 @@ import type { BookDetailResponse } from '@/types/bookDetailTypes';
 
 interface BookDetailProps {
   bookData?: BookDetailResponse;
+  onTotalPriceChange?: (price: number) => void;
 }
 
-const FirstCartView = ({ bookData }: BookDetailProps) => {
+const FirstCartView = ({ bookData, onTotalPriceChange }: BookDetailProps) => {
   const [count, setCount] = useState(1);
   const MAX_COUNT = 10;
   const discountedUnitPrice = Number(bookData?.price?.replace('원', '') ?? '0');
@@ -21,6 +22,12 @@ const FirstCartView = ({ bookData }: BookDetailProps) => {
   const originalTotalPrice = originalUnitPrice * count;
 
   const totalPoint = Math.floor(discountedTotalPrice * 0.05);
+
+  useEffect(() => {
+    if (onTotalPriceChange) {
+      onTotalPriceChange(discountedTotalPrice);
+    }
+  }, [discountedTotalPrice, onTotalPriceChange]);
 
   const handleDecrease = () => {
     if (count > 1) {
