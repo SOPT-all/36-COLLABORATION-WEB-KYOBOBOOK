@@ -30,7 +30,6 @@ export const AdBadge = css`
   border-radius: 1rem; 
   background-color: ${theme.colors.gray3};
   color: ${theme.colors.white};
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   ${theme.fonts.caption4};

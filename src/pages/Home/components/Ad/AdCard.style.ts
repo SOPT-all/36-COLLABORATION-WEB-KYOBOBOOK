@@ -29,6 +29,7 @@ export const title = ({ top, left }: Position) => css`
   left: ${left};
   ${theme.fonts.subtitle2};
   color: ${theme.colors.black1};
+  white-space: normal;
 `;
 
 export const subtitle = ({ top, left }: Position) => css`
