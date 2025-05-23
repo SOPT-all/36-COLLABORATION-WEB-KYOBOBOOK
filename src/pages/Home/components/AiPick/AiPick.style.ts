@@ -3,15 +3,13 @@ import { css } from '@emotion/react';
 import { theme } from '@/styles/theme';
 
 export const wrapper = css`
-  width: 100%;
-  max-width: 32.7rem;
   border-radius: 1rem;
   background-color: ${theme.colors.gray1};
   padding: 2.4rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;   
+  margin: 0 2.4rem;   
 `;
 
 export const titleRow = css`
