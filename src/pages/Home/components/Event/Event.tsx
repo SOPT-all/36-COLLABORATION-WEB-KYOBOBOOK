@@ -36,7 +36,7 @@ const Event = () => {
         ))}
       </div>
 
-      <HorizontalScrollList gap="1rem" sidePadding="2.4rem" effect={false}>
+      <HorizontalScrollList gap="1rem" sidePadding="0" effect={false}>
         <img src={eventImg1} alt="이벤트1" css={S.bannerImage} />
         <img src={eventImg2} alt="이벤트2" css={S.bannerImage} />
       </HorizontalScrollList>

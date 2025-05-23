@@ -3,8 +3,6 @@ import { css } from '@emotion/react';
 import { theme } from '@/styles/theme';
 
 export const wrapper = css`
-  max-width: 37.5rem;
-  margin: 0 auto;
   padding: 0 2.4rem;
 `;
 
@@ -16,6 +14,7 @@ export const titleRow = css`
 `;
 
 export const titleText = css`
+  padding: 0.8rem 0;
   ${theme.fonts.title1};
   color: ${theme.colors.black1};
 `;
@@ -29,6 +28,7 @@ export const moreButton = css`
 `;
 
 export const tabRow = css`
+  padding-left: 1.2rem;
   display: flex;
   align-items: center;
   gap: 1.2rem;
