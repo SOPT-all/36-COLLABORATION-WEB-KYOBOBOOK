@@ -15,10 +15,12 @@ const HomeBestDetailCart = () => {
   const navigate = useNavigate();
   const { bookId } = useParams<{ bookId: string }>();
 
-  if (!bookId) return <div>잘못된 접근입니다.</div>;
-
-  const numericBookId = Number(bookId);
+  const numericBookId = Number(bookId || '0');
   const { data: bookDetailData } = useGetBookDetail(numericBookId);
+
+  if (!bookId || isNaN(numericBookId)) {
+    return <div>잘못된 접근입니다.</div>;
+  }
 
   const handleBack = () => navigate(`/best/detail/${bookId}`);
   const handleHome = () => navigate(routePath.HOME);
