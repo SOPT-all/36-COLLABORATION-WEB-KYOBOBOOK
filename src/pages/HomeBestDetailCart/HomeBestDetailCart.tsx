@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { HomeBestDetailCartStyle as s } from '@/pages/HomeBestDetailCart/HomeBestDetailCart.style';
 import Icon from '@/components/Icon';
@@ -9,11 +9,18 @@ import SecondCartView from '@/pages/HomeBestDetailCart/SecondCartView/SecondCart
 import ThirdCartView from '@/pages/HomeBestDetailCart/ThirdCartView/ThirdCartView';
 import FourthCartView from '@/pages/HomeBestDetailCart/FourthCartView/ForthCartView';
 import routePath from '@/routes/routePath';
+import { useGetBookDetail } from '@/apis/homeBestDetail/queries';
 
 const HomeBestDetailCart = () => {
   const navigate = useNavigate();
+  const { bookId } = useParams<{ bookId: string }>();
 
-  const handleBack = () => navigate(routePath.HOME_BEST_DETAIL);
+  if (!bookId) return <div>잘못된 접근입니다.</div>;
+
+  const numericBookId = Number(bookId);
+  const { data: bookDetailData } = useGetBookDetail(numericBookId);
+
+  const handleBack = () => navigate(`/best/detail/${bookId}`);
   const handleHome = () => navigate(routePath.HOME);
 
   return (
@@ -63,7 +70,7 @@ const HomeBestDetailCart = () => {
       </div>
 
       <main css={s.Body}>
-        <FirstCartView />
+        <FirstCartView bookData={bookDetailData} />
         <SecondCartView />
         <ThirdCartView />
         <FourthCartView />

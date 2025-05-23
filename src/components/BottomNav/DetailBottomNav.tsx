@@ -4,19 +4,20 @@ import { useTheme } from '@emotion/react';
 
 import { DetailBottomNavStyle as s } from '@/components/BottomNav/DetailBottomNav.style';
 import Icon from '@/components/Icon';
-import routePath from '@/routes/routePath';
+import { useBookId } from '@/utils/useBookId';
 
 const DetailBottomNav = () => {
   const theme = useTheme();
   const navigate = useNavigate();
   const [liked, setLiked] = useState(false);
+  const bookId = useBookId();
 
   const handleLikeToggle = () => {
     setLiked((prev) => !prev);
   };
 
   const handleGoToCart = () => {
-    navigate(routePath.HOME_BEST_DETAIL_CART);
+    navigate(`/best/detail-cart/${bookId}`);
   };
 
   return (

@@ -3,12 +3,24 @@ import { useState } from 'react';
 import { FirstCartViewStyle as s } from './FirstCartView.style';
 
 import Icon from '@/components/Icon';
+import type { BookDetailResponse } from '@/types/bookDetailTypes';
 
-const FirstCartView = () => {
+interface BookDetailProps {
+  bookData?: BookDetailResponse;
+}
+
+const FirstCartView = ({ bookData }: BookDetailProps) => {
   const [count, setCount] = useState(1);
   const MAX_COUNT = 10;
-  const price = 16800;
-  const point = 840;
+  const discountedUnitPrice = Number(bookData?.price?.replace('원', '') ?? '0');
+
+  const originalUnitPrice = Math.floor(discountedUnitPrice / 0.9);
+
+  const discountedTotalPrice = discountedUnitPrice * count;
+
+  const originalTotalPrice = originalUnitPrice * count;
+
+  const totalPoint = Math.floor(discountedTotalPrice * 0.05);
 
   const handleDecrease = () => {
     if (count > 1) {
@@ -21,9 +33,6 @@ const FirstCartView = () => {
       setCount(count + 1);
     }
   };
-
-  const discounted = Math.floor(price * count * 0.9);
-  const totalPoint = point * count;
 
   return (
     <div css={s.Wrapper}>
@@ -59,20 +68,24 @@ const FirstCartView = () => {
         <div css={s.cardHeader}>
           <div css={s.bookTag}>
             <Icon name="check" width={20} height={20} />
-            <span className="title">[국내도서] 단 한 번의 삶</span>
+            <span css={s.titleText}>{bookData?.title ?? ''}</span>
           </div>
           <Icon name="close" width={20} height={20} />
         </div>
 
         <div css={s.cardBody}>
-          <Icon name="cartBook" width={62} height={90} />
+          <img
+            css={s.imageStyle}
+            src={bookData?.imageUrl ?? ''}
+            alt={`책 대표 이미지 - ${bookData?.title}`}
+          />
           <div className="priceSection">
             <div className="priceBox">
               <p className="discount">10%</p>
-              <p className="finalPrice">{discounted.toLocaleString()}원</p>
+              <p className="finalPrice">{discountedTotalPrice.toLocaleString()}원</p>
               <p className="origin">
-                <span className="originPrice">{(price * count).toLocaleString()}원</span>
-                <span className="point"> ({totalPoint}P)</span>
+                <span className="originPrice">{originalTotalPrice.toLocaleString()}원</span>
+                <span className="point"> ({totalPoint.toLocaleString()}P)</span>
               </p>
             </div>
             <div className="countController">

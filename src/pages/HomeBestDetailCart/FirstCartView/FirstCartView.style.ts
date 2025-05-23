@@ -19,6 +19,8 @@ const topWrapper = (theme: Theme) => css`
   border-bottom: 1px solid ${theme.colors.gray2};
 `;
 
+const imageStyle = () => css``;
+
 const Banner = css`
   display: flex;
   justify-content: space-between;
@@ -111,15 +113,16 @@ const cardHeader = css`
   justify-content: space-between;
 `;
 
-const bookTag = (theme: Theme) => css`
+const bookTag = () => css`
   display: flex;
   gap: 0.5rem;
   align-items: center;
   justify-content: space-between;
-  .title {
-    font: ${theme.fonts.body1};
-    color: ${theme.colors.black1};
-  }
+`;
+
+const titleText = (theme: Theme) => css`
+  font: ${theme.fonts.body1};
+  color: ${theme.colors.black1};
 `;
 
 const cardBody = (theme: Theme) => css`
@@ -230,6 +233,7 @@ export const FirstCartViewStyle = {
   Wrapper,
   firstBox,
   topWrapper,
+  imageStyle,
   Banner,
   bannerTop,
   iconButton,
@@ -241,6 +245,7 @@ export const FirstCartViewStyle = {
   Card,
   cardHeader,
   bookTag,
+  titleText,
   cardBody,
   footerButton,
   Chip,
