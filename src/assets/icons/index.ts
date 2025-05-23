@@ -61,6 +61,7 @@ import NavSam from '../icons/svg/ic_nav_sam.svg?react';
 import NavEbook from '../icons/svg/ic_nav_ebook.svg?react';
 import NavLogoBackground from '../icons/svg/ic_nav_logo_background.svg?react';
 import IcHeaderLogo from '../icons/svg/ic_header_logo.svg?react';
+import PauseIcon from '../icons/svg/ic_pause.svg?react';
 
 export const iconMap = {
   account: AccountIcon,
@@ -126,6 +127,7 @@ export const iconMap = {
   navEbook: NavEbook,
   navLogoBackground: NavLogoBackground,
   icHeaderLogo: IcHeaderLogo,
+  pause: PauseIcon,
 };
 
 export type IconName = keyof typeof iconMap;
