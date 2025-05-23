@@ -5,9 +5,7 @@ import { theme } from '@/styles/theme';
 // ===== [1] Wrapper & Title Row =====
 export const wrapper = css`
   width: 100%;
-  max-width: 37.5rem;
-  margin: 0 auto;
-  padding: 0 1.2rem;
+  padding: 0 2.4rem;
 `;
 
 export const titleRow = css`
@@ -15,7 +13,7 @@ export const titleRow = css`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0.8rem 0.6rem;
+  padding: 0.8rem 0;
 `;
 
 export const best = css`
@@ -55,7 +53,7 @@ export const tabItem = css`
   align-items: center;
   width: 100%;
   height: auto;              
-  padding: 0 1.2rem 0.8rem; 
+  padding-bottom: 0.8rem; 
   box-sizing: border-box;
 `;
 
@@ -94,7 +92,7 @@ export const backgroundBlurBox = css`
   backdrop-filter: blur(80px);
   -webkit-backdrop-filter: blur(80px);
   overflow: hidden;
-  border-radius: 0.8rem;
+  border-radius: 8px 8px 0 0;
   z-index: 1;
 `;
 
@@ -118,6 +116,7 @@ export const textContainer = css`
   flex-direction: column;
   position: relative;
   z-index: 3;
+  border-radius: 0 0 8px 8px;
 `;
 
 export const cardTitle = css`

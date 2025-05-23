@@ -44,31 +44,35 @@ const TodayPick = () => {
   const navigate = useNavigate();
 
   return (
-    <section css={s.wrapper}>
-      <div css={s.titleRow}>
-        <span css={s.best}>오늘의 선택</span>
-        <button css={s.moreButton} onClick={() => navigate('/today')}>
-          <span css={s.moreText}>더보기 +</span>
-        </button>
-      </div>
+    <>
+      {/* Title 영역만 section에 감싸기 */}
+      <section css={s.wrapper}>
+        <div css={s.titleRow}>
+          <span css={s.best}>오늘의 선택</span>
+          <button css={s.moreButton} onClick={() => navigate('/today')}>
+            <span css={s.moreText}>더보기 +</span>
+          </button>
+        </div>
+      </section>
 
+      {/* 탭 영역 */}
       <div css={s.tabItem}>
-      <HorizontalScrollList gap="0.6rem" sidePadding="1.2rem" effect={false}>
-        {TABS.map((tab, idx) => (
+        <HorizontalScrollList gap="0.6rem" sidePadding="2.4rem" effect={false}>
+          {TABS.map((tab, idx) => (
             <div key={tab} css={s.tabBlock}>
-                <button
-                    css={s.tabButton(selectedTab === tab)}
-                     onClick={() => setSelectedTab(tab)}
-                >
+              <button
+                css={s.tabButton(selectedTab === tab)}
+                onClick={() => setSelectedTab(tab)}
+              >
                 {tab}
-                </button>
-                {idx < TABS.length - 1 && <div css={s.tabDivider} />}
+              </button>
+              {idx < TABS.length - 1 && <div css={s.tabDivider} />}
             </div>
-        ))}
+          ))}
         </HorizontalScrollList>
-
       </div>
 
+      {/* 책 카드 리스트 */}
       <HorizontalScrollList gap="1.6rem" sidePadding="2.4rem">
         {BOOKS.map((book) => (
           <div key={book.id} css={s.cardWrapper}>
@@ -79,17 +83,17 @@ const TodayPick = () => {
             <div css={s.textContainer}>
               <p css={s.cardTitle}>{book.title}</p>
               <div css={s.cardCaption}>
-              <span css={s.captionInner}>
-                <CaptionIcon css={s.captionIcon} />
-                <span css={s.cardSubtitle}>{book.subtitle}</span>
-              </span>
+                <span css={s.captionInner}>
+                  <CaptionIcon css={s.captionIcon} />
+                  <span css={s.cardSubtitle}>{book.subtitle}</span>
+                </span>
               </div>
               <p css={s.cardDescription}>{book.caption}</p>
             </div>
           </div>
         ))}
       </HorizontalScrollList>
-    </section>
+    </>
   );
 };
 
