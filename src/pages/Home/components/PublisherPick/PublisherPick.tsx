@@ -1,9 +1,4 @@
-import {
-  Wrapper,
-  TitleText,
-  AdBadge,
-  ScrollWrapper,
-} from './PublisherPick.style';
+import { Wrapper, TitleText, AdBadge, ScrollWrapper, textWrapper } from './PublisherPick.style';
 
 import Img1 from '@/assets/img/img_recommend1.png';
 import Img2 from '@/assets/img/img_recommend2.png';
@@ -19,17 +14,18 @@ const books = [
 
 const PublisherPick = () => {
   return (
-    <section css={Wrapper}>
-      <span css={AdBadge}>AD</span>
-      <h2 css={TitleText}>출판사에서 자신있게 추천해요</h2>
-      <div css={ScrollWrapper}>
-        <HorizontalScrollList>
-          {books.map((book) => (
-            <Card key={book.id} imgUrl={book.imgUrl} title={book.title} />
-          ))}
-        </HorizontalScrollList>
-      </div>
-    </section>
+    <div>
+      <section css={Wrapper}>
+        <span css={AdBadge}>AD</span>
+        <h2 css={TitleText}>출판사에서 자신있게 추천해요</h2>
+      </section>
+
+      <HorizontalScrollList>
+        {books.map((book) => (
+          <Card key={book.id} imgUrl={book.imgUrl} title={book.title} />
+        ))}
+      </HorizontalScrollList>
+    </div>
   );
 };
 
