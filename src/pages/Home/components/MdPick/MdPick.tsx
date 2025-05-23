@@ -35,7 +35,7 @@ const MdPick = () => {
 
       {/* 탭 */}
       <section css={s.tabWrapper}>
-        <HorizontalScrollList gap="1rem" sidePadding="0" effect={false}>
+        <HorizontalScrollList gap="0" sidePadding="2.4rem" effect={false}>
             {TABS.map((tab, idx) => (
                 <div key={tab} css={s.tabBlock}>
                     <button css={s.tabButton(selectedTab === tab)} onClick={() => setSelectedTab(tab)}>

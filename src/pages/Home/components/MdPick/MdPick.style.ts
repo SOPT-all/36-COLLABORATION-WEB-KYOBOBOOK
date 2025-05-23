@@ -4,8 +4,6 @@ import { theme } from '@/styles/theme';
 
 export const wrapper = css`
   width: 100%;
-  max-width: 37.5rem;
-  margin: 0 auto;
 `;
 
 export const titleRow = css`
@@ -14,7 +12,7 @@ export const titleRow = css`
   align-items: center;
   width: 100%;
   height: 4.4rem;
-  padding: 0 1.2rem;
+  padding: 0 2.4rem;
   margin-bottom: 0.8rem;
 `;
 
@@ -57,23 +55,17 @@ export const tabButton = (isSelected: boolean) => css`
 `;
 
 export const tabDivider = css`
-  width: 1px;
-  height: 1.4rem;
-  background-color: ${theme.colors.gray4};
-  margin: 0 0.6rem;
+  width: 0.1rem;
+  height: 1rem;
+  background-color: ${theme.colors.gray3};
+  margin: 0 1.2rem;
 `;
 
 export const tabWrapper = css`
   width: 100%;
-  max-width: 37.5rem;
-  margin: 0 auto;
-  padding: 0 1.2rem 0.8rem 1.2rem;
 `;
 
 export const cardWrapper = css`
   width: 100%;
-  max-width: 37.5rem;
-  margin: 0 auto;
   padding: 2.4rem 2.4rem;
-  gap: 1.6rem;
 `;
