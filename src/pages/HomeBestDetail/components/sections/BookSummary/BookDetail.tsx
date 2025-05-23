@@ -4,8 +4,6 @@ import { useTheme } from '@emotion/react';
 import * as s from '@/pages/HomeBestDetail/components/sections/BookSummary/BookDetail.style';
 import Icon from '@/components/Icon';
 import { Chip } from '@/components/Chip/Chip';
-import { useBookId } from '@/utils/useBookId';
-import { useGetBookDetail } from '@/apis/homeBestDetail/queries';
 import type { BookDetailResponse } from '@/types/bookDetailTypes';
 
 interface BookDetailProps {
@@ -14,13 +12,6 @@ interface BookDetailProps {
 
 const BookDetail = ({ bookData }: BookDetailProps) => {
   const theme = useTheme();
-  const bookId = useBookId();
-  const { data: bookDetailData } = useGetBookDetail(bookId);
-  const formatDate = (dateStr?: string) => {
-    if (!dateStr) return '';
-    const [year, month, day] = dateStr.split('-');
-    return `${year}년 ${month}월 ${day}일`;
-  };
 
   return (
     <>
@@ -28,8 +19,8 @@ const BookDetail = ({ bookData }: BookDetailProps) => {
         <div css={s.bookContainer}>
           <img
             css={s.imageStyle(theme)}
-            src={bookDetailData?.imageUrl ?? ''}
-            alt={`책 대표 이미지 - ${bookDetailData?.title}`}
+            src={bookData?.imageUrl ?? ''}
+            alt={`책 대표 이미지 - ${bookData?.title}`}
           />
           <div css={s.previewContainer(theme)}>
             <span css={s.previewText(theme)}>미리보기</span>
@@ -50,10 +41,21 @@ const BookDetail = ({ bookData }: BookDetailProps) => {
           <Chip variant="outlinedGray">소득공제</Chip>
         </div>
 
-        <h3 css={s.titleText(theme)}>{bookDetailData?.title ?? ''}</h3>
-        <p css={s.publisherText(theme)}>{bookDetailData?.publisher ?? ''}</p>
-        <p css={s.authorText(theme)}>{bookDetailData?.author ?? ''} 저자 (글)</p>
-        <p css={s.dateText(theme)}>{formatDate(bookDetailData?.date)}</p>
+        <h3 css={s.titleText(theme)}>{bookData?.title ?? ''}</h3>
+        <p css={s.publisherText(theme)}>{bookData?.publisher ?? ''}</p>
+        <p css={s.authorText(theme)}>{bookData?.author ?? ''} 저자 (글)</p>
+        <p css={s.dateText(theme)}>
+          {bookData?.date
+            ? new Date(bookData.date)
+                .toLocaleDateString('ko-KR', {
+                  year: 'numeric',
+                  month: '2-digit',
+                  day: '2-digit',
+                })
+                .replace(/\. /g, '년 ')
+                .replace('.', '일')
+            : ''}
+        </p>
         <div css={s.bestContainer}>
           <Icon name="best" />
           <strong css={s.bestText(theme)}>주간베스트</strong>
