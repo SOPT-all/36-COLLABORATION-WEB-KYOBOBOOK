@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import * as S from './BestBookList.styles';
+import * as S from './BestBookList.style';
 
 import { useGetTopBooks } from '@/apis/home/queries';
 import { Chip } from '@/components/Chip/Chip';
