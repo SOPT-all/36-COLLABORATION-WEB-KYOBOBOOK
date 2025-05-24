@@ -22,7 +22,7 @@ const MdPick = () => {
   const navigate = useNavigate();
 
   return (
-    <>
+    <div>
       {/* 제목 */}
       <section css={s.wrapper}>
         <div css={s.titleRow}>
@@ -55,7 +55,7 @@ const MdPick = () => {
           ))}
         </HorizontalScrollList>
       </section>
-    </>
+    </div>
   );
 };
 

@@ -4,20 +4,14 @@ import { theme } from '@/styles/theme';
 
 export const wrapper = css`
   width: 100%;
-  max-width: 37.5rem;
-  margin: 0 auto;
-  padding: 0 1.2rem;
+  padding: 0 2.4rem;
 `;
 
 // ===== [1] 베스트/스테디/더보기+ =====
 export const titleRow = css`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 37.5rem;
   height: auto;
-  padding: 0.8rem 0.6rem;
 `;
 
 export const titleTabs = css`
@@ -26,11 +20,13 @@ export const titleTabs = css`
 `;
 
 export const best = css`
+padding: 0.8rem 0 0.8rem 0.8rem;
   ${theme.fonts.title1};
   color: ${theme.colors.black1};
 `;
 
 export const steady = css`
+padding: 0.8rem 0.8rem 0.8rem 0;
   ${theme.fonts.title1};
   color: ${theme.colors.gray3};
 `;
@@ -59,7 +55,7 @@ export const tabButton = (isSelected: boolean) => css`
   color: ${isSelected ? theme.colors.purple7 : theme.colors.gray4};
   background: none;
   border: none;
-  height: 2rem;
+  height: 4.4rem;
   padding: 0;
   cursor: pointer;
 `;

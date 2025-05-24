@@ -3,18 +3,12 @@ import { css } from '@emotion/react';
 import { theme } from '@/styles/theme';
 
 export const Wrapper = css`
-  position: relative;
+display: flex;
   width: 100%;
-  padding: 0 2.4rem;
+  padding: 0.8rem 2.4rem 1.6rem;
   background-color: ${theme.colors.white};
-`;
-
-export const textWrapper = css`
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.8rem 0;
-  margin-bottom: 1.6rem;
+  align-items:center;
 `;
 
 export const TitleText = css`
@@ -23,15 +17,13 @@ export const TitleText = css`
 `;
 
 export const AdBadge = css`
-  top: 3.1rem;
-  right: 2.4rem;
+display:flex;
+
   height: 1.4rem;
   padding: 0 0.6rem;
-  border-radius: 1rem; 
+  border-radius: 10px; 
   background-color: ${theme.colors.gray3};
   color: ${theme.colors.white};
-  align-items: center;
-  justify-content: center;
   ${theme.fonts.caption4};
 `;
 

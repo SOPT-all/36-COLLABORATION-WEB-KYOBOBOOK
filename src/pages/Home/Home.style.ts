@@ -26,10 +26,15 @@ export const BannerControls = css`
 `;
 
 export const AdWrapper = css`
-  width: 100%;
+display:flex;
+justify-content: center;
+  padding: 3.2rem 2.4rem;
+`;
+
+export const Ad1Wrapper = css`
   display: flex;
   justify-content: center;
-  margin-bottom: 2.4rem; 
+  padding: 2.4rem 2.4rem 0.8rem;
 `;
 
 export const PauseIcon = css`
@@ -62,3 +67,8 @@ export const InfoText = css`
   color: ${theme.colors.white};
 `;
 
+export const gapWrapper = css`
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+`;

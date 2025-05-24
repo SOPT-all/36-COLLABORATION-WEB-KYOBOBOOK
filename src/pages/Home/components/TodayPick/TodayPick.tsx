@@ -44,7 +44,7 @@ const TodayPick = () => {
   const navigate = useNavigate();
 
   return (
-    <>
+    <div>
       {/* Title 영역만 section에 감싸기 */}
       <section css={s.wrapper}>
         <div css={s.titleRow}>
@@ -93,7 +93,7 @@ const TodayPick = () => {
           </div>
         ))}
       </HorizontalScrollList>
-    </>
+    </div>
   );
 };
 

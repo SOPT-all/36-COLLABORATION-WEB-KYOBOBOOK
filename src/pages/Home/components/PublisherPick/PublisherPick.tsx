@@ -16,8 +16,8 @@ const PublisherPick = () => {
   return (
     <div>
       <section css={Wrapper}>
-        <span css={AdBadge}>AD</span>
         <h2 css={TitleText}>출판사에서 자신있게 추천해요</h2>
+        <span css={AdBadge}>AD</span>
       </section>
 
       <HorizontalScrollList>

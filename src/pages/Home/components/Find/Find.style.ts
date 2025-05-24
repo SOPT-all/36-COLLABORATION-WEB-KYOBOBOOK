@@ -3,8 +3,7 @@ import { css } from '@emotion/react';
 import { theme } from '@/styles/theme';
 
 export const wrapper = css`
-  max-width: 37.5rem;
-  margin: 0 auto;
+  width:100%
 `;
 
 export const titleRow = css`

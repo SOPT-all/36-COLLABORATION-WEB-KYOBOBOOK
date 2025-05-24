@@ -14,6 +14,7 @@ const Event = () => {
   const [selectedTab, setSelectedTab] = useState('교보문고');
 
   return (
+    <div css={S.Container}>
     <section css={S.wrapper}>
       <div css={S.titleRow}>
         <span css={S.titleText}>이벤트의 정성이 달라요</span>
@@ -41,6 +42,7 @@ const Event = () => {
         <img src={eventImg2} alt="이벤트2" css={S.bannerImage} />
       </HorizontalScrollList>
     </section>
+    </div>
   );
 };
 
