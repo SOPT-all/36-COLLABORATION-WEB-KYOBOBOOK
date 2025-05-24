@@ -84,16 +84,23 @@ export const cardWrapper = css`
   position: relative;
 `;
 
-export const backgroundBlurBox = css`
+export const backgroundBlurBox = (imgUrl: string) => css`
   width: 30rem;
   height: 27.6rem;
   position: relative;
-  background-color: ${theme.colors.black3};
-  backdrop-filter: blur(80px);
-  -webkit-backdrop-filter: blur(80px);
-  overflow: hidden;
   border-radius: 8px 8px 0 0;
+  overflow: hidden;
   z-index: ${theme.zIndex.one};
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(${imgUrl});
+    background-size: cover;
+    background-position: center;
+    filter: blur(80px);
+  }
 `;
 
 export const imageWrapper = css`

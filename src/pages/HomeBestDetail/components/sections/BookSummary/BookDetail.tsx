@@ -1,4 +1,5 @@
 import { useTheme } from '@emotion/react';
+import { useState } from 'react';
 
 import * as s from '@/pages/HomeBestDetail/components/sections/BookSummary/BookDetail.style';
 import Icon from '@/components/Icon';
@@ -11,6 +12,8 @@ interface BookDetailProps {
 
 const BookDetail = ({ bookData }: BookDetailProps) => {
   const theme = useTheme();
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   const getTodayLabel = () =>
     new Date()
       .toLocaleDateString('ko-KR', {
@@ -25,10 +28,12 @@ const BookDetail = ({ bookData }: BookDetailProps) => {
     <>
       <div css={s.imageBackground(theme)}>
         <div css={s.bookContainer}>
+          {!imageLoaded && <div css={s.imageSkeleton} />}
           <img
-            css={s.imageStyle(theme)}
+            css={[s.imageStyle(theme), !imageLoaded && s.imageHidden]}
             src={bookData?.imageUrl ?? ''}
             alt={`책 대표 이미지 - ${bookData?.title}`}
+            onLoad={() => setImageLoaded(true)}
           />
           <div css={s.previewContainer(theme)}>
             <span css={s.previewText(theme)}>미리보기</span>

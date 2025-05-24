@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -77,7 +76,7 @@ const TodayPick = () => {
         {BOOKS.map((book) => (
           <div key={book.id} css={s.cardWrapper}>
             <div style={{ position: 'relative', width: '100%', height: '27.6rem' }}>
-              <div css={s.backgroundBlurBox} />
+              <div css={s.backgroundBlurBox(book.imgUrl)} />
               <img src={book.imgUrl} alt={book.title} css={s.imageWrapper} />
             </div>
             <div css={s.textContainer}>
