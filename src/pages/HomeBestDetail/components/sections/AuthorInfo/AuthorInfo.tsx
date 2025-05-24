@@ -6,6 +6,10 @@ import AuthorImage from '@/assets/img/im_author.svg';
 import Card from '@/components/Card/Card';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 import useToggle from '@/hooks/useToggle';
+import book1Img from '@/assets/img/im_author_book1.png';
+import book2Img from '@/assets/img/im_author_book2.png';
+import book3Img from '@/assets/img/im_author_book3.png';
+import book4Img from '@/assets/img/im_author_book4.png';
 
 const AuthorInfo = () => {
   const theme = useTheme();
@@ -13,19 +17,19 @@ const AuthorInfo = () => {
 
   const books = [
     {
-      src: '/img/im_author_book1.png',
+      src: book1Img,
       title: '김영하의 세계문학 원정대 4: 빨간 머리 앤',
     },
     {
-      src: '/src/assets/img/im_author_book2.png',
+      src: book2Img,
       title: '김영하의 세계문학 원정대 3: 지킬 박사와 하이드',
     },
     {
-      src: '/src/assets/img/im_author_book3.png',
+      src: book3Img,
       title: '여행의 이유',
     },
     {
-      src: '/src/assets/img/im_author_book4.png',
+      src: book4Img,
       title: '김영하의 세계문학 원정대 2: 로미오와 줄리엣, 오만과 편견를',
     },
   ];
