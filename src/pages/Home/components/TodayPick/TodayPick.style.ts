@@ -93,7 +93,7 @@ export const backgroundBlurBox = css`
   -webkit-backdrop-filter: blur(80px);
   overflow: hidden;
   border-radius: 8px 8px 0 0;
-  z-index: 1;
+  z-index: ${theme.zIndex.one};
 `;
 
 export const imageWrapper = css`
@@ -104,7 +104,7 @@ export const imageWrapper = css`
   height: 21.6rem;
   object-fit: cover;
   border-radius: 0.4rem;
-  z-index: 2;
+  z-index: ${theme.zIndex.one};
 `;
 
 export const textContainer = css`
@@ -115,7 +115,7 @@ export const textContainer = css`
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 3;
+  z-index: ${theme.zIndex.one};
   border-radius: 0 0 8px 8px;
 `;
 

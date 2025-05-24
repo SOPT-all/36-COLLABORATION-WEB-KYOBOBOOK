@@ -12,8 +12,9 @@ const Wrapper = (theme: Theme) => css`
 const Header = (theme: Theme) => css`
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
+  max-width: 73rem;
+  min-width: 37.5rem;
   background-color: ${theme.colors.white};
   padding: 0 2.4rem 0 1.4rem;
   z-index: ${theme.zIndex.two};

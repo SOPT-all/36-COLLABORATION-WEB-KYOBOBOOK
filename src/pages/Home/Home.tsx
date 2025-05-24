@@ -1,3 +1,5 @@
+import { useTheme } from '@emotion/react';
+
 import {
   BannerWrapper,
   BannerImage,
@@ -8,6 +10,7 @@ import {
   AdWrapper,
   Ad1Wrapper,
   gapWrapper,
+  emptyContainer,
 } from './Home.style';
 import CategoryButton from './components/CategoryButton/CategoryButton';
 import BestBookList from './components/BestBookList/BestBookList';
@@ -29,6 +32,8 @@ import homeBanner from '@/assets/img/home_banner.png';
 import banner1 from '@/assets/img/banner1.jpg';
 
 const Home = () => {
+  const theme = useTheme();
+
   return (
     <>
       <MainHeader />
@@ -36,12 +41,12 @@ const Home = () => {
       {/* 배너 */}
       <div css={BannerWrapper}>
         <img src={homeBanner} alt="6분 클래식" css={BannerImage} />
-        <div css={BannerControls}>
+        <div css={BannerControls(theme)}>
           <div css={PauseIcon}>
             <Icon name="pause" />
           </div>
           <div css={InfoBox}>
-            <span css={InfoText}>30-37 전체보기</span>
+            <span css={InfoText(theme)}>30-37 전체보기</span>
           </div>
         </div>
       </div>
@@ -98,6 +103,7 @@ const Home = () => {
 
       {/* 푸터 */}
       <Footer />
+      <div css={emptyContainer} />
       <Floater />
       <HomeBottomNav />
     </>

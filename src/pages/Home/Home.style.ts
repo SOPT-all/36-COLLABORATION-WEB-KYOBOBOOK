@@ -1,6 +1,4 @@
-import { css } from '@emotion/react';
-
-import { theme } from '@/styles/theme';
+import { css, type Theme } from '@emotion/react';
 
 export const BannerWrapper = css`
   position: relative;
@@ -15,14 +13,14 @@ export const BannerImage = css`
   display: block;
 `;
 
-export const BannerControls = css`
+export const BannerControls = (theme: Theme) => css`
   position: absolute;
   bottom: 0.1rem;
   right: 0.1rem;
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  z-index: 1;
+  z-index: ${theme.zIndex.one};
 `;
 
 export const AdWrapper = css`
@@ -62,7 +60,7 @@ export const InfoBox = css`
   border-radius: 0.1rem;
 `;
 
-export const InfoText = css`
+export const InfoText = (theme: Theme) => css`
   ${theme.fonts.caption2};
   color: ${theme.colors.white};
 `;
@@ -71,4 +69,8 @@ export const gapWrapper = css`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+`;
+
+export const emptyContainer = css`
+  height: 8.5rem;
 `;
