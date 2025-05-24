@@ -10,6 +10,7 @@
 교보문고의 주요 기능을 모바일 웹 화면에 최적화된 UI/UX로 재구성하여 사용자 경험을 개선합니다.
 
 ## 📌 배포 URL
+🔗 [서비스 바로가기](https://36-collaboration-web-kyobobook.vercel.app/)
 
 ## 🤙 WEB Developer
 
