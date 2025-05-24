@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { theme } from '@/styles/theme';
 
 export const wrapper = css`
-  width:100%
+  width:100%;
 `;
 
 export const titleRow = css`

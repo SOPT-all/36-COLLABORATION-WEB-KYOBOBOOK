@@ -57,7 +57,7 @@ const TodayPick = () => {
 
       {/* 탭 영역 */}
       <div css={s.tabItem}>
-        <HorizontalScrollList gap="0.6rem" sidePadding="2.4rem" effect={false}>
+        <HorizontalScrollList gap="0" sidePadding="2.4rem" effect={false}>
           {TABS.map((tab, idx) => (
             <div key={tab} css={s.tabBlock}>
               <button

@@ -68,10 +68,10 @@ export const tabButton = (isSelected: boolean) => css`
 `;
 
 export const tabDivider = css`
-  width: 1px;
-  height: 1.4rem;
-  background-color: ${theme.colors.gray4};
-  margin: 0 0.6rem;
+  width: 0.1rem;
+  height: 1rem;
+  background-color: ${theme.colors.gray3};
+  margin: 0 1.2rem;
 `;
 
 // ===== [3] Book Card =====

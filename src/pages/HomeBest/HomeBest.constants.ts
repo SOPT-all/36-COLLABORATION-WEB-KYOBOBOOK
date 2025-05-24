@@ -9,7 +9,7 @@ const CategoryButtonList: CategoryButtonTypes[] = [
   { label: '종합', iconName: 'total' },
   { label: '온라인', iconName: 'online' },
   { label: '실시간', iconName: 'readtime' },
-  { label: '매장별', iconName: 'store' },
+  { label: '매장별', iconName: 'bestStore' },
   { label: '인물', iconName: 'person' },
 ];
 

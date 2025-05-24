@@ -67,5 +67,5 @@ export const tabWrapper = css`
 
 export const cardWrapper = css`
   width: 100%;
-  padding: 2.4rem 0;
+  padding: 2.4rem 0 0 0;
 `;
