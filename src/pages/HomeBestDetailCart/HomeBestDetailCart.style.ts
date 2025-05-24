@@ -122,7 +122,7 @@ const Body = (theme: Theme) => css`
   flex-direction: column;
   gap: 1.4rem;
   padding: 1.2rem 0rem;
-  background-color: ${theme.colors.gray1};
+  background-color: ${theme.colors.white};
 `;
 
 const emptpyContainer = css`
