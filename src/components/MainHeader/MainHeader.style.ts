@@ -51,7 +51,7 @@ const headerTabWrapper = (theme: Theme) => css`
   height: 6.6rem;
   gap: 1.6rem;
   background-color: ${theme.colors.white};
-  z-index: ${theme.zIndex.one};
+  z-index: ${theme.zIndex.two};
 `;
 
 const headerTabSticky = (theme: Theme) => css`
@@ -63,7 +63,7 @@ const headerTabSticky = (theme: Theme) => css`
 
   background-color: ${theme.colors.white};
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  z-index: ${theme.zIndex.one};
+  z-index: ${theme.zIndex.two};
 `;
 
 const emptyContainer = css`

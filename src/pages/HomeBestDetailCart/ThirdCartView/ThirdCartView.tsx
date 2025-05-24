@@ -48,18 +48,22 @@ const mockRectangularCards = [
 
 const ThirdCartView = () => {
   return (
-    <div css={s.Wrapper}>
-      <h3 css={s.title}>이런 상품은 어떠세요?</h3>
-
-      <HorizontalScrollList gap="1.2rem" sidePadding="0rem">
+    <div>
+      <div css={s.Wrapper}>
+        <h3 css={s.title}>책이 더 좋아지게 만드는 작은 취향</h3>
+      </div>
+      <HorizontalScrollList gap="1.2rem" sidePadding="2.4rem">
         {mockSquareCards.map((card, idx) => (
           <div key={idx} css={s.cardWrapper}>
             <CartCard imgUrl={card.src} title={card.title} price={card.price} type="square" />
           </div>
         ))}
       </HorizontalScrollList>
+      <div css={s.Wrapper}>
+        <h3 css={s.title}>‘요즘 나'에게 필요한 지혜와 위로</h3>
+      </div>
 
-      <HorizontalScrollList gap="1.2rem" sidePadding="0rem">
+      <HorizontalScrollList gap="1.2rem" sidePadding="2.4rem">
         {mockRectangularCards.map((card, idx) => (
           <div key={idx} css={s.cardWrapper}>
             <CartCard imgUrl={card.src} title={card.title} price={card.price} type="rectangular" />

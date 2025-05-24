@@ -1,18 +1,40 @@
 import { useTheme } from '@emotion/react';
+import { useState } from 'react';
 
-import BookImage from '@/assets/img/im_book_main.png';
 import * as s from '@/pages/HomeBestDetail/components/sections/BookSummary/BookDetail.style';
 import Icon from '@/components/Icon';
 import { Chip } from '@/components/Chip/Chip';
+import type { BookDetailResponse } from '@/types/bookDetailTypes';
 
-const BookDetail = () => {
+interface BookDetailProps {
+  bookData?: BookDetailResponse;
+}
+
+const BookDetail = ({ bookData }: BookDetailProps) => {
   const theme = useTheme();
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const getTodayLabel = () =>
+    new Date()
+      .toLocaleDateString('ko-KR', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+      })
+      .replace(/\. /g, '년 ')
+      .replace('.', '일') + ' 오늘의 선택';
 
   return (
     <>
       <div css={s.imageBackground(theme)}>
         <div css={s.bookContainer}>
-          <img css={s.imageStyle(theme)} src={BookImage} alt="책 대표 이미지" />
+          {!imageLoaded && <div css={s.imageSkeleton} />}
+          <img
+            css={[s.imageStyle(theme), !imageLoaded && s.imageHidden]}
+            src={bookData?.imageUrl ?? ''}
+            alt={`책 대표 이미지 - ${bookData?.title}`}
+            onLoad={() => setImageLoaded(true)}
+          />
           <div css={s.previewContainer(theme)}>
             <span css={s.previewText(theme)}>미리보기</span>
             <span>
@@ -24,7 +46,7 @@ const BookDetail = () => {
 
       <div css={s.bookDetail}>
         <div css={s.tagContainer}>
-          <Chip variant="outlinedPurple">2025년 05월 24일 오늘의 선택</Chip>
+          <Chip variant="outlinedPurple">{getTodayLabel()}</Chip>
           <Chip variant="outlinedPurple">MD의 선택</Chip>
           <Chip variant="outlinedGray">무료배송</Chip>
           <Chip variant="outlinedGray">사은품</Chip>
@@ -32,11 +54,19 @@ const BookDetail = () => {
           <Chip variant="outlinedGray">소득공제</Chip>
         </div>
 
-        <h3 css={s.titleText(theme)}>단 한번의 삶</h3>
-        <p css={s.publisherText(theme)}>양장본 Hardcover</p>
-        <p css={s.authorText(theme)}>김영하 저자(글)</p>
-        <p css={s.dateText(theme)}>복복서가 · 2025년 04월 06일</p>
-
+        <h3 css={s.titleText(theme)}>{bookData?.title ?? ''}</h3>
+        <p css={s.publisherText(theme)}>{bookData?.publisher ?? ''}</p>
+        <p css={s.authorText(theme)}>{bookData?.author ?? ''} 저자 (글)</p>
+        <p css={s.dateText(theme)}>
+          {new Date()
+            .toLocaleDateString('ko-KR', {
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit',
+            })
+            .replace(/\. /g, '년 ')
+            .replace('.', '일')}
+        </p>
         <div css={s.bestContainer}>
           <Icon name="best" />
           <strong css={s.bestText(theme)}>주간베스트</strong>

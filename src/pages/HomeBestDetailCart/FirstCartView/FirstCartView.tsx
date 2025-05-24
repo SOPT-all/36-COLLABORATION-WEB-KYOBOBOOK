@@ -1,14 +1,33 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { FirstCartViewStyle as s } from './FirstCartView.style';
 
 import Icon from '@/components/Icon';
+import type { BookDetailResponse } from '@/types/bookDetailTypes';
 
-const FirstCartView = () => {
+interface BookDetailProps {
+  bookData?: BookDetailResponse;
+  onTotalPriceChange?: (price: number) => void;
+}
+
+const FirstCartView = ({ bookData, onTotalPriceChange }: BookDetailProps) => {
   const [count, setCount] = useState(1);
   const MAX_COUNT = 10;
-  const price = 16800;
-  const point = 840;
+  const discountedUnitPrice = Number(bookData?.price?.replace('원', '') ?? '0');
+
+  const originalUnitPrice = Math.floor(discountedUnitPrice / 0.9);
+
+  const discountedTotalPrice = discountedUnitPrice * count;
+
+  const originalTotalPrice = originalUnitPrice * count;
+
+  const totalPoint = Math.floor(discountedTotalPrice * 0.05);
+
+  useEffect(() => {
+    if (onTotalPriceChange) {
+      onTotalPriceChange(discountedTotalPrice);
+    }
+  }, [discountedTotalPrice, onTotalPriceChange]);
 
   const handleDecrease = () => {
     if (count > 1) {
@@ -21,10 +40,14 @@ const FirstCartView = () => {
       setCount(count + 1);
     }
   };
+  const getTodayDeliveryLabel = () => {
+    const today = new Date();
+    const month = today.getMonth() + 1;
+    const date = today.getDate();
+    const weekday = ['일', '월', '화', '수', '목', '금', '토'][today.getDay()];
 
-  const discounted = Math.floor(price * count * 0.9);
-  const totalPoint = point * count;
-
+    return `오늘 (${month}/${date},${weekday}) 도착`;
+  };
   return (
     <div css={s.Wrapper}>
       <div css={s.firstBox}>
@@ -59,20 +82,24 @@ const FirstCartView = () => {
         <div css={s.cardHeader}>
           <div css={s.bookTag}>
             <Icon name="check" width={20} height={20} />
-            <span className="title">[국내도서] 단 한 번의 삶</span>
+            <span css={s.titleText}>{bookData?.title ?? ''}</span>
           </div>
           <Icon name="close" width={20} height={20} />
         </div>
 
         <div css={s.cardBody}>
-          <Icon name="cartBook" width={62} height={90} />
+          <img
+            css={s.imageStyle}
+            src={bookData?.imageUrl ?? ''}
+            alt={`책 대표 이미지 - ${bookData?.title}`}
+          />
           <div className="priceSection">
             <div className="priceBox">
               <p className="discount">10%</p>
-              <p className="finalPrice">{discounted.toLocaleString()}원</p>
+              <p className="finalPrice">{discountedTotalPrice.toLocaleString()}원</p>
               <p className="origin">
-                <span className="originPrice">{(price * count).toLocaleString()}원</span>
-                <span className="point"> ({totalPoint}P)</span>
+                <span className="originPrice">{originalTotalPrice.toLocaleString()}원</span>
+                <span className="point"> ({totalPoint.toLocaleString()}P)</span>
               </p>
             </div>
             <div className="countController">
@@ -87,10 +114,10 @@ const FirstCartView = () => {
             <div className="chips">
               <div className="line">
                 <span css={s.Chip}>당일배송</span>
-                <span>오늘(4/24, 목) 도착</span>
+                <span>{getTodayDeliveryLabel()}</span>
               </div>
               <div className="line">
-                <span css={s.Chip}>바로드림</span>
+                <span css={s.secondChip}>바로드림</span>
                 <span>9시간 이후 수령 가능</span>
               </div>
             </div>

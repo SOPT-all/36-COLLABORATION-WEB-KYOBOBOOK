@@ -3,13 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 import Icon from '@/components/Icon';
 import { headerWrapper, iconWrapper } from '@/components/DetailHeader/DetailHeader.style';
+import routePath from '@/routes/routePath';
 
 const DetailHeader = ({ scrollState }: { scrollState: number }) => {
   const theme = useTheme();
   const navigate = useNavigate();
 
   const handleBack = () => {
-    navigate(-1);
+    navigate(routePath.HOME_BEST);
   };
 
   return (

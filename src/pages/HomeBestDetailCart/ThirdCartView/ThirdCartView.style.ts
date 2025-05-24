@@ -6,14 +6,14 @@ const Wrapper = (theme: Theme) => css`
   min-width: 37.5rem;
   background-color: ${theme.colors.white};
   flex-direction: column;
-  padding: 2.4rem 1.6rem;
+  padding: 0 2.4rem;
 `;
 
 const cardWrapper = css`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.2rem 0rem;
+  padding: 1.2rem 0rem 2.6rem;
 `;
 
 const cartButton = (theme: Theme) => css`

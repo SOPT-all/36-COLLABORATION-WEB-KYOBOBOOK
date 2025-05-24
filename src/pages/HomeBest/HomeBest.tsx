@@ -30,11 +30,11 @@ const HomeBest = () => {
   const enrichedBooks = (responseData ?? []).map(addBookInfo);
   const navigate = useNavigate();
 
-    const navigateToDetail = (bookId: number) => {
+  const navigateToDetail = (bookId: number) => {
     const path = generatePath(routePath.HOME_BEST_DETAIL, { bookId });
     navigate(path);
   };
-  
+
   return (
     <>
       <MainHeader />

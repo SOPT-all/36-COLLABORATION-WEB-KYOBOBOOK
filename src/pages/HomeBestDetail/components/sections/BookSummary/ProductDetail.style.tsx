@@ -131,6 +131,7 @@ export const moreButton = (theme: Theme) => css`
 `;
 
 export const moreText = (theme: Theme) => css`
+  color: ${theme.colors.black1};
   ${theme.fonts.caption2};
 `;
 
@@ -230,6 +231,7 @@ export const locationButton = (theme: Theme) => css`
 `;
 
 export const locationText = (theme: Theme) => css`
+  color: ${theme.colors.black1};
   ${theme.fonts.body3};
 `;
 
@@ -248,6 +250,7 @@ export const buttonContainer = css`
 `;
 
 export const buttonText = (theme: Theme) => css`
+  color: ${theme.colors.black1};
   ${theme.fonts.body2};
 `;
 

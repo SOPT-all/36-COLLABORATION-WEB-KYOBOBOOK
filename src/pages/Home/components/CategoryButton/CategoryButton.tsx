@@ -1,5 +1,4 @@
-import { Row, Item, Label } from './CategoryButton.styles';
-
+import { Row, Item, Label } from '@/pages/Home/components/CategoryButton/CategoryButton.style';
 import { Button } from '@/components/Button/Button';
 import Icon from '@/components/Icon';
 
