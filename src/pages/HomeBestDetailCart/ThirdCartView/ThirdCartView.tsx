@@ -1,11 +1,11 @@
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 import CartCard from '@/pages/HomeBestDetailCart/components/CartCard/CartCard';
 import { ThirdCartViewStyle as s } from '@/pages/HomeBestDetailCart/ThirdCartView/ThirdCartView.style';
-import per1Img from '@/assets/img/img_foru1.png';
-import per2Img from '@/assets/img/img_foru2.png';
-import per3Img from '@/assets/img/img_foru3.png';
-import per4Img from '@/assets/img/img_foru4.png';
-import per5Img from '@/assets/img/img_foru5.png';
+import per1Img from '@/assets/img/img_preference1.png';
+import per2Img from '@/assets/img/img_preference2.png';
+import per3Img from '@/assets/img/img_preference3.png';
+import per4Img from '@/assets/img/img_preference4.png';
+import per5Img from '@/assets/img/img_preference5.png';
 import need1Img from '@/assets/img/img_need1.png';
 import need2Img from '@/assets/img/img_need2.png';
 import need3Img from '@/assets/img/img_need3.png';
