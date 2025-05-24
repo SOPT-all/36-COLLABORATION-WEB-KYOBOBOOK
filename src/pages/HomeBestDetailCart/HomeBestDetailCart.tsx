@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
+import { useState } from 'react';
 
 import { HomeBestDetailCartStyle as s } from '@/pages/HomeBestDetailCart/HomeBestDetailCart.style';
 import Icon from '@/components/Icon';
@@ -10,7 +11,6 @@ import ThirdCartView from '@/pages/HomeBestDetailCart/ThirdCartView/ThirdCartVie
 import FourthCartView from '@/pages/HomeBestDetailCart/FourthCartView/ForthCartView';
 import routePath from '@/routes/routePath';
 import { useGetBookDetail } from '@/apis/homeBestDetail/queries';
-import { useState } from 'react';
 
 const HomeBestDetailCart = () => {
   const navigate = useNavigate();
@@ -47,6 +47,8 @@ const HomeBestDetailCart = () => {
           </button>
         </div>
       </header>
+      
+      <div css={s.emptpyContainer} />
 
       <div css={s.subHeader}>
         <div css={s.checkArea}>

@@ -24,9 +24,11 @@ const mockCards = [
 
 const SecondCartView = () => {
   return (
-    <div css={s.Wrapper}>
-      <h3 css={s.Title}>당신을 위한 추천 도서</h3>
-      <HorizontalScrollList gap="1.2rem" sidePadding="0rem">
+    <div>
+      <div css={s.Wrapper}>
+        <h3 css={s.Title}>당신을 위한 추천 도서</h3>
+      </div>
+      <HorizontalScrollList gap="1.2rem" sidePadding="2.4rem">
         {mockCards.map((card, idx) => (
           <div key={idx} css={s.cardWrapper}>
             <CartCard imgUrl={card.src} title={card.title} price={card.price} type="rectangular" />

@@ -10,9 +10,12 @@ const Wrapper = (theme: Theme) => css`
 `;
 
 const Header = (theme: Theme) => css`
-  background-color: ${theme.colors.white};
-  padding: 1.4rem 1.5rem;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  background-color: ${theme.colors.white};
+  padding: 0 2.4rem 0 1.4rem;
   z-index: ${theme.zIndex.two};
 `;
 
@@ -20,7 +23,7 @@ const headerTop = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.8rem;
+  height: 5.8rem;
 `;
 
 const leftButtons = css`
@@ -116,9 +119,13 @@ const placeButton = (theme: Theme) => css`
 const Body = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.4rem;
   padding: 1.2rem 0rem;
   background-color: ${theme.colors.gray1};
+`;
+
+const emptpyContainer = css`
+  height: 5.8rem;
 `;
 
 export const HomeBestDetailCartStyle = {
@@ -137,4 +144,5 @@ export const HomeBestDetailCartStyle = {
   placeButton,
   kyoboChip,
   Body,
+  emptpyContainer,
 };
