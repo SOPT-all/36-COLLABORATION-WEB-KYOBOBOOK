@@ -13,7 +13,7 @@ const AuthorInfo = () => {
 
   const books = [
     {
-      src: '/src/assets/img/im_author_book1.png',
+      src: '/img/im_author_book1.png',
       title: '김영하의 세계문학 원정대 4: 빨간 머리 앤',
     },
     {
