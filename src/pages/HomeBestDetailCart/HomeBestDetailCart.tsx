@@ -11,6 +11,7 @@ import ThirdCartView from '@/pages/HomeBestDetailCart/ThirdCartView/ThirdCartVie
 import FourthCartView from '@/pages/HomeBestDetailCart/FourthCartView/ForthCartView';
 import routePath from '@/routes/routePath';
 import { useGetBookDetail } from '@/apis/homeBestDetail/queries';
+import Divider from '@/components/Divider/Divider';
 
 const HomeBestDetailCart = () => {
   const navigate = useNavigate();
@@ -47,7 +48,7 @@ const HomeBestDetailCart = () => {
           </button>
         </div>
       </header>
-      
+
       <div css={s.emptpyContainer} />
 
       <div css={s.subHeader}>
@@ -78,8 +79,13 @@ const HomeBestDetailCart = () => {
 
       <main css={s.Body}>
         <FirstCartView bookData={bookDetailData} onTotalPriceChange={setTotalPrice} />
+        <Divider />
+
         <SecondCartView />
+        <Divider />
+
         <ThirdCartView />
+        <Divider />
         <FourthCartView />
       </main>
       <Floater />

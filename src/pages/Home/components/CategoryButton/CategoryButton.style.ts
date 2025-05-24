@@ -4,10 +4,9 @@ import { theme } from '@/styles/theme';
 
 export const Row = css`
   display: flex;
-  justify-content: center; 
+  justify-content: space-between; 
   width: 100%;                  
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;  
+  padding: 1.6rem 2.4rem;
 `;
 
 export const Item = css`
