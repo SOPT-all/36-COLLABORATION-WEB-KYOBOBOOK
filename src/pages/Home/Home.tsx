@@ -54,12 +54,12 @@ const Home = () => {
       {/* 광고 1 */}
       <div css={AdWrapper}>
         <AdCard
-         imgSrc={adImg1}
-         altText="출석체크"
-         title="출석체크 혜택 UP!"
-         subtitle="매일 출석하면 한 달 최대 4800원"
-         titlePos={{ top: '2.7rem', left: '13.1rem' }}
-         subtitlePos={{ top: '5.3rem', left: '13.1rem' }}
+          imgSrc={adImg1}
+          altText="출석체크"
+          title="출석체크 혜택 UP!"
+          subtitle="매일 출석하면 한 달 최대 4800원"
+          titlePos={{ top: '2.7rem', left: '13.1rem' }}
+          subtitlePos={{ top: '5.3rem', left: '13.1rem' }}
         />
       </div>
 
@@ -75,14 +75,14 @@ const Home = () => {
       {/* 광고 2 */}
       <div css={AdWrapper}>
         <AdCard
-         imgSrc={adImg2}
-         altText="행복 수업"
-         title="인생의 절반쯤 왔을 때 
+          imgSrc={adImg2}
+          altText="행복 수업"
+          title="인생의 절반쯤 왔을 때 
                  <br />
                  당신이 놓치고 있는 것들"
-         subtitle="하버드 대학 행복 수업"
-         titlePos={{ top: '2.6rem', left: '2.2rem' }}
-         subtitlePos={{ top: '7.4rem', left: '2.2rem' }}
+          subtitle="하버드 대학 행복 수업"
+          titlePos={{ top: '2.6rem', left: '2.2rem' }}
+          subtitlePos={{ top: '7.4rem', left: '2.2rem' }}
         />
       </div>
 
@@ -95,12 +95,12 @@ const Home = () => {
       {/* 광고 3 */}
       <div css={AdWrapper}>
         <AdCard
-         imgSrc={adImg3}
-         altText="손자병법"
-         title="세상의 모든 전쟁을 지배한 단 한권의 책"
-         subtitle="손자병법: 세상의 모든 진술"
-         titlePos={{ top: '2.3rem', left: '2.4rem' }}
-         subtitlePos={{ top: '4.7rem', left: '2.4rem' }}
+          imgSrc={adImg3}
+          altText="손자병법"
+          title="세상의 모든 전쟁을 지배한 단 한권의 책"
+          subtitle="손자병법: 세상의 모든 진술"
+          titlePos={{ top: '2.3rem', left: '2.4rem' }}
+          subtitlePos={{ top: '4.7rem', left: '2.4rem' }}
         />
       </div>
 
@@ -115,8 +115,8 @@ const Home = () => {
         <AdCard
           imgSrc={adImg4}
           altText="뇌과학"
-          title='“일단 뛰어내려라.<br />
-                  날개는 그 뒤에 만드는 것”'
+          title="“일단 뛰어내려라.<br />
+                  날개는 그 뒤에 만드는 것”"
           subtitle="아마존 인지 뇌과학1!"
           titlePos={{ top: '2.2rem', left: '2.4rem' }}
           subtitlePos={{ top: '4.6rem', left: '2.4rem' }}
