@@ -62,6 +62,10 @@ import NavEbook from '../icons/svg/ic_nav_ebook.svg?react';
 import NavLogoBackground from '../icons/svg/ic_nav_logo_background.svg?react';
 import IcHeaderLogo from '../icons/svg/ic_header_logo.svg?react';
 import PauseIcon from '../icons/svg/ic_pause.svg?react';
+import Banner4 from '../icons/svg/ic_banner_ad4.svg?react';
+import Banner3 from '../icons/svg/ic_banner_ad3.svg?react';
+import Banner2 from '../icons/svg/ic_banner_ad2.svg?react';
+import HomeBestStroe from '../icons/svg/ic_home_best_store.svg?react';
 
 export const iconMap = {
   account: AccountIcon,
@@ -128,6 +132,10 @@ export const iconMap = {
   navLogoBackground: NavLogoBackground,
   icHeaderLogo: IcHeaderLogo,
   pause: PauseIcon,
+  banner4: Banner4,
+  banner3: Banner3,
+  banner2: Banner2,
+  bestStore: HomeBestStroe,
 };
 
 export type IconName = keyof typeof iconMap;

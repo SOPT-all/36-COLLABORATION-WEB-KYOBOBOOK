@@ -9,7 +9,8 @@ export const wrapper = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 2.4rem;   
+  margin: 0 2.4rem;
+  width: 32.7rem;
 `;
 
 export const titleRow = css`

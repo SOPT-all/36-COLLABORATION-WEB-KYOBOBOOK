@@ -11,7 +11,8 @@ export const titleRow = css`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.8rem auto;
-  padding: 2.4rem;
+  padding: 0 2.4rem;
+  height: 4.4rem;
 `;
 
 export const titleText = css`

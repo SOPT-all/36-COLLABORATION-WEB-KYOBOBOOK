@@ -37,7 +37,7 @@ const cartBox = (theme: Theme) => css`
   padding: 1.6rem;
   border-radius: 0.75rem;
   line-height: 1.6;
-  margin-top: 3.2rem;
+  margin-top: 2.6rem;
 
   h3 {
     font: ${theme.fonts.subtitle4};

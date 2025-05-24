@@ -2,6 +2,10 @@ import { css } from '@emotion/react';
 
 import { theme } from '@/styles/theme';
 
+export const Container = css`
+  padding-bottom: 3.2rem;
+`;
+
 export const wrapper = css`
   padding: 0 2.4rem;
 `;

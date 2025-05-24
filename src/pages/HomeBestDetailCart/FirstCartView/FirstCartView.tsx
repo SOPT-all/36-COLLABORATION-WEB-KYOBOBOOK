@@ -40,7 +40,14 @@ const FirstCartView = ({ bookData, onTotalPriceChange }: BookDetailProps) => {
       setCount(count + 1);
     }
   };
+  const getTodayDeliveryLabel = () => {
+    const today = new Date();
+    const month = today.getMonth() + 1;
+    const date = today.getDate();
+    const weekday = ['일', '월', '화', '수', '목', '금', '토'][today.getDay()];
 
+    return `오늘 (${month}/${date},${weekday}) 도착`;
+  };
   return (
     <div css={s.Wrapper}>
       <div css={s.firstBox}>
@@ -107,7 +114,7 @@ const FirstCartView = ({ bookData, onTotalPriceChange }: BookDetailProps) => {
             <div className="chips">
               <div className="line">
                 <span css={s.Chip}>당일배송</span>
-                <span>오늘(4/24, 목) 도착</span>
+                <span>{getTodayDeliveryLabel()}</span>
               </div>
               <div className="line">
                 <span css={s.secondChip}>바로드림</span>

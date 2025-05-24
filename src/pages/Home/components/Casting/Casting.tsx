@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import * as S from './Casting.style';
-
+import * as S from '@/pages/Home/components/Casting/Casting.style';
 import HorizontalScrollList from '@/components/HorizontalScroll/HorizontalScroll';
 import Card from '@/components/Card/Card';
 import imgCasting1 from '@/assets/img/img_casting1.png';
@@ -20,8 +19,8 @@ const Casting = () => {
         </button>
       </div>
 
-      <div css={S.contentWrapper}>
-        <HorizontalScrollList gap="0.8rem" sidePadding="0" effect={false}>
+      <div>
+        <HorizontalScrollList gap="0.8rem" sidePadding="2.4rem">
           <div css={S.overrideImageSize}>
             <Card imgUrl={imgCasting1} title="김영하 작가가 소설을 첨삭해 준다면?" />
           </div>

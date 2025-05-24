@@ -1,5 +1,4 @@
-import { Row, Item, Label } from './CategoryButton.style';
-
+import { Row, Item, Label } from '@/pages/Home/components/CategoryButton/CategoryButton.style';
 import { Button } from '@/components/Button/Button';
 import Icon from '@/components/Icon';
 
@@ -18,7 +17,7 @@ const CategoryButton = () => {
         <div key={name} css={Item}>
           <Button
             variant="mainOutlined"
-            icon={<Icon name={name} width={30} height={30} />}
+            icon={<Icon name={name} width={36} height={36} />}
           >
             <span css={Label}>{label}</span>
           </Button>

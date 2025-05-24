@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -44,7 +43,7 @@ const TodayPick = () => {
   const navigate = useNavigate();
 
   return (
-    <>
+    <div>
       {/* Title 영역만 section에 감싸기 */}
       <section css={s.wrapper}>
         <div css={s.titleRow}>
@@ -57,7 +56,7 @@ const TodayPick = () => {
 
       {/* 탭 영역 */}
       <div css={s.tabItem}>
-        <HorizontalScrollList gap="0.6rem" sidePadding="2.4rem" effect={false}>
+        <HorizontalScrollList gap="0" sidePadding="2.4rem" effect={false}>
           {TABS.map((tab, idx) => (
             <div key={tab} css={s.tabBlock}>
               <button
@@ -77,7 +76,7 @@ const TodayPick = () => {
         {BOOKS.map((book) => (
           <div key={book.id} css={s.cardWrapper}>
             <div style={{ position: 'relative', width: '100%', height: '27.6rem' }}>
-              <div css={s.backgroundBlurBox} />
+              <div css={s.backgroundBlurBox(book.imgUrl)} />
               <img src={book.imgUrl} alt={book.title} css={s.imageWrapper} />
             </div>
             <div css={s.textContainer}>
@@ -93,7 +92,7 @@ const TodayPick = () => {
           </div>
         ))}
       </HorizontalScrollList>
-    </>
+    </div>
   );
 };
 

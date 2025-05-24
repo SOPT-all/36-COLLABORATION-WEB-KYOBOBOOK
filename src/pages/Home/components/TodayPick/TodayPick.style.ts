@@ -68,10 +68,10 @@ export const tabButton = (isSelected: boolean) => css`
 `;
 
 export const tabDivider = css`
-  width: 1px;
-  height: 1.4rem;
-  background-color: ${theme.colors.gray4};
-  margin: 0 0.6rem;
+  width: 0.1rem;
+  height: 1rem;
+  background-color: ${theme.colors.gray3};
+  margin: 0 1.2rem;
 `;
 
 // ===== [3] Book Card =====
@@ -84,16 +84,23 @@ export const cardWrapper = css`
   position: relative;
 `;
 
-export const backgroundBlurBox = css`
+export const backgroundBlurBox = (imgUrl: string) => css`
   width: 30rem;
   height: 27.6rem;
   position: relative;
-  background-color: ${theme.colors.black3};
-  backdrop-filter: blur(80px);
-  -webkit-backdrop-filter: blur(80px);
-  overflow: hidden;
   border-radius: 8px 8px 0 0;
-  z-index: 1;
+  overflow: hidden;
+  z-index: ${theme.zIndex.one};
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(${imgUrl});
+    background-size: cover;
+    background-position: center;
+    filter: blur(80px);
+  }
 `;
 
 export const imageWrapper = css`
@@ -104,7 +111,7 @@ export const imageWrapper = css`
   height: 21.6rem;
   object-fit: cover;
   border-radius: 0.4rem;
-  z-index: 2;
+  z-index: ${theme.zIndex.one};
 `;
 
 export const textContainer = css`
@@ -115,7 +122,7 @@ export const textContainer = css`
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 3;
+  z-index: ${theme.zIndex.one};
   border-radius: 0 0 8px 8px;
 `;
 

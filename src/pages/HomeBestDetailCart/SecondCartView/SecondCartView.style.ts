@@ -7,7 +7,7 @@ const Wrapper = (theme: Theme) => css`
   min-width: 37.5rem;
   background-color: ${theme.colors.white};
   flex-direction: column;
-  padding: 2.4rem 1.6rem;
+  padding: 2.6rem 2.4rem 0;
 `;
 
 const Title = (theme: Theme) => css`

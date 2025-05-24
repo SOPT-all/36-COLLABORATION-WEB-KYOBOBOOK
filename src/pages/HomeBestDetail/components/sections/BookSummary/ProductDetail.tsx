@@ -18,6 +18,14 @@ const ProductDetail = ({ productData }: ProductDetailProps) => {
   const discountedPrice = Number(productData?.price?.replace('원', '') ?? '0');
   const originalPrice = Math.floor(discountedPrice / 0.9);
   const point = Math.floor(discountedPrice * 0.05);
+  const getTodayDeliveryLabel = () => {
+    const today = new Date();
+    const month = today.getMonth() + 1;
+    const date = today.getDate();
+    const weekday = ['일', '월', '화', '수', '목', '금', '토'][today.getDay()];
+
+    return `오늘 (${month}/${date},${weekday}) 도착`;
+  };
 
   return (
     <div css={s.productWrapper}>
@@ -47,7 +55,7 @@ const ProductDetail = ({ productData }: ProductDetailProps) => {
         </div>
         <div css={s.deliverRightWrapper}>
           <Chip variant="filledRoundPurple">당일배송</Chip>
-          <b css={s.arriveText(theme)}>오늘 (4/24,목) 도착</b>
+          <b css={s.arriveText(theme)}>{getTodayDeliveryLabel()}</b>
           <Icon name="info" fill={theme.colors.white} width={18} height={18} />
         </div>
         <div css={s.deliverRightWrapper}>
